@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.531">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>전략경영 - 10&nbsp; 전략 실행과 조직 설계</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Chapter11.html" rel="next">
+<link href="./Chapter9.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">전략 실행과 조직 설계</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">전략경영</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">외부환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">내부 환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">전략적 이슈의 통합과 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">비즈니스 수준 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">혁신 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기업 수준의 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">국제화 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter10.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">전략 실행과 조직 설계</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">윤리적 판단과 사회적 책임</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#시작하며" id="toc-시작하며" class="nav-link active" data-scroll-target="#시작하며"><span class="header-section-number">10.1</span> 시작하며</a></li>
+  <li><a href="#조직-설계의-중요성" id="toc-조직-설계의-중요성" class="nav-link" data-scroll-target="#조직-설계의-중요성"><span class="header-section-number">10.2</span> 조직 설계의 중요성</a></li>
+  <li><a href="#조직-구조의-설계" id="toc-조직-구조의-설계" class="nav-link" data-scroll-target="#조직-구조의-설계"><span class="header-section-number">10.3</span> 조직 구조의 설계</a>
+  <ul class="collapse">
+  <li><a href="#분업" id="toc-분업" class="nav-link" data-scroll-target="#분업"><span class="header-section-number">10.3.1</span> 분업</a></li>
+  <li><a href="#수직적수평적-연결" id="toc-수직적수평적-연결" class="nav-link" data-scroll-target="#수직적수평적-연결"><span class="header-section-number">10.3.2</span> 수직적/수평적 연결</a></li>
+  <li><a href="#비공식적-연결" id="toc-비공식적-연결" class="nav-link" data-scroll-target="#비공식적-연결"><span class="header-section-number">10.3.3</span> 비공식적 연결</a></li>
+  </ul></li>
+  <li><a href="#조직-구조의-유형" id="toc-조직-구조의-유형" class="nav-link" data-scroll-target="#조직-구조의-유형"><span class="header-section-number">10.4</span> 조직 구조의 유형</a>
+  <ul class="collapse">
+  <li><a href="#조직-구조의-전략적-함의" id="toc-조직-구조의-전략적-함의" class="nav-link" data-scroll-target="#조직-구조의-전략적-함의"><span class="header-section-number">10.4.1</span> 조직 구조의 전략적 함의</a></li>
+  <li><a href="#구조-선택의-트레이드오프" id="toc-구조-선택의-트레이드오프" class="nav-link" data-scroll-target="#구조-선택의-트레이드오프"><span class="header-section-number">10.4.2</span> 구조 선택의 트레이드오프</a></li>
+  <li><a href="#기능별-구조" id="toc-기능별-구조" class="nav-link" data-scroll-target="#기능별-구조"><span class="header-section-number">10.4.3</span> 기능별 구조</a></li>
+  <li><a href="#사업부-구조" id="toc-사업부-구조" class="nav-link" data-scroll-target="#사업부-구조"><span class="header-section-number">10.4.4</span> 사업부 구조</a></li>
+  <li><a href="#매트릭스-구조" id="toc-매트릭스-구조" class="nav-link" data-scroll-target="#매트릭스-구조"><span class="header-section-number">10.4.5</span> 매트릭스 구조</a></li>
+  <li><a href="#경계-없는-조직" id="toc-경계-없는-조직" class="nav-link" data-scroll-target="#경계-없는-조직"><span class="header-section-number">10.4.6</span> 경계 없는 조직</a></li>
+  <li><a href="#조직-구조-변경의-전략적-이유" id="toc-조직-구조-변경의-전략적-이유" class="nav-link" data-scroll-target="#조직-구조-변경의-전략적-이유"><span class="header-section-number">10.4.7</span> 조직 구조 변경의 전략적 이유</a></li>
+  </ul></li>
+  <li><a href="#조직-통제-시스템의-설계" id="toc-조직-통제-시스템의-설계" class="nav-link" data-scroll-target="#조직-통제-시스템의-설계"><span class="header-section-number">10.5</span> 조직 통제 시스템의 설계</a>
+  <ul class="collapse">
+  <li><a href="#출력-통제" id="toc-출력-통제" class="nav-link" data-scroll-target="#출력-통제"><span class="header-section-number">10.5.1</span> 출력 통제</a></li>
+  <li><a href="#행동-통제" id="toc-행동-통제" class="nav-link" data-scroll-target="#행동-통제"><span class="header-section-number">10.5.2</span> 행동 통제</a></li>
+  <li><a href="#클랜-통제" id="toc-클랜-통제" class="nav-link" data-scroll-target="#클랜-통제"><span class="header-section-number">10.5.3</span> 클랜 통제</a></li>
+  <li><a href="#관리-유행-전략적-통제인가-시대적-착각인가" id="toc-관리-유행-전략적-통제인가-시대적-착각인가" class="nav-link" data-scroll-target="#관리-유행-전략적-통제인가-시대적-착각인가"><span class="header-section-number">10.5.4</span> 관리 유행: 전략적 통제인가, 시대적 착각인가?</a></li>
+  </ul></li>
+  <li><a href="#비즈니스의-형태" id="toc-비즈니스의-형태" class="nav-link" data-scroll-target="#비즈니스의-형태"><span class="header-section-number">10.6</span> 비즈니스의 형태</a></li>
+  <li><a href="#마무리하며" id="toc-마무리하며" class="nav-link" data-scroll-target="#마무리하며"><span class="header-section-number">10.7</span> 마무리하며</a></li>
+  <li><a href="#실습-모듈-네트워크-분석-r-실습" id="toc-실습-모듈-네트워크-분석-r-실습" class="nav-link" data-scroll-target="#실습-모듈-네트워크-분석-r-실습">실습 모듈 : 네트워크 분석 R 실습</a></li>
+  <li><a href="#실습-모듈-un-총회-투표-기반-네트워크-분석-r-실습" id="toc-실습-모듈-un-총회-투표-기반-네트워크-분석-r-실습" class="nav-link" data-scroll-target="#실습-모듈-un-총회-투표-기반-네트워크-분석-r-실습">실습 모듈 : UN 총회 투표 기반 네트워크 분석 R 실습</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">전략 실행과 조직 설계</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Adapted from *Strategic Management* by Reed Kennedy et al. (2020), CC BY-NC-SA 3.0 https://doi.org/10.21061/strategicmanagement 한국어 번역·부분 개작: 박광민 / Sapientia a Dei (2025) -->
+<section id="시작하며" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="시작하며"><span class="header-section-number">10.1</span> 시작하며</h2>
+<p>전략이 아무리 훌륭해도 실행이 실패하면 조직은 경쟁에서 뒤처진다. 실제로 많은 기업이 명확한 비전과 차별화된 전략을 보유하고 있음에도 불구하고 실행력 부족으로 인해 시장 점유율을 잃고 성장을 멈춘다. <strong>전략 실행의 핵심은 조직 설계에 있다.</strong> 전략은 의사결정의 방향을 제시하고, 조직 구조는 그것을 실현하는 경로를 만든다.</p>
+<p>최근 몇 년간 발생한 수많은 사례들이 이 점을 극명하게 보여준다. 예컨대, <strong>2023년의 디즈니 조직 개편</strong>은 콘텐츠 중심 전략에서 스트리밍 중심 전략으로의 전환을 가속화하는 조직 구조의 필요성을 반영한 조치였다. 디즈니는 기존의 영화·TV 사업부 중심 조직을 해체하고 콘텐츠 제작과 배급을 통합하는 구조로 전환함으로써, 전략적 민첩성을 확보하고자 했다. 그러나 내부 의사결정 속도와 책임 소재의 모호성이 드러나면서 구조와 전략의 부조화가 불거졌다.</p>
+<p>또 다른 예는 <strong>OpenAI와 마이크로소프트의 협력 모델</strong>이다. OpenAI는 전략적으로 마이크로소프트와 파트너십을 통해 클라우드 및 인프라 자원을 확보했으며, 이에 따라 내부적으로도 상업부문과 연구부문을 분리하여 상이한 목표를 지닌 두 조직이 공존할 수 있는 설계를 도입했다. 이는 전통적인 R&amp;D 조직이 가진 탐색과 착취의 딜레마를 조직구조적으로 해결한 대표 사례다. <strong>조직 설계는 전략을 구체화할 뿐 아니라, 실행의 갈등을 조율하는 장치이기도 하다.</strong></p>
+<p>조직 구조는 단순한 도표가 아니다. 그것은 권한의 흐름, 의사결정의 중심, 협업의 방식, 통제와 자율성의 균형을 규정한다. 스타트업이 기능 중심 구조에서 매트릭스 구조로, 이후 사업부 중심 구조로 진화해가는 과정은 전략 실행 단계의 복잡성이 커질수록 조직 설계가 더 정교해져야 한다는 사실을 방증한다. <strong>구조는 전략의 그릇이다. 부적절한 구조는 아무리 정교한 전략도 흘러내리게 만든다.</strong></p>
+<p>한편, 전략 실행에는 구조뿐만 아니라 <strong>통제 시스템(control systems)</strong> 이 병행되어야 한다. 테슬라의 예를 들면, 일론 머스크는 기능 중심 구조 내에서 수직적 통제를 강화함으로써, 부서 간 조율 비용을 줄이고 기술 집약적 문제 해결에 속도를 냈다. 그러나 이는 반대로 내부 창의성과 협업을 제한하는 요인으로 작용하기도 했다. <strong>통제 시스템은 전략의 속도와 방향을 조절하는 가속기이자 브레이크다.</strong></p>
+<p>마지막으로, 글로벌 환경에서 전략 실행은 법인 설계와 책임 구조에까지 확장된다. 2021년 이후 글로벌 ESG 규제가 강화되면서, 다국적 기업들은 단순히 효율 중심 법인 구조를 넘어서 사회적 책임과 투명성까지 고려한 조직 재설계를 강요받고 있다. <strong>지배구조, 법적 책임, 윤리 기준은 전략 실행의 비가시적 경계선을 결정한다.</strong></p>
+<p>이 장에서는 이러한 조직 설계가 전략 실행에 어떤 방식으로 영향을 미치는지를 구체적으로 다룬다. 구체적으로는 조직 구조의 유형, 각 구조의 장단점, 통제 시스템의 설계, 법인 구조의 선택지가 전략에 따라 어떻게 달라지는지를 분석할 것이다. 더불어 전략과 구조 사이의 부조화가 발생할 때 나타나는 조직적 실패의 징후들도 함께 살펴본다. 이후 장에서는 윤리와 지속가능성이 전략 실행에 미치는 영향을 보다 심층적으로 다룰 예정이다.</p>
+</section>
+<section id="조직-설계의-중요성" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="조직-설계의-중요성"><span class="header-section-number">10.2</span> 조직 설계의 중요성</h2>
+<p>전략이 성패를 좌우하지 않는다. <strong>전략을 실행할 수 있는 조직 구조의 유무가 진짜 차이를 만든다.</strong> 최근 몇 년간 발생한 사례는 이를 극명하게 보여준다.<br>
+2023년, 아마존은 창립 이래 최대 규모의 조직 개편을 단행했다. 팬데믹 이후 둔화된 전자상거래 성장세와 AWS의 기대 이하 실적을 반영한 조치였다. 아마존은 기능 중심 구조에서 보다 기민한 고객 단위 구조로 전환하면서, 각 지역·제품군 단위에서 의사결정을 더 빠르게 내릴 수 있도록 권한을 위임했다. 이는 고객 수요 변화에 빠르게 대응할 수 있는 민첩성을 확보하기 위한 전략적 결정이었다. 그러나 동시에, 내부 커뮤니케이션 단절, 데이터 중복 투자, 핵심 인재 유출이라는 <strong>조직적 부작용</strong>도 동반되었다. 이 사례는 하나의 메시지를 던진다. <strong>조직 구조의 설계는 전략의 추상적인 청사진을 현실화하는 유일한 경로다.</strong></p>
+<p>또 다른 사례는 테슬라의 조직 설계 변화다. 일론 머스크는 기능 간 경계를 최소화하는 <strong>초평면적 구조</strong>를 도입하여, 엔지니어링, 제조, 소프트웨어, AI 팀을 물리적으로 통합된 공간에 배치했다. 이는 기존 자동차 산업의 복잡한 계층 구조를 탈피한 실험이었고, 사이버트럭, 자율주행 소프트웨어 개발 등 고난도 프로젝트에서 빠른 실행력을 확보하는 데 기여했다. 그러나 지나치게 CEO 중심으로 집중된 의사결정 구조는 거버넌스 리스크를 야기했고, 2024년 이후 조직적 병목과 고위급 이탈로 이어졌다. 테슬라의 사례는 <strong>조직 설계의 장점과 한계가 전략 성과에 어떤 방식으로 동시에 영향을 미칠 수 있는지를 보여준다.</strong></p>
+<p>조직 설계는 단순히 박스와 라인의 배열이 아니다. <strong>그것은 권력의 흐름을 정의하고, 의사결정의 속도를 조율하며, 기업이 위기에 어떻게 반응할지를 결정짓는 근본 구조다.</strong> 조직이 어떻게 분화되고 통합되며, 권한이 어떻게 분산되거나 집중되는지는 기업이 외부 환경에 어떻게 적응하고 내부 자원을 어떻게 활용하는지를 결정한다. 이러한 맥락에서 조직 설계는 전략 실행의 <strong>운영 체계이자 위험 관리 장치</strong>다.</p>
+<p>2022년 마이크로소프트는 클라우드, 보안, AI 사업 중심의 구조 개편을 단행하며, 각 사업부를 독립적인 수익 책임 단위로 분리하였다. Satya Nadella는 “기술 중심이 아닌 <strong>문제 해결 중심 조직</strong>으로의 전환”을 목표로 삼았다. 이로 인해 기술 솔루션 개발 속도는 빨라졌고, 고객 중심 프로젝트 수익률도 개선되었다. 그러나 동시에, 기존에 통합적으로 운영되던 기술 역량 간의 중복 투자 문제가 발생했고, 데이터 일관성 확보에 추가 자원이 소요되었다. <strong>조직 설계는 트레이드오프의 예술이다. 빠름과 정교함, 자율성과 통제 사이에서 최적의 균형을 찾아야 한다.</strong></p>
+<p>이러한 현대 사례들이 보여주는 공통된 교훈은 다음과 같다. 첫째, <strong>기업의 전략은 그것을 수용할 수 있는 구조가 있을 때에만 실행 가능하다.</strong> 둘째, 조직 구조는 기업의 내부 자원, 역량, 문화뿐 아니라 외부 경쟁 환경, 기술 변화, 규제 환경에 의해 영향을 받는다. 셋째, 잘못된 구조는 좋은 전략조차도 실패로 이끌 수 있다. 넷째, <strong>구조는 고정된 것이 아니라 전략 주기에 따라 반복적으로 재설계되어야 하는 동적인 시스템이다.</strong></p>
+<p>기업은 생존과 성장을 위해 자신의 전략과 가장 잘 맞는 조직 구조를 설계해야 한다. 여기에 정답은 없다. 그러나 적합성은 존재한다. 예컨대, 제품 다양성이 낮고 비용 우위 전략을 추구하는 기업은 기능 중심 구조가 효율적일 수 있다. 반면, 빠르게 변화하는 시장에서 고객 맞춤형 서비스를 제공해야 하는 기업은 사업부 중심 혹은 매트릭스 구조가 더 적합하다. 구조의 선택은 단지 조직 내부의 효율성을 넘어서, <strong>전략적 민첩성, 혁신 역량, 리스크 분산 전략과 직결된다.</strong></p>
+<p>마지막으로, 오늘날 ESG, 글로벌 공급망 리스크, AI 기반 의사결정의 확산은 조직 설계에 새로운 도전과 기회를 제공한다. 글로벌 기업은 더 이상 단일 본사 중심 구조로 생존할 수 없다. <strong>조직은 전략과 환경, 기술과 문화 사이에서 균형을 잡는 유기체가 되어야 한다.</strong></p>
+</section>
+<section id="조직-구조의-설계" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="조직-구조의-설계"><span class="header-section-number">10.3</span> 조직 구조의 설계</h2>
+<p>조직 구조는 기업의 전략을 실현하는 물리적·사회적 프레임이다. 잘 설계된 구조는 자원의 낭비를 줄이고, 의사결정의 속도를 높이며, 협업을 촉진한다. 반면, 잘못된 구조는 의사결정의 병목, 부서 간 충돌, 이중 책임, 조직 문화의 왜곡을 초래한다. <strong>조직 구조는 단순한 서열과 보고 체계가 아니라, 기업의 전략적 의도를 구체화하는 실행 기제</strong>다.</p>
+<p>전설적인 미식축구 감독 빈스 롬바르디는 “조직의 성과는 각 개인의 노력이 합쳐진 결과”라고 말했다. 하지만 이 문장은 중요한 전제를 생략하고 있다. 개인의 노력은 그것이 <strong>어떻게 연결되고 배열되는가</strong>에 따라 전혀 다른 결과를 만들어낸다. 사람들을 어떤 방식으로 조직하는가에 따라 조직의 민첩성, 혁신성, 효율성은 극적으로 달라진다.</p>
+<p>조직 구조의 설계는 몇 가지 핵심 구성 요소를 중심으로 이루어진다.</p>
+<p>첫째, <strong>업무의 분업(Division of Labor)</strong>. 조직은 개별 업무를 더 작고 전문화된 단위로 나눔으로써 효율성을 높일 수 있다. 예컨대, 스타트업의 한 명의 개발자가 프론트엔드와 백엔드를 모두 맡는 상황과, 대기업의 프론트엔드·백엔드·데이터 엔지니어가 분업화된 상황은 조직의 성장 국면에 따라 전략적 분업 방식이 달라짐을 보여준다. 그러나 분업이 지나치면 조직 내 사일로(silo) 현상이 발생할 수 있다. <strong>분업은 효율성을 높이는 동시에, 조정 비용이라는 그늘도 동반한다.</strong></p>
+<p>둘째, <strong>조직도(Organizational Chart)</strong>. 조직도는 권한과 책임, 보고 체계를 시각적으로 표현한 지도다. 하지만 지도는 현실의 축소일 뿐이다. 실제 조직 운영에서는 공식적 라인을 넘어선 <strong>비공식적 흐름</strong>이 전략 실행에 중요한 영향을 미친다. 예를 들어, 구글의 ‘TGIF(All-Hands)’ 회의는 CEO와 모든 직원이 직접 소통하는 구조를 가능하게 만들었으며, 이는 조직도에서는 표현되지 않는 수평적 네트워크를 강화하는 문화적 기제로 작용했다. 구글의 TGIF는 “Thank God It’s Friday”의 약자로, 원래는 금요일을 의미하는 표현이지만, 구글에서는 매주 금요일에 진행되는 전사 직원 회의를 의미한다. 이 회의에서 직원들은 회사 현황, 주요 결정, 신규 프로젝트 등에 대한 정보를 공유하고 질의응답 시간을 갖는다.</p>
+<p>셋째, <strong>수직적 연결(Vertical Linkages)</strong>. 상사와 부하 간 보고 체계, 통제 구조는 수직적 연결을 통해 구현된다. 명확한 수직적 라인은 책임소재와 명령 체계를 분명하게 해주지만, 계층이 많아질수록 의사결정 속도는 느려지고 현장의 정보가 왜곡될 가능성도 커진다. 2020년 이후 GE의 분사 전략은 지나치게 비대한 수직 구조가 전략 실행을 방해한다는 반성을 내포하고 있다.</p>
+<p>넷째, <strong>수평적 연결(Horizontal Linkages)</strong>. 수평 연결은 동일 계층 내의 구성원이나 부서 간 협업을 촉진하는 메커니즘이다. 최근의 많은 기업은 고객 경험 중심 전략을 위해 마케팅, IT, R&amp;D, 영업 부서 간 <strong>크로스펑셔널 팀(cross-functional team)</strong> 을 운영한다. 예컨대, 넷플릭스는 콘텐츠 제작과 데이터 과학 부서를 긴밀히 연결해 추천 알고리즘의 성능을 극대화하고 있다. <strong>수평 연결은 유연성과 혁신성을 강화하지만, 명확한 조정 메커니즘 없이는 갈등을 증폭시킬 수 있다.</strong></p>
+<p>다섯째, <strong>비공식적 연결(Informal Linkages)</strong>. 조직도에는 나타나지 않지만, 실질적인 영향력을 행사하는 관계들이 존재한다. 멘토링 관계, 부서 간 친밀감, 핵심 인재 네트워크 등은 공식 구조를 보완하거나 왜곡할 수 있는 이중 회로다. 예를 들어, 테크 기업에서 사내 커피챗이나 비공식 커뮤니티가 혁신을 유도하는 경우가 이에 해당한다. <strong>조직은 언제나 형식과 비형식, 구조와 문화가 얽힌 유기적 존재다.</strong></p>
+<p>마지막으로, <strong>명령 일원화(Unity of Command)</strong> 원칙이 있다. 이는 한 사람이 동시에 둘 이상의 상관에게 보고하지 않아야 한다는 원칙이다. 이 원칙은 혼란을 방지하고 책임소재를 분명히 하기 위해 중요하다. 그러나 매트릭스 조직이나 프로젝트 기반 조직에서는 이 원칙이 깨지는 경우가 많고, 그 대신 <strong>복수 리더십 체계에서의 균형과 조율 메커니즘</strong>이 필요해진다. 따라서 현대 조직에서는 이 원칙을 절대적으로 따르기보다 전략과 조직 특성에 맞게 유연하게 적용해야 한다.</p>
+<p><strong>조직 구조는 전략을 실현하는 하드웨어이며, 문화는 그것을 작동시키는 운영체제다.</strong> 각 구성 요소가 전략적 맥락에서 어떻게 조합되느냐에 따라 조직의 운명은 갈린다. 그리고 이 구성 요소들은 결코 독립적으로 작동하지 않는다. 분업이 수직적 연결을 전제하며, 비공식 연결은 수평적 협업을 촉진하거나 방해한다.</p>
+<section id="분업" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="분업"><span class="header-section-number">10.3.1</span> 분업</h3>
+<p><strong>분업(Division of Labor)</strong> 은 조직이 복잡한 작업을 더 작고 전문화된 단위로 나누어 수행함으로써 <strong>생산성과 효율성, 전문성</strong>을 극대화하는 핵심 원칙이다. 이는 수천 명의 직원을 거느리는 제조 기업뿐 아니라, 스타트업, 플랫폼 기업, AI 조직 등 <strong>모든 조직의 구조 설계</strong>에서 중심이 되는 개념이다.</p>
+<p>오늘날 복잡한 제품과 서비스를 다루는 기업들은 하나의 업무를 단일 인력이 처음부터 끝까지 처리하는 방식보다, <strong>작업을 분해하고 세분화하여 전문 인력에 배분하는 체계</strong>를 채택한다. 예를 들어, 엔비디아는 고성능 GPU 칩을 개발할 때 회로 설계, 소자 엔지니어링, 펌웨어 개발, 소프트웨어 최적화, 하드웨어 테스트, 고객사 협업 등으로 기능을 나누고, 각 영역에 세계 최고 수준의 전문가를 배치한다. <strong>하나의 제품이 수십 개의 팀과 수백 개의 작업 단위로 나뉘는 분업의 정교함이 바로 기업 경쟁력의 근간이 된다.</strong></p>
+<p>이러한 분업 구조는 디지털 산업에서도 마찬가지다. 넷플릭스는 오리지널 콘텐츠 제작, 알고리즘 개발, 사용자 인터페이스 디자인, 마케팅, 지역별 언어 번역, 법무 대응 등 모든 프로세스를 전문화하고 수평적으로 연결된 형태로 운영한다. <strong>사용자가 클릭 한 번으로 경험하는 ‘재생’ 버튼 뒤에는 수십 개의 분업된 조직과 업무가 실시간으로 작동하고 있다.</strong></p>
+<p><strong>분업은 단순히 작업을 나누는 것이 아니라, 조직 전체의 실행 구조를 정의하는 행위</strong>다. 효율성은 높이되, 조정과 협업의 복잡성을 증가시키는 이중적 성격을 가진다. 따라서 분업이 심화될수록 다음과 같은 두 가지 문제가 발생한다. 첫째, 기능 간 연계가 약해지면서 정보가 단절되고, 목표가 파편화된다. 둘째, 작업 간 연쇄적 의존도가 높아져 하나의 병목이 전체 시스템을 지연시킬 수 있다.</p>
+<p>이러한 한계를 극복하기 위해 현대 기업은 다음과 같은 조치를 취한다. <strong>첫째, 크로스펑셔널 팀 운영</strong>을 통해 기능 간 협업을 촉진한다. 예컨대, 애플은 신제품 개발 과정에서 디자인, 하드웨어, 마케팅 팀을 통합한 프로젝트 셀을 운영함으로써 조직 간 사일로를 해소한다. <strong>둘째, 워크플로우 자동화와 디지털 협업 도구의 도입</strong>을 통해 정보의 흐름을 동기화한다. 마이크로소프트의 DevOps 체계, 아마존의 내부 API 기반 구조는 모두 이러한 시도를 반영한다.</p>
+<p><strong>셋째, AI와 데이터 기반의 의사결정 보조 시스템이 분업의 새로운 기반으로 작동하고 있다.</strong> 예를 들어, 전자상거래 기업은 고객 세분화, 수요 예측, 재고 관리, 물류 스케줄링, 가격 책정 등 각기 다른 분업 영역에 AI 알고리즘을 접목함으로써, 각 기능이 독립적으로 최적화되면서도 전체 전략과 조화를 이루도록 설계한다.</p>
+<p>이처럼 분업은 고정된 구조가 아니라, <strong>기술, 환경, 전략 변화에 따라 끊임없이 재설계되는 유기적 구조</strong>다. 스타트업 단계에서는 일반화된 역할이 유리하지만, 성장과 확장 단계에서는 분업과 전문화 없이는 지속 가능하지 않다. 그러나 동시에, 지나친 분업은 유연성을 저하시킬 수 있기 때문에, <strong>효율성과 적응성의 균형</strong>을 고려한 구조 설계가 요구된다.</p>
+<p><strong>분업은 전략 실행의 시작점이자 조직 설계의 기반이다.</strong> 그것은 단순한 업무 나눔이 아니라, 조직이 목표를 어떻게 실현하고, 어떻게 변화에 대응할지를 결정짓는 전략적 선택이다.</p>
+</section>
+<section id="수직적수평적-연결" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="수직적수평적-연결"><span class="header-section-number">10.3.2</span> 수직적/수평적 연결</h3>
+<p>조직 구조는 단순히 사람들을 배열하는 것이 아니라, <strong>권한과 책임의 흐름, 협업의 경로, 전략 실행의 장치</strong>를 설계하는 일이다. 이를 시각적으로 나타낸 것이 조직도이며, 이 조직도는 기본적으로 <strong>수직적 연결(Vertical Linkages)</strong> 과 <strong>수평적 연결(Horizontal Linkages)</strong> 의 두 축으로 구성된다.</p>
+<p><strong>수직적 연결</strong>은 상사와 부하 직원 간의 공식적인 권한 위임 구조를 의미한다. 이 구조는 기업 내 계층적 질서를 반영하며, 명령, 감독, 성과 평가, 책임 소재를 명확히 하는 데 중심 역할을 한다. 대부분의 기업은 명령의 일원화(Unity of Command) 원칙에 기반하여, 각 직원이 <strong>한 명의 상사에게만 직접 보고</strong>하도록 설계한다. 이 원칙은 갈등되는 지시나 책임 회피를 방지하는 데 유효하다.</p>
+<p>예컨대, 테슬라는 제품 개발 속도를 높이기 위해 매우 납작한 수직 구조(flat hierarchy)를 도입했다. 하지만 그 중심에는 <strong>CEO 개인에게 집중된 수직적 권한</strong>이 자리하고 있다. 엘론 머스크는 거의 모든 주요 제품에 직접 개입하며, 중간 관리자의 권한은 축소되어 있다. 이러한 구조는 혁신 속도를 높이는 데 유리하지만, 의사결정 병목과 과도한 의존이라는 단점을 낳는다. <strong>수직적 연결의 강도는 조직의 속도와 위험을 동시에 결정한다.</strong></p>
+<p>반대로, 구글은 프로젝트별 매트릭스 구조를 통해 수직적 계층보다는 문제 해결 중심의 수평적 협업을 장려한다. 각 프로젝트는 소속 부서와 별도로 구성되어, 개발자, UX 디자이너, 마케터, 데이터 과학자 등이 공동 책임을 지는 구조다. 이런 조직에서는 하나의 개인이 여러 명의 상사(기능상 리더, 프로젝트 리더)에게 보고할 수 있어, <strong>명령의 일원화 원칙은 종종 희생된다.</strong> 하지만 이를 보완하기 위해 구글은 OKR(Objectives and Key Results) 기반의 목표 관리 시스템을 통해 권한과 책임을 명확히 조율한다.</p>
+<p>한편, <strong>수평적 연결</strong>은 같은 계층 내, 혹은 기능상 동등한 구성원 간의 협업을 나타낸다. 이것은 부서 간 프로젝트, 태스크포스, 위원회, 크로스펑셔널 팀 등을 통해 구현되며, 조직이 변화에 민첩하게 대응하고 문제를 통합적으로 해결할 수 있도록 돕는다.</p>
+<p>Spotify의 경우, 수평적 협업 구조를 시스템화한 대표적인 사례다. 이들은 조직을 <strong>Squad(팀), Tribe(부문), Chapter(기능별 소속), Guild(관심 기반 네트워크)</strong> 등으로 나누고, 다양한 수평적 링크를 통해 기술 공유와 문제 해결을 유도한다. 이를 통해 제품은 빠르게 개선되며, 혁신이 조직 전반으로 퍼진다. <strong>수평적 연결은 협업의 비용을 줄이고, 집단 지성을 조직 구조에 내장하는 방식</strong>이다.</p>
+<p>이러한 구조적 연결은 기술 기업뿐 아니라, 전통 제조기업에도 빠르게 확산되고 있다. 현대자동차는 2023년부터 연구소 조직을 도식화된 수직 보고 체계에서 탈피해, ‘기술 셀(Cell)’ 중심의 자율 협업 구조로 전환했다. 이는 전기차, 자율주행, 배터리 기술 등의 융합이 필수화된 시대에 맞춘 변화였다. 각 셀은 기술 목표에 따라 유동적으로 편성되며, 필요한 경우 타 셀과 유기적으로 연결된다. <strong>이처럼 수직과 수평 연결의 하이브리드화는 현대 조직 구조의 핵심 흐름</strong>이다.</p>
+<p>중요한 것은, 수직적 연결은 책임과 통제를 명확히 하는 데 필수적이며, 수평적 연결은 문제 해결과 혁신을 가속화한다는 점이다. 어느 한쪽이 우월하지 않다. <strong>전략의 성격, 산업의 속도, 기술 복잡성에 따라 수직과 수평의 비율과 강도가 달라져야 한다.</strong> 너무 평면적인 조직은 전략적 통제력을 잃고, 너무 계층적인 조직은 학습과 혁신의 속도를 잃는다.</p>
+<p><strong>Spotify의 유연한 조직 설계 - Squad, Tribe, Chapter, Guild 모델</strong></p>
+<p>Spotify는 전통적인 수직 구조의 한계를 극복하고, 빠르게 변화하는 음악 스트리밍 시장에서 민첩성과 혁신성을 극대화하기 위해 독특한 조직 설계 모델을 도입했다. 이 구조는 흔히 <strong>“Spotify Squad Model”</strong> 이라고 불리며, 제품 중심의 애자일(agile) 조직 설계의 대표적 사례로 인용된다. 이 모델은 <strong>Squad, Tribe, Chapter, Guild</strong>의 네 가지 구조적 단위를 기반으로 구성된다.</p>
+<p><strong>Squad</strong>는 Spotify 조직의 핵심 단위로, 독립적인 미니 스타트업처럼 운영된다. 각 Squad는 특정한 제품 기능이나 사용자 경험 요소를 책임지며, 자체 목표, 백로그(backlog:작업목록으로 해야할 일의 우선순위 리스트), 우선순위를 보유한다. Squad 내에는 프론트엔드 개발자, 백엔드 개발자, UX 디자이너, QA, 데이터 분석가 등 다양한 역할의 인원이 함께 포함되어 있어 <strong>기능 간 협업</strong>이 기본 전제다. 각 Squad는 기술적으로 자율성을 가지고 있으며, 새로운 기능을 빠르게 실험하고 배포할 수 있는 권한도 부여받는다.</p>
+<p>여러 개의 Squad는 공통 목표나 제품 라인에 따라 <strong>Tribe</strong>라는 더 큰 단위로 묶인다. 예를 들어, “추천 시스템 Tribe”는 알고리즘, 사용자 데이터 처리, 프론트엔드 경험을 다루는 여러 Squad로 구성된다. Tribe는 정기적인 Tribe Day를 통해 정보 공유와 시너지를 유도하며, 필요시 유사한 이슈를 해결하기 위한 임시 협업체계도 운영한다.</p>
+<p><strong>Chapter</strong>는 동일한 전문 역량(예: iOS 개발자, UX 디자이너 등)을 가진 인원들이 소속된 기능별 소속체로, 기술 공유와 일관성 확보를 위해 존재한다. 각 Chapter에는 Chapter Lead가 있으며, 이들은 각 Squad에서 활동 중인 인원들의 <strong>기술적 멘토링과 커리어 개발</strong>을 담당한다. 이 구조는 기능적 일관성과 개인 성장이라는 두 가지 목표를 동시에 추구하기 위한 장치다.</p>
+<p>마지막으로, <strong>Guild</strong>는 회사 전반에 걸쳐 관심사 기반으로 자발적으로 구성되는 지식공유 네트워크다. 예컨대, 데이터 시각화에 관심 있는 구성원들이 모여 Guild를 만들고, 사내 세미나나 도구 개발 프로젝트를 진행할 수 있다. Guild는 <strong>비공식 수평 연결의 대표적 구조</strong>이며, 혁신 문화와 자기 주도 학습을 조직 내에 확산시키는 역할을 한다.</p>
+<p>이러한 구조는 수직적 명령 체계를 최소화하고, 수평적 연결을 시스템화한 방식으로, <strong>조직 내 자율성과 정렬(alignment)</strong>을 동시에 확보하려는 전략적 설계다. Spotify는 이를 통해 빠른 시장 대응, 빠른 제품 실험, 구성원 만족도 향상이라는 성과를 달성했다. 하지만 지나치게 자율적인 구조는 기능 중복, 리더십 책임 분산, 장기 전략 부재라는 부작용도 낳을 수 있기에, <strong>지속적 조율과 학습이 전제되는 유기적 구조</strong>로 진화 중이다.</p>
+</section>
+<section id="비공식적-연결" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="비공식적-연결"><span class="header-section-number">10.3.3</span> 비공식적 연결</h3>
+<p><strong>비공식적 연결(informal linkages)</strong> 은 조직도에 나타나지 않는, 그러나 조직의 역학과 성과에 깊이 작용하는 <strong>비가시적 관계의 네트워크</strong>다. 이는 우정, 신뢰, 비공식적 권력, 개인적 호의, 감정적 연대, 또는 단순한 일상적 대화에서 비롯되는 관계를 포함한다. 조직 내부에서 커피를 마시며 나누는 가벼운 대화, Slack에서 주고받는 유머, 식사 자리에서 생긴 신뢰감 등이 모두 <strong>비공식적 연결의 실질적 기반</strong>이 된다.</p>
+<p>현대 조직에서 이러한 비공식적 연결은 <strong>공식 구조보다 더 강한 실행력</strong>을 발휘하는 경우가 많다. 특히 <strong>하이브리드 근무</strong>, <strong>원격 협업</strong>, <strong>자율성 기반 팀 운영</strong>이 일반화된 환경에서는, 조직도의 위계보다는 개인 간 관계가 정보 흐름과 의사결정의 경로를 결정짓는 경우가 빈번하다.</p>
+<p>예를 들어, 실리콘밸리의 많은 스타트업에서는 <strong>커피챗(coffee chat)</strong> 문화가 비공식 연결을 활성화하는 핵심 수단으로 자리잡고 있다. Google은 정식 프로젝트 미팅 외에도 매주 랜덤하게 매칭된 동료들과 15분간의 커피챗을 하도록 장려한다. 이 대화에서 팀 간 연결고리가 형성되고, 프로젝트 아이디어나 문제 해결 방식이 사전 공유된다. <strong>이러한 연결은 조직도에는 존재하지 않지만, 실제 협업 속도와 품질에 큰 영향을 미친다.</strong></p>
+<p>또한, 비공식적 연결은 <strong>의사결정의 숨은 경로</strong>가 되기도 한다. 예컨대, 신규 프로젝트를 승인받기 위해 필요한 ’공식 절차’보다, 핵심 의사결정자와의 사적인 공감대 형성이 더 결정적인 역할을 할 수 있다. 이는 종종 정치적이거나 불공정하게 비칠 수 있으나, <strong>현실의 조직은 공식 규범과 비공식 힘의 혼합체</strong>임을 보여준다.</p>
+<p>메타(예전 Facebook)는 이 문제를 분석하기 위해 내부적으로 <strong>“Shadow Org Chart”</strong>, 즉 비공식 권력 구조를 시각화하는 실험을 진행한 바 있다. 그들은 이메일, 슬랙 메시지, 회의 기록 등의 메타데이터를 기반으로, 실질적인 영향력을 가진 네트워크를 추적했고, 이는 명목상 리더십과 다르게 구성되어 있었다. <strong>공식적 보고 체계와 실제 영향력 체계가 괴리될 때, 조직은 실행력을 잃고 갈등을 겪는다.</strong></p>
+<p>비공식적 연결은 또한 <strong>신뢰 기반 문화 형성, 심리적 안전 확보, 혁신 전파</strong> 등에서도 중요한 역할을 한다. 신입 직원이 조직 문화를 이해하고 빠르게 적응하는 과정에서, 동료의 멘토링이나 팀 외 구성원의 조언은 공식 교육보다 더 큰 효과를 발휘한다. 또한 혁신적인 아이디어는 공식 회의보다 사적인 대화에서 더 많이 탄생한다는 연구 결과도 다수 존재한다.</p>
+<p>물론, 비공식 연결은 역기능도 가지고 있다. 정보의 편향된 확산, 파벌 형성, 권한 없는 영향력의 확대는 조직의 투명성과 공정성을 해칠 수 있다. 따라서 조직은 비공식 연결을 부정하거나 억제할 것이 아니라, <strong>이를 인식하고 설계 가능한 수준으로 조직 문화에 통합할 수 있는 구조적 장치</strong>를 마련해야 한다. 커피챗, 점심 파트너 제도, 랜덤 1:1 미팅, 소셜 봇(bot) 기반 추천 매칭 시스템 등이 그 예다.</p>
+<p><strong>비공식 연결은 조직의 그림자이자 윤활유다.</strong> 그것은 통제할 수 없는 혼돈이 아니라, 전략적으로 관리해야 할 역동성이다. 조직은 공식 구조 위에 비공식 연결을 설계할 수 있을 때, 전략과 실행 사이의 간극을 줄일 수 있다.</p>
+<p><strong>Meta의 Shadow Org Chart 실험 – 보이지 않는 권력의 지도화</strong></p>
+<p>메타(Meta, 예전 Facebook)는 조직 내의 비공식적 권력 구조가 공식적인 보고 체계와 어떻게 다른지를 파악하기 위해, 내부적으로 “Shadow Org Chart” 실험을 진행한 바 있다. 이 실험의 목적은 조직도에 나타나지 않는 <strong>실질적 영향력의 흐름</strong>, 즉 직원들 간의 신뢰, 조언, 비공식적 의사결정 경로를 시각화하는 것이었다.</p>
+<p>메타는 이 분석을 위해 이메일, 슬랙(Slack) 메시지, 회의 참석 데이터 등 디지털 메타데이터를 활용했다. 동시에 직원들을 대상으로 “누구에게 영감을 받는가?”, “누구에게 조언을 구하는가?”, “누가 당신의 결정에 영향을 주는가?”와 같은 질문을 통해, <strong>내부 영향력자(informal influencers)</strong>를 식별했다. 이 데이터를 기반으로 조직 전체를 연결하는 실질적인 권력 네트워크를 그렸고, 이를 공식 조직도와 비교했다.</p>
+<p>그 결과, 중간 관리자나 공식 리더가 아닌 <strong>전혀 다른 인물들이 네트워크 중심부에 위치</strong>하고 있음이 드러났다. 실제로 특정 팀에서는 상위 10명 정도의 구성원이 전체 의사소통의 약 70% 이상을 중재하고 있다는 분석 결과도 나왔다. 이들은 공식적인 지위와 무관하게 다른 직원들의 의사결정, 감정, 행동에 강한 영향력을 미치는 이른바 ’비공식 축’이었다.</p>
+<p>이 실험은 공식적인 보고 체계와 실제 영향력 체계 사이에 괴리가 존재할 경우, 조직은 실행력을 잃고 갈등을 겪는다는 중요한 시사점을 남겼다. 전략이 효과적으로 실행되기 위해서는 <strong>실제 영향력이 존재하는 경로와 사람들에 기반하여 전략을 전달하고 설계해야 한다</strong>는 것이다.</p>
+<p>또한 Shadow Org Chart는 사회 연결망 분석(Social Network Analysis)의 실제 적용 사례로, 현대 조직에서 <strong>디지털 흔적(digital trace)</strong> 을 기반으로 조직의 심층 구조를 분석할 수 있다는 가능성을 보여주었다. 이는 단순히 이론적 흥미를 넘어, 변화관리나 리더십 설계, 조직 재설계와 같은 실무 영역에서도 직접적으로 활용될 수 있다.</p>
+<p>조직이 전략적 변화, 혁신, 신제품 도입 등 중대한 결정을 추진할 때, 공식 리더십만을 경로로 활용하는 것은 매우 비효율적일 수 있다. 오히려 <strong>숨은 영향력자들을 식별하고, 그들과 협력 구조를 형성하는 것이 전략 실행의 속도와 확산을 극대화하는 경로가 된다.</strong></p>
+<p>이 사례는 명확하게 보여준다. 조직이 겉으로 보이는 구조만을 신뢰한다면, 진짜 의사결정 네트워크는 그 뒤에서 완전히 다른 논리로 움직이고 있을 수 있다. 메타의 Shadow Org Chart 실험은 조직 설계에 있어 <strong>공식 구조와 비공식 구조를 함께 설계하고 조율할 수 있어야 실행력이 확보된다는 것</strong>을 생생하게 입증한 사례다.</p>
+</section>
+</section>
+<section id="조직-구조의-유형" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="조직-구조의-유형"><span class="header-section-number">10.4</span> 조직 구조의 유형</h2>
+<p>기업이 전략을 효과적으로 실행하기 위해서는 그에 부합하는 <strong>조직 구조</strong>를 갖추는 것이 필수다. 조직 구조란 단순히 보고 체계를 설계하는 것이 아니라, 전략적 목표 달성을 위해 <strong>사람, 기능, 자원, 의사결정 흐름</strong>이 어떻게 연결되는지를 구체화하는 시스템이다.</p>
+<p>대부분의 기업에서 경영진은 <strong>수직적 연결(vertical linkages)</strong>과 <strong>수평적 연결(horizontal linkages)</strong>을 활용하여 조직의 상호작용과 협업을 조정한다. 수직적 연결은 계층적 명령체계를 통해 통제를 가능하게 하며, 수평적 연결은 부서 간 협력과 혁신을 촉진한다.</p>
+<p>조직 구조를 설계하는 데 있어 대표적으로 선택되는 네 가지 유형은 다음과 같다: <strong>기능별 구조(Functional)</strong>, <strong>사업부 구조(Multi-divisional)</strong>, <strong>매트릭스 구조(Matrix)</strong>, 그리고 <strong>경계 없는 구조(Boundaryless)</strong>. 하지만 마치 눈송이처럼, 현실에서 완전히 동일한 조직 구조는 존재하지 않는다. 경영진은 이들 기본 유형을 참고하되, <strong>자사 고유의 산업, 전략, 문화, 성장단계에 맞게 변형하고 조합</strong>하는 방식으로 설계해야 한다.</p>
+<section id="조직-구조의-전략적-함의" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="조직-구조의-전략적-함의"><span class="header-section-number">10.4.1</span> 조직 구조의 전략적 함의</h3>
+<p>조직 구조의 선택은 단지 내부 효율성 문제에 그치지 않고, <strong>미래의 전략적 기회에 대한 조직의 대응력</strong>을 직접적으로 제약하거나 촉진하는 역할을 한다. 예를 들어, <strong>테슬라(Tesla)</strong>는 성장 초기에 강력한 기능 중심 구조를 채택하여 제품 품질과 공정 효율성을 극대화했다. 하지만 이후 에너지 사업, 로보틱스, 자율주행 등으로 다각화가 이루어지면서 기존 구조가 신속한 전략 전환을 가로막는 장애물이 되었다. 이에 따라 테슬라는 부문별 의사결정 자율성을 강화하는 방향으로 구조 개편을 단행했다.</p>
+<p>또한, <strong>구글(Google)</strong>은 Alphabet 체제로 전환하면서 기능별 중심의 단일 구조에서 벗어나, 각 사업을 자율성과 책임을 가진 독립된 사업부로 분리하는 <strong>Multi-divisional 구조</strong>를 선택했다. 이는 새로운 기술 및 시장 실험에 대한 민첩성을 보장하면서도, 코어 비즈니스의 안정성을 유지하려는 전략적 결정이었다.</p>
+<p>반면, <strong>Airbnb</strong>는 팬데믹 위기 당시 글로벌 운영조직이 지나치게 분산되어 있었던 구조 탓에 빠른 대응에 어려움을 겪었다. 이를 계기로 Airbnb는 구조를 간소화하고 중복 기능을 제거하며 <strong>경계 없는 구조(Boundaryless)</strong>로 재편함으로써, 고객 피드백과 시장 변화에 실시간으로 반응할 수 있는 구조적 민첩성을 확보했다.</p>
+</section>
+<section id="구조-선택의-트레이드오프" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="구조-선택의-트레이드오프"><span class="header-section-number">10.4.2</span> 구조 선택의 트레이드오프</h3>
+<p>조직 구조는 전략과 상호작용하며, 특정 전략을 뒷받침하는 구조는 다른 전략을 제한할 수 있다. <strong>효율성을 극대화하는 구조는 유연성을 희생할 수 있고</strong>, <strong>혁신을 촉진하는 구조는 자원 낭비와 책임소재의 불명확성을 초래할 수 있다</strong>. 구조는 단순한 도구가 아니라, <strong>전략의 가능성과 한계를 동시에 결정짓는 제약조건</strong>이다.</p>
+<p>실리콘밸리의 한 AI 스타트업은 창의성을 극대화하기 위해 초기부터 매트릭스 구조를 채택했다. 엔지니어, 디자이너, 마케터들이 프로젝트 단위로 유기적으로 연결된 이 구조는 제품 초기 개발에는 강력한 시너지를 발휘했으나, 자원이 중복되고 우선순위 조정이 어려워지면서 <strong>스케일업 단계에서 구조적 갈등</strong>이 발생했다. 이 스타트업은 이후 기능별 구조와 프로젝트 기반 운영을 절충하는 <strong>하이브리드 구조</strong>로 전환했다.</p>
+<table class="table">
+<caption>일반적인 조직 구조</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>조직 구조</th>
+<th>핵심 특징</th>
+<th>대표 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기능별 구조</strong></td>
+<td>동일 기능을 중심으로 부서를 구성. 효율성 극대화.</td>
+<td>초기 테슬라, 전통 제조기업</td>
+</tr>
+<tr class="even">
+<td><strong>사업부 구조</strong></td>
+<td>제품, 지역, 고객군 단위로 부서를 구분. 자율성 강화.</td>
+<td>Alphabet (구글), P&amp;G</td>
+</tr>
+<tr class="odd">
+<td><strong>매트릭스 구조</strong></td>
+<td>기능별 + 프로젝트별 이중 보고 체계. 협업과 혁신 강화.</td>
+<td>유니레버, 보잉</td>
+</tr>
+<tr class="even">
+<td><strong>경계 없는 구조</strong></td>
+<td>전통적 경계 제거. 외부와의 개방적 협력 강조.</td>
+<td>Airbnb, Github</td>
+</tr>
+</tbody>
+</table>
+<p>조직 구조는 전략의 종속 변수가 아니다. 구조 그 자체가 전략적 선택이며, 어떤 구조를 선택하느냐에 따라 조직이 미래의 기회를 포착할 수 있을지, 아니면 현재에 갇혀 정체될지가 결정된다.</p>
+</section>
+<section id="기능별-구조" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="기능별-구조"><span class="header-section-number">10.4.3</span> 기능별 구조</h3>
+<p>기업이 성장하고 복잡성이 증가함에 따라, 단순한 인맥이나 직관에 의존한 조직 운영은 점차 한계에 부딪힌다. 이때 도입되는 조직 설계 방식 중 하나가 <strong>기능별 구조</strong>다. 이 구조는 회사의 핵심 기능, 예컨대 마케팅, 생산, 인사, 정보 기술, 고객 서비스 등으로 조직을 분할하고, 각 기능 내에 전문 인력을 배치하는 체계적 분업 방식이다.</p>
+<p>기능별 구조의 가장 큰 강점은 <strong>전문화와 효율성의 극대화</strong>다. 동일 기능을 수행하는 전문가들이 한 부서에 집중되어 있으면, 반복 학습과 축적된 지식이 성과로 전환되는 속도가 빠르다. 예를 들어, 넷플릭스(Netflix)는 콘텐츠 구매, 사용자 경험 설계, 추천 알고리즘 개선 등 각 기능별로 고도로 전문화된 팀을 구성해 빠른 성과를 내고 있다. 이는 단순히 콘텐츠 플랫폼이라는 성격을 넘어서, 기술 기업으로서 넷플릭스를 규정짓는 핵심 기반이 된다.</p>
+<p>또한 기능 간 중복을 줄임으로써 <strong>운영 비용 절감과 내부 일관성 유지</strong>가 가능하다. 동일한 배경과 훈련을 받은 사람들이 함께 일하므로, 커뮤니케이션 비용이 낮고 내부 갈등도 적다. 내부 호환성이 높을수록 절차 기반의 통제가 잘 작동하고, 복잡한 승인 과정도 비교적 원활하게 처리된다.</p>
+<p>그러나 이 구조는 전략적 유연성과 혁신 추진력에서 <strong>중대한 한계를 내포한다</strong>. 특히 기능 간 협업이 필수적인 새로운 제품 개발이나 비즈니스 모델 전환에는 <strong>병목현상과 책임 회피</strong>가 빈번하게 발생한다. 예를 들어, 한 글로벌 식품회사가 전통적인 기능별 구조를 유지한 채 비건 제품 라인을 신속히 확장하려 했지만, 연구개발·마케팅·생산팀 간 협의가 지연되면서 출시 시점이 경쟁사보다 6개월 이상 늦어졌고 시장 점유율 확대에 실패했다.</p>
+<p>문제는 기능별 구조가 고착화되면 각 부서가 <strong>자기 영역만을 수호하는 사일로(silo)</strong>로 변질된다는 점이다. 이러한 구조는 외부 환경의 급변에 기민하게 대응하지 못하며, 결과적으로 변화에 둔감한 조직 문화를 조장한다. 특히 AI, 지속가능성, 플랫폼 전략 등 복합적 변화를 요구하는 시대에는 <strong>기능 간 통합적 사고와 민첩한 대응력</strong>이 필수다.</p>
+<p>최근 전통 제조 기업인 <strong>GE Healthcare</strong>는 기능별 구조에서 부서 간 협업 중심의 ‘Agile Tribe’ 구조로 전환했다. 이 구조는 기존의 R&amp;D, 품질, 생산, 마케팅 기능을 해체하고, 고객 중심의 문제 해결 유닛으로 재편했다. 이로 인해 제품 개발 주기는 절반 이하로 단축되었고, 각 기능 간 의견 충돌은 현저히 감소했다. 이는 기능별 구조가 단순한 효율성 추구를 넘어, 전략적 유연성과 연결성을 동시에 고려해야 한다는 점을 보여준다.</p>
+<p>기능별 구조는 좁고 안정적인 제품 라인을 운영하며, 외부 환경 변화가 비교적 예측 가능한 산업군(예: 공공부문, 전통 금융, 일부 내수 중심 기업)에서는 여전히 효과적이다. 그러나 기술 중심, 소비자 주도, 글로벌 경쟁 환경이 강조되는 산업에서는 이 구조만으로는 <strong>전략적 딜레마에 대응하기 어렵다</strong>.</p>
+<p>결국 기능별 구조의 선택은 전략의 정체성과 속도, 그리고 리스크 감내 수준에 대한 <strong>명확한 판단이 전제되어야 하는 전략적 선택지</strong>다. 단순한 도식적 조직도 그 이상의 것이며, 구조는 곧 전략이다.</p>
+</section>
+<section id="사업부-구조" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="사업부-구조"><span class="header-section-number">10.4.4</span> 사업부 구조</h3>
+<p>기업이 하나의 제품이나 지역을 넘어서 <strong>다양한 제품군과 다국적 시장을 동시에 관리</strong>해야 하는 순간, 단일한 기능 중심의 조직 구조는 더 이상 전략적 유효성을 갖기 어렵다. 이런 맥락에서 등장하는 구조가 바로 <strong>사업부 구조</strong>다. 이 구조는 기업을 제품, 지역, 고객군 등 특정 기준에 따라 <strong>독립된 부문으로 나누고</strong>, 각 부문이 하나의 소기업처럼 자율적으로 운영되도록 설계된다.</p>
+<p>사업부 구조의 가장 큰 강점은 <strong>신속한 의사결정과 시장 대응력</strong>이다. 각 사업부가 자체적인 손익 책임(P&amp;L)을 지고 운영되기 때문에, 제품 개발, 마케팅, 공급망 전략 등을 외부 환경 변화에 맞춰 빠르게 조정할 수 있다. 예컨대 <strong>마이크로소프트(Microsoft)</strong>는 AI, 게임, 클라우드, 엔터프라이즈 등 분야별 독립 사업부 체제를 통해 각 영역의 기술 변화에 민첩하게 대응해왔다. 클라우드 부문은 경쟁사인 AWS와의 경쟁에 맞춰 자체 전략과 R&amp;D 우선순위를 수립했고, 게임 부문은 Xbox 생태계와 Activision Blizzard 인수를 별도로 추진하는 유연성을 확보했다.</p>
+<p>또한 사업부 구조는 <strong>고객 중심 전략을 강화</strong>하는 데 유리하다. 고객군이나 지역 시장의 특성이 다른 경우, 단일한 본사 중심 전략으로는 미세한 요구를 포착하기 어렵다. 반면 사업부 구조는 시장 근접성을 기반으로 고객 특화 전략을 수립할 수 있다. 예를 들어, <strong>현대자동차</strong>는 내연기관, 전기차, 고급차(제네시스), 지역법인 단위로 사업부를 구분해 각 시장의 규제와 수요 변화에 맞춰 전략을 차별화하고 있다. 이러한 구조는 특히 <strong>규제 환경이 빠르게 바뀌거나 지역 특화 마케팅이 중요한 산업</strong>에서 필수적이다.</p>
+<p>그러나 사업부 구조는 <strong>비용과 전략 일관성 측면에서 심각한 도전</strong>을 동반한다. 각 사업부가 독자적인 마케팅, 인사, 재무 부서를 운영하게 되면, 기능이 중복되고 규모의 경제가 약화되어 고정비가 급증한다. 실제로 <strong>GE는 2010년대 중반 이후 사업부 간 이질성, 복잡한 계층 구조, 중복 기능 비용의 증가로 인해 수익성 악화</strong>를 겪었고, 결국 2021년에는 회사를 세 개의 독립 상장사(헬스케어, 에너지, 항공)로 분할하는 구조조정을 단행했다. 이는 사업부 구조가 항상 확장 가능하지 않으며, <strong>과도하게 복잡해지면 오히려 전략적 민첩성을 저해할 수 있음</strong>을 보여준다.</p>
+<p>또 다른 전략적 위험은 <strong>부문 간 전략 충돌과 브랜드 일관성의 붕괴</strong>다. 각 사업부가 자율적으로 운영되는 만큼, 기업 전체의 핵심 가치나 방향성과 충돌하는 의사결정을 내릴 가능성이 존재한다. 대표적 사례가 <strong>메타(Facebook)</strong>의 메타버스 사업부다. 본사의 메타버스 전략 추진 속도에 비해 광고·소셜미디어 부문은 여전히 기존 수익 기반 유지에 집중했고, 이로 인해 리소스 배분과 기업 메시지에 혼선이 생겼다. 이런 불일치는 투자자 신뢰에 부정적 영향을 주며 전략의 설득력을 약화시킨다.</p>
+<p>이러한 문제를 해결하기 위해, 일부 글로벌 기업은 <strong>기능별 서비스를 일부 중앙 집중화</strong>하는 방식을 채택한다. 예를 들어 <strong>유니레버(Unilever)</strong>는 각 브랜드 사업부가 독립적으로 운영되지만, 인사, 재무, 지속가능성 전략 등은 본사에서 통합 관리해 <strong>비용 효율성과 전략 일관성</strong>을 확보하고 있다. 특히 ESG 전략의 경우, 개별 브랜드가 독자적으로 움직이면 오히려 ‘그린워싱’ 논란에 휘말릴 수 있기 때문에, 중앙의 ESG 부서에서 기업 전체 프레임을 정의하고 각 사업부가 이를 적용하는 하향식 구조를 유지한다.</p>
+<p>결국 사업부 구조는 <strong>분권과 통제의 균형</strong>, <strong>자율성과 일관성의 긴장</strong>을 지속적으로 조율해야 하는 <strong>복합적 전략 구조</strong>다. 단순히 제품군이 많다고 사업부 구조가 정답이 되는 것은 아니며, 다음과 같은 질문에 대한 전략적 판단이 우선되어야 한다:</p>
+<ul>
+<li>각 사업부는 시장·기술·고객의 특성이 충분히 다른가?</li>
+<li>중복된 기능 운영으로 발생하는 비용을 감내할 수 있는가?</li>
+<li>전체 전략과 브랜드 가치가 부문 간 충돌 없이 유지 가능한가?</li>
+</ul>
+<p>사업부 구조는 고도화된 전략 실행 시스템이지, 자동화된 정답이 아니다. 구조가 전략을 살릴 수도, 전략을 망칠 수도 있다.</p>
+</section>
+<section id="매트릭스-구조" class="level3" data-number="10.4.5">
+<h3 data-number="10.4.5" class="anchored" data-anchor-id="매트릭스-구조"><span class="header-section-number">10.4.5</span> 매트릭스 구조</h3>
+<p>조직이 단일 제품 또는 단일 시장에 국한되지 않고, <strong>복수의 기능과 프로젝트, 지역과 고객군</strong>을 동시에 관리해야 할 때, 기존의 기능별 혹은 사업부별 구조만으로는 복잡성을 감당하기 어려워진다. 이러한 다중 요구에 대응하기 위해 등장한 것이 <strong>매트릭스 구조</strong>다. 매트릭스 구조는 기능과 프로젝트, 혹은 기능과 지역 등 <strong>두 개의 축을 기반으로 권한과 책임을 이중화</strong>하여 설계된다. 여기서 중요한 전환은 수직적 연결 중심의 조직에서 <strong>수평적 연결을 본질로 삼는 협업 구조</strong>로 이동한다는 점이다.</p>
+<p>매트릭스 구조의 가장 큰 특징은 <strong>중첩된 리더십과 중첩된 소속감</strong>이다. 직원은 동시에 두 명 이상의 상사에게 보고하게 된다. 하나는 기능적 전문성을 기반으로 한 상사(예: 마케팅 디렉터), 다른 하나는 프로젝트 혹은 지역 기반의 관리자(예: 북미 시장 총괄 또는 제품 X 팀장)다. 이러한 이중 보고 체계는 협업을 전제로 하며, <strong>조직의 민첩성과 혁신 역량을 강화</strong>하는 데 핵심 역할을 한다.</p>
+<p>예컨대, <strong>노바티스(Novartis)</strong>와 같은 글로벌 제약회사는 연구개발, 마케팅, 임상시험 등의 기능 단위를 유지하면서도 각 치료영역(심혈관, 종양, 희귀질환 등)별로 프로젝트 단위를 구성한다. 각 직원은 기능적 라인에서 전문성을 쌓고, 치료영역 라인에서는 시장 중심의 전략 실행 경험을 축적하게 된다. 이로 인해 한 명의 인재가 <strong>전문성과 현장 감각을 동시에 갖춘 T자형 인재로 성장</strong>할 수 있는 기반이 된다.</p>
+<p>그러나 이러한 구조는 명확성과 단순성을 희생하는 구조다. <strong>누구의 지시를 우선 따라야 하는가</strong>, <strong>성과는 누구의 책임인가</strong>, <strong>성과 평가 기준은 무엇인가</strong> 등에서 <strong>역할 모호성과 갈등</strong>이 필연적으로 발생한다. <strong>일론 머스크가 트위터 인수 후 SpaceX와 Tesla의 리소스를 병행 활용하려다 내부 혼란을 겪었던 사례</strong>는, 의도치 않게 매트릭스 형태의 구조를 만들어놓고도 이를 통제하지 못한 전형적 사례다.</p>
+<p>또한, 인재 자원의 희소성이 심화된 상황에서 <strong>프로젝트 간 인재 배분</strong>을 둘러싼 정치적 갈등이 격화되기도 한다. 각 프로젝트 리더는 최고의 인력을 자신에게 배정받기 원하며, 이는 때때로 <strong>내부 경쟁과 리더십 간 파벌 형성</strong>으로 이어진다. 조직은 자율성과 협업을 강조하면서도, 동시에 <strong>공정성과 성과 중심 평가 시스템</strong>을 통해 갈등을 관리할 메커니즘을 반드시 구축해야 한다.</p>
+<p>매트릭스 구조의 진가는 <strong>복잡성과 불확실성이 높은 환경</strong>에서 발휘된다. <strong>SAP, 3M, 에어버스, 네슬레</strong>와 같은 글로벌 대기업은 다양한 지역과 고객 세그먼트를 동시에 커버하면서도 기능 간 전문성을 유지해야 하기 때문에 이 구조를 지속적으로 유지한다. 특히 <strong>에어버스(Airbus)</strong>는 각 국가별 생산 거점과 기능(설계, 조립, 납품관리)을 이중 매트릭스 구조로 연결해, 전 세계에 걸친 항공기 생산 체계를 동기화하고 있다.</p>
+<p>또한 <strong>병원, 대학, 다국적 NGO</strong> 등 공공성과 전문성이 동시에 요구되는 조직에서도 매트릭스 구조는 핵심적이다. 최근 <strong>하버드 대학교</strong>는 기존 학부 중심의 독립 운영에서 벗어나, 특정 글로벌 이슈(예: 기후 변화, 공공보건) 중심의 프로젝트 기반 매트릭스 팀을 구성하고, 각 단과대 교수진이 기능적 기여를 하도록 설계했다. 이는 <strong>전통적 아카데믹 구조를 넘어선 지식 협업의 실험</strong>으로 평가된다.</p>
+<p>매트릭스 구조는 복잡한 구조지만, 그 자체가 문제는 아니다. 문제는 이 구조가 요구하는 <strong>명확한 소통, 리더십 균형 감각, 갈등 조정 능력</strong>이 조직에 내재되어 있지 않을 때 발생한다. 따라서 이 구조는 다음 세 가지 조건이 충족될 때만 전략적으로 유효하다:</p>
+<ul>
+<li>권한과 책임의 명확한 정의</li>
+<li>갈등 조정과 중재를 위한 제도적 장치</li>
+<li>상호 존중을 기반으로 한 협업 문화</li>
+</ul>
+<p>매트릭스 구조는 단순한 조직도 개편이 아니다. 그것은 조직이 <strong>복잡성을 안고 가며 성장할 준비가 되어 있는지</strong>를 묻는 리더십의 선택이다.</p>
+</section>
+<section id="경계-없는-조직" class="level3" data-number="10.4.6">
+<h3 data-number="10.4.6" class="anchored" data-anchor-id="경계-없는-조직"><span class="header-section-number">10.4.6</span> 경계 없는 조직</h3>
+<p>전통적인 조직 구조는 기능, 사업부, 계층, 지역 단위로 사람과 책임을 구획짓고, 그 경계를 통해 통제를 유지하려 한다. 그러나 오늘날의 복잡하고 상호 연결된 세계에서는 이러한 경계가 오히려 <strong>혁신과 대응력을 가로막는 장애물</strong>이 되곤 한다. <strong>경계 없는 조직</strong>은 이와 같은 제약을 제거하고, 조직 내부와 외부의 경계를 유동적이고 개방적인 방식으로 재설계하려는 전략적 시도다.</p>
+<p>경계 없는 조직이란 기능 간, 계층 간, 지역 간, 나아가 기업과 외부 이해관계자 간의 경계를 최소화함으로써 <strong>정보 흐름, 아이디어 교류, 문제 해결</strong>이 자유롭게 이뤄지도록 설계된 조직이다. 이 구조는 <strong>유연성과 학습, 민첩성, 창의성</strong>을 극대화하는 데 초점을 맞춘다. 통제보다 연결, 명령보다 자율, 권한보다 협업이 조직 운영의 핵심 원리가 된다.</p>
+<p>대표적인 예로, 오픈소스 소프트웨어 생태계를 이끄는 <strong>Red Hat</strong>은 전통적인 위계 구조 대신 기여자 중심의 네트워크 구조를 택했다. 제품 설계, 버그 수정, 기능 요청 등 대부분의 운영이 전 세계 개발자 커뮤니티와의 <strong>수평적 상호작용</strong>을 통해 이뤄지며, 조직은 리더보다는 <strong>조정자(facilitator)</strong>의 역할을 수행한다. 이는 단지 기술적 구조가 아니라, <strong>조직 철학과 운영 시스템 전반을 재정의한 방식</strong>이다.</p>
+<p>경계 없는 조직은 <strong>복잡성과 불확실성이 높은 환경에서 전략적 우위를 확보</strong>하는 데 효과적이다. <strong>테슬라</strong>는 제조, 소프트웨어, 에너지, 인공지능이라는 전통적으로 분절된 산업 영역을 하나의 유기적 플랫폼 안에 통합함으로써, 수직 통합이 아닌 <strong>수평적 확장 구조</strong>를 실현하고 있다. 각 부서는 독립적 권한을 가지고도 전체 전략 방향에 긴밀하게 정렬되어 있으며, 기술적 발견이 경계 없이 전 부문으로 확산되는 구조다.</p>
+<p>이러한 구조는 <strong>위기 대응 전략</strong>에서도 강력한 성과를 보인다. 2020년 코로나19 팬데믹 초기, <strong>에스토니아 정부는 민간 테크 기업 및 시민 개발자들과 함께 ’Hack the Crisis’라는 긴급 디지털 솔루션 해커톤을 실행</strong>했다. 이 프로젝트는 국경 통제, 마스크 공급, 감염 추적 시스템 등 수많은 기능을 일주일 안에 구축해냈다. 이는 공식적 명령 체계나 부처 간 승인 없이도 <strong>실시간 정보 교환과 자율 실행이 가능했던 조직 구조</strong> 덕분이었다. 이는 공공조직에서도 경계 없는 협업이 가능한 이유를 보여준다.</p>
+<p>경계 없는 조직은 단지 계층을 줄이거나 조직도를 단순화하는 문제가 아니다. 그것은 <strong>조직 운영 방식의 근본적 패러다임 전환</strong>이다. 전략 수립, 자원 배분, 성과 관리, 리더십 모델이 모두 변화한다. 무엇보다 중요한 것은 <strong>신뢰 기반의 문화</strong>와 <strong>명확한 공동의 목적</strong>이다. 경계를 허물었을 때 정보가 과잉되고 책임이 분산되는 리스크를 통제할 수 있는 것은, <strong>강한 내부 정렬(alignment)과 자율 속의 책임</strong>이라는 문화적 기반이다.</p>
+<p>그러나 이 구조가 만능은 아니다. 이해관계가 명확히 충돌하거나, 법적 책임 소재가 분명해야 하는 산업(예: 금융, 항공, 공공의료 등)에서는 <strong>책임의 불명확성, 의사결정 지연, 내부 정보 유출</strong> 등 심각한 리스크를 초래할 수 있다. 따라서 경계 없는 조직은 <strong>모든 조직에 동일한 방식으로 적용되는 모델이 아니라, 선택적이고 상황 기반적이며, 전략적으로 관리되어야 하는 구조</strong>다.</p>
+<p>궁극적으로 경계 없는 조직은 “어떻게 더 빨리 움직일 것인가”라는 질문이 아니라, “<strong>어떻게 함께 움직일 것인가</strong>”라는 질문에 대한 조직적 해답이다. 그것은 권한의 해체가 아니라 <strong>조정 능력의 분산</strong>, 통제의 부정이 아니라 <strong>협업의 최적화</strong>다. 오늘날의 전략은 더 이상 계획된 로드맵이 아니라, 유기적으로 반응하고 연결되는 네트워크다. 경계 없는 조직은 그 네트워크의 핵심 구성 방식이다.</p>
+</section>
+<section id="조직-구조-변경의-전략적-이유" class="level3" data-number="10.4.7">
+<h3 data-number="10.4.7" class="anchored" data-anchor-id="조직-구조-변경의-전략적-이유"><span class="header-section-number">10.4.7</span> 조직 구조 변경의 전략적 이유</h3>
+<p>조직 구조를 설계하는 일은 단 한 번의 결정이 아니라 <strong>지속적인 전략적 조정 과정</strong>이다. 시장, 기술, 경쟁자, 내부 역량, 소비자 기대가 변화함에 따라 조직의 구조도 함께 진화해야 한다. 구조는 전략 실행의 도구이자 제약이기 때문에, 잘못된 구조는 빠른 결정, 효율적 자원 배분, 혁신적 시도들을 가로막는다. 반대로 <strong>적시에 구조를 재설계하는 것</strong>은 전략 실패를 막는 유일한 수단이 되기도 한다.</p>
+<p>대표적인 구조 변경의 동기는 크게 세 가지다. 첫째, <strong>의사결정의 병목과 속도 저하</strong>. 둘째, <strong>성과 악화 또는 대응 실패</strong>. 셋째, <strong>조직의 복잡성이 과도하게 증가한 경우</strong>다.</p>
+<p>2023년, <strong>디즈니(Disney)</strong>는 디지털 플랫폼 통합과 스트리밍 전략의 실패를 반성하며, CEO 복귀와 동시에 조직 구조를 전면 개편했다. 기존의 콘텐츠 제작, 유통, 스트리밍, 광고 부서를 기능별로 분리했던 구조는 <strong>책임 소재의 불명확성과 민첩성 부족</strong>을 야기했고, 넷플릭스와 유튜브의 공격적 시장 확장에 제대로 대응하지 못했다. 이에 디즈니는 다시 콘텐츠 중심으로 재편하면서, 각 콘텐츠 제작 부문(Pixar, Marvel, ESPN 등)에 <strong>자율성과 수익 책임(P&amp;L)을 부여하는 사업부 구조</strong>를 복원했다. 이는 조직 구조가 전략 방향뿐 아니라, 수익 모델 자체를 좌우할 수 있음을 보여준다.</p>
+<p>또 다른 사례는 <strong>SAP</strong>다. 2020년까지 SAP는 다양한 소프트웨어 솔루션을 인수하며 제품 포트폴리오를 확장했지만, 각 제품군의 기능팀이 서로 단절된 <strong>매트릭스 기반 다기능 구조</strong>로 구성되면서 통합 플랫폼 개발 속도가 느려졌다. 경쟁사인 Salesforce가 전방위적인 생태계 통합을 밀어붙이는 사이, SAP는 ‘너무 복잡한 협업 체계’ 때문에 고객이 원하는 통합 경험을 제공하지 못했고, 결국 주가가 1년 반 만에 40% 가까이 하락했다. 이후 SAP는 기술 부문과 고객 부문을 단순화하고, <strong>제품 중심의 수평 연결 구조</strong>로 재편해 속도를 회복했다.</p>
+<p>이처럼 구조가 과도하게 복잡해지면, <strong>전략 실행은 마비되고, 조직은 내향화되며, 경쟁력은 외부에서 결정</strong>된다. 구조 변경의 필요성은 단지 효율성 개선의 문제가 아니라, <strong>전략적 생존과 복원력의 문제</strong>로 연결된다.</p>
+<p>2021년, <strong>인텔(Intel)</strong>은 x86 CPU 중심의 기능적 구조와 설계 프로세스를 고수하다가, ARM 기반의 설계 유연성을 내세운 애플, AMD, 퀄컴 등에 밀려 점유율을 빠르게 잃었다. 당시 인텔은 최고기술책임자(CTO)가 프로젝트 보고를 4단계 이상 거쳐야 했고, 신규 칩 개발팀은 마케팅, 패키징, 생산부문과 일주일에 한 번만 접촉할 수 있었다. 이는 구조적 사일로(silo)의 전형적인 증상이었고, 혁신과 민첩성 모두를 저해했다. 새로 취임한 CEO 팻 겔싱어는 보고 계층을 2단계로 단축하고, 설계와 생산을 수직 통합하는 <strong>구조-제품 간 연결</strong>를 회복하며 전략 전환에 성공했다.</p>
+<p>조직 구조는 단순히 ’사람을 어떻게 묶을 것인가’의 문제가 아니다. 그것은 <strong>정보가 어디서 어떻게 흐르고, 누가 무엇을 책임지고, 어느 부문이 얼마나 빠르게 변화에 대응할 수 있는가</strong>를 규정짓는 메커니즘이다. 조직 구조는 모든 병을 치료하진 못한다. 그러나 구조를 바꾸지 않으면 어떤 병도 제대로 고치기 어렵다. 구조는 전략을 실현하는 해부학이고, 구조의 문제는 곧 전략의 실패로 이어진다. 따라서 구조의 재설계는 전략의 업데이트 못지않게 <strong>정기적이고 전투적인 의사결정 영역</strong>이어야 한다.</p>
+</section>
+</section>
+<section id="조직-통제-시스템의-설계" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="조직-통제-시스템의-설계"><span class="header-section-number">10.5</span> 조직 통제 시스템의 설계</h2>
+<p>조직 구조만으로 전략을 실행할 수는 없다. 구조는 가능성을 열어줄 뿐이며, 전략이 현장에서 일관되게 작동하려면 <strong>통제 시스템(control systems)</strong>이 병행되어야 한다. 통제란 단지 사람을 감시하거나 보고서를 모으는 것이 아니라, 조직이 <strong>비전과 전략적 목표에 정렬되어 행동하도록 유도하고 교정하는 메커니즘</strong>이다. 효과적인 통제 시스템은 전략 실행의 성과를 실시간으로 진단하고, 문제 발생 시 조치를 유도하며, 조직 전체에 기대와 기준을 내면화시킨다.</p>
+<p>조직 통제 시스템은 크게 세 가지 유형으로 분류된다: <strong>출력 통제(output control)</strong>, <strong>행동 통제(behavioral control)</strong>, <strong>클랜 통제(clan control)</strong>. 각각의 통제 방식은 조직이 전략을 실행하는 방식을 다른 관점에서 보완하며, 성공적인 기업들은 이 세 가지를 <strong>조직의 특성과 환경에 맞게 혼합</strong>하여 운영한다.</p>
+<p><strong>출력 통제</strong>는 목표 달성 여부를 정량적인 성과 지표로 평가하는 방식이다. 매출, 수익, 시장 점유율, 고객 유지율, NPS 등으로 대표된다. 출력 통제는 <strong>객관성과 비교 가능성</strong>을 제공하며, 특히 다국적 기업이나 다사업부 기업에서 사업 단위 간 성과를 분명히 구분할 수 있도록 한다. 예컨대, <strong>아마존(Amazon)</strong>은 제품 라인과 지역 사업부에 명확한 P&amp;L 책임을 부여하고, 모든 단위의 <strong>핵심성과지표(KPI)를 매주 단위로 분석</strong>한다. 이와 같은 고정밀 출력 통제 시스템 덕분에 아마존은 수천 개의 프로덕트라인이 동시에 움직이면서도 전략적 효율을 유지할 수 있다.</p>
+<p>하지만 출력 통제만으로는 행동의 방향성과 질을 보장할 수 없다. 숫자가 맞더라도 <strong>조직의 핵심 가치와 전략적 의도와 불일치한 행동</strong>이 발생할 수 있기 때문이다. 이를 보완하는 것이 <strong>행동 통제</strong>다. 행동 통제는 사전 규칙, 절차, 매뉴얼, 프로세스를 통해 조직 구성원의 행위를 통제한다. 특히 <strong>안전, 규정준수, 품질, 윤리 등 위험 통제가 핵심인 산업군</strong>에서 행동 통제는 필수적이다. <strong>보잉(Boeing)</strong>은 737 MAX 사고 이후, 모든 공정에서 독립된 리뷰 라인을 도입하고, 사전 인증된 조립 순서와 점검 절차를 강제화했다. 이는 행동 통제가 단지 비효율적 규제가 아니라 <strong>생존을 위한 전략적 장치</strong>임을 보여준다.</p>
+<p>세 번째 통제 방식인 <strong>클랜 통제</strong>는 행동을 외부에서 강제하기보다, 구성원 내면에 전략적 가치를 내재화시키는 방식이다. 이는 <strong>공유된 가치, 신념, 문화, 사명</strong> 등을 중심으로 작동하며, 구성원이 자율적으로 조직의 기대에 부합하는 행동을 하도록 유도한다. 스타트업이나 크리에이티브 집단, 자율성과 협업이 핵심인 AI 연구조직 등에서 클랜 통제는 <strong>창의성과 정렬의 균형</strong>을 유지하는 데 중요한 역할을 한다. <strong>넷플릭스(Netflix)</strong>는 통제보다 신뢰를 강조하는 ‘자율과 책임’ 문화를 통해, 엄격한 절차 없이도 전략적 일관성을 유지하고 있다. 그러나 클랜 통제는 문화적 정렬이 실패하면 급속히 무기력한 조직으로 전락할 수 있으며, 특히 급속한 인력 확장 시에는 리스크가 크다.</p>
+<p>이 세 가지 통제 방식은 상호 대체관계가 아니다. 예를 들어, <strong>테슬라(Tesla)</strong>는 신속한 기술 실험과 시장 대응이 필요한 영역에서는 출력 통제를 활용하면서도, 생산 안전과 품질 관리 영역에서는 행동 통제를 강화하고, 전사적으로는 ’세상을 바꾼다’는 사명 기반의 클랜 통제를 병행한다. 이처럼 통제 시스템은 전략적 유연성과 강제력을 동시에 확보하는 <strong>복합적 통제 설계 전략</strong>이어야 한다.</p>
+<p>통제 시스템이 전략 실행의 조력자가 되기 위해서는, 그것이 단지 통계 수집이나 행정 규율이 아니라 <strong>전략적 피드백 루프</strong>라는 인식이 전제되어야 한다. 즉, 전략이 현장에서 왜곡되고 있는가, 목표는 행동으로 전환되고 있는가, 어떤 신호가 실패를 예고하는가에 대한 <strong>실시간 감지 체계</strong>가 되어야 한다. 통제는 과거를 평가하는 수단이 아니라, 미래를 보정하는 시스템이다.</p>
+<section id="출력-통제" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="출력-통제"><span class="header-section-number">10.5.1</span> 출력 통제</h3>
+<p>“측정할 수 없는 것은 관리할 수 없다.”라는 말은 통제 시스템 중에서도 <strong>출력 통제(output control)</strong>의 본질을 가장 직설적으로 표현한다. 출력 통제는 조직의 구성원들이 달성해야 할 <strong>명확하고 수치화된 성과 목표</strong>를 설정하고, 그 결과를 기준으로 성과를 평가하고 조정하는 방식이다. 이것은 단순한 성과 점검이 아니라, <strong>조직의 전략적 의도를 정량적 지표로 변환하는 장치</strong>다.</p>
+<p>출력 통제는 특히 <strong>결과 중심 문화(result-driven culture)</strong>를 지향하는 조직에서 강력한 효과를 발휘한다. 예컨대, <strong>테슬라(Tesla)</strong>는 각 공장의 생산성, 불량률, 유닛당 에너지 사용량, 배송 시간 등을 분 단위로 집계하고 실시간 모니터링한다. 이 데이터는 공장 관리자뿐 아니라 고위 경영진의 KPI로도 직결된다. 수치 기반의 통제 시스템은 <strong>전략의 실시간 가시화</strong>를 가능하게 하며, 이는 의사결정의 속도와 정밀도를 동시에 확보하는 기반이 된다.</p>
+<p>출력 통제는 <strong>조직의 자율성과 통제의 균형</strong>을 가능하게 한다. 관리자는 구성원이 어떤 방식으로든 목표를 달성하면 된다는 전제를 기반으로, 작업 방식에 과도하게 개입하지 않고 결과 중심으로 판단한다. 이는 특히 <strong>다국적 조직, 원격 근무 체계, 프로젝트 기반 조직</strong>에서 매우 효과적이다. <strong>세일즈포스(Salesforce)</strong>는 각 지역 영업팀의 MRR(monthly recurring revenue), 고객 유지율, 고객당 평균 매출 등의 핵심 성과지표를 중심으로 전사적 전략을 일관되게 실행한다. 각 팀은 현지 시장에 맞는 방식으로 성과를 달성할 수 있는 자율성을 부여받지만, 결과는 동일한 프레임워크 내에서 비교되고 관리된다.</p>
+<p>그러나 출력 통제는 반드시 다음의 세 가지 조건이 충족되어야 효과를 발휘한다. 첫째, <strong>정확하고 타당한 측정 지표의 설정</strong>. 둘째, <strong>성과와 보상의 명확한 연계</strong>. 셋째, <strong>의도하지 않은 부작용의 예방</strong>이다.</p>
+<p>최근 <strong>유나이티드헬스그룹(UnitedHealth)</strong>은 콜센터 상담원의 응대 시간을 단축시키기 위해 평균 통화 시간을 핵심 KPI로 설정했지만, 상담 품질이 하락하고 고객 불만이 증가하는 역효과를 경험했다. <strong>숫자에만 집착한 출력 통제는 종종 전략적 방향성과 충돌하며, 현장에서는 단기성과 왜곡, 협업 해체, 도덕적 해이로 연결될 수 있다.</strong> 이는 “무엇을 측정하느냐가 무엇을 유도하느냐”는 통제 시스템의 딜레마를 보여준다.</p>
+<p>이러한 문제를 해결하기 위해 기업들은 <strong>출력 통제를 행동 통제 및 클랜 통제와 병행</strong>한다. 예를 들어, <strong>구글(Google)</strong>은 OKR(Objectives and Key Results) 시스템을 통해 정량적 목표를 설정하면서도, 목표 달성 과정의 협업 방식이나 창의적 시도도 평가에 반영한다. 이는 <strong>성과를 수치화하되, 행동과 문화의 질적 요소를 동시에 고려하는 통합적 접근</strong>이다.</p>
+<p>궁극적으로 출력 통제는 전략의 수치적 언어다. 목표 없는 수치는 무의미하고, 전략 없는 측정은 위험하다. <strong>출력 통제는 전략을 실행 가능하게 만드는 동시에, 전략의 왜곡을 초래할 수 있는 양날의 검</strong>이다. 따라서 경영진은 출력 통제를 구성할 때 항상 다음을 자문해야 한다: “이 수치가 우리 전략의 본질을 제대로 반영하고 있는가?”</p>
+<p><strong>OKR 시스템의 작동 방식과 통제 유형의 통합적 활용</strong></p>
+<p>OKR(Objectives and Key Results)은 목표 중심의 성과관리 방식으로, 조직의 전략적 방향성과 개인의 일상 업무를 정렬시키기 위해 설계된 통제 시스템이다. 이 방식은 1970년대 인텔(Intel)에서 시작되었으며, 구글(Google)이 1999년부터 적극적으로 도입하면서 글로벌 스케일로 확산되었다. OKR은 단순한 목표 설정 도구가 아니라, <strong>출력 통제(Output Control)</strong>와 <strong>행동 통제(Behavioral Control)</strong>, 그리고 <strong>클랜 통제(Clan Control)</strong>의 논리를 유기적으로 결합한 구조적 시스템으로 작동한다.</p>
+<p>구글에서 OKR은 분기마다 운영되며, 각 직원은 자신의 개인 OKR을 설정하기 전에 팀의 OKR, 부서 OKR, 그리고 전사적 OKR을 먼저 파악하고 이를 기준으로 자신의 목표를 정의한다. OKR은 항상 두 구성요소로 나뉘는데, <strong>Objectives(목표)</strong>는 전략적 방향성을 서술적으로 명확히 규정하며, <strong>Key Results(핵심 결과)</strong>는 해당 목표를 수치화한 지표로 측정 가능하게 만든다. 예를 들어, 한 광고 기술 팀의 목표가 “신규 파트너사의 온보딩 속도를 개선한다”라면, 핵심 결과는 “Q3 내 신규 파트너 10곳 중 80% 이상을 3일 내에 온보딩 완료”와 같이 명확하고 정량적으로 표현된다.</p>
+<p>이 시스템은 전형적인 출력 통제 구조에 가깝다. OKR의 Key Results는 <strong>구체적인 수치 기준을 통해 성과를 평가</strong>하며, 결과 기반으로 각 팀과 개인의 기여도를 분석한다. 다만 구글의 OKR은 일반적인 KPI 시스템과 달리, Key Results의 <strong>달성률이 100%가 되는 것을 장려하지 않는다.</strong> 보통 60~70% 달성을 기준으로 설정하며, 이는 과도한 목표 달성을 추구하는 대신 <strong>도전적인 목표를 설정하고 실패에서 학습하는 문화를 장려하기 위한 철학적 기조</strong>에 기반한다.</p>
+<p>하지만 OKR이 단순히 출력 통제로만 작동했다면, 다음과 같은 문제가 발생했을 것이다. 첫째, 팀 간 시너지가 무시되고 개인별 성과만 부각되는 문제. 둘째, 수치 달성 자체가 목적이 되면서 창의적 시도나 실험을 꺼리는 분위기. 셋째, 서로 다른 부서 간의 이해 충돌로 인해 공동 목표보다 부문 이기주의가 강화되는 현상이다. 특히 초창기 구글의 기술 부서들 사이에서는 OKR이 지나치게 ’측정 가능한 것’만을 목표로 삼는 경향이 강해지면서, 팀 간 협업을 유도하기 어려운 구조로 흘러간 적이 있다.</p>
+<p>이를 해결하기 위해 구글은 OKR 운영 방식에 다음과 같은 <strong>행동 통제적 요소</strong>를 추가했다. OKR 설정 시 각 목표와 결과에 대해 <strong>“어떤 방식으로 행동할 것인가”를 팀별로 선언하도록 유도</strong>했으며, OKR 달성률이 낮아도 <strong>실험적 시도나 팀워크가 뛰어난 경우 평가에 긍정적 요소로 반영</strong>하였다. 예를 들어, 한 팀이 고객 인터뷰 100건을 목표로 했으나 60건만 달성했을 경우, 그 과정에서 발견된 인사이트가 다른 팀의 전략에 기여되었다면, 해당 OKR은 <strong>실패가 아닌 전략적 학습으로 간주</strong>되었다.</p>
+<p>또한 구글은 OKR을 통해 팀 내부의 상향식 아이디어 흐름을 장려하며, 자율적 목표 설정 문화를 통해 <strong>클랜 통제의 논리</strong>, 즉 구성원 간 공유된 사명감과 일관된 문화적 기대치를 유도한다. OKR은 구글 내부에서 비공식적으로 공유되며, 모든 구성원은 서로의 OKR을 열람할 수 있다. 이는 단지 성과 감시를 위한 것이 아니라, <strong>조직 내 투명성과 신뢰를 구축하고, 공동의 방향성을 정렬하기 위한 구조</strong>이다.</p>
+<p>요약하자면 구글의 OKR은 단순한 결과 측정 툴이 아니라, 전략적 목표 설정과 실행, 행동의 정렬, 조직 문화 내면화를 통합적으로 실현하는 수단이다. 출력 통제는 수치 기반으로 실행력을 높이고, 행동 통제는 실행 과정의 질과 방식에 개입하며, 클랜 통제는 OKR을 둘러싼 조직 내 공유 규범과 신념을 강화한다. 구글은 OKR을 통해 <strong>전략은 목표이고, 실행은 수치이며, 문화는 실행의 방식</strong>이라는 삼중 구조를 제도적으로 구현하고 있다.</p>
+</section>
+<section id="행동-통제" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="행동-통제"><span class="header-section-number">10.5.2</span> 행동 통제</h3>
+<p>출력 통제가 “어떤 결과를 얻었는가”에 주목한다면, 행동 통제는 “그 결과를 어떻게 만들었는가”에 주목한다. <strong>행동 통제(behavioral control)</strong>란 조직 구성원들이 일정한 기준에 맞게 행동하도록 유도하거나 강제하는 시스템으로, 규칙, 절차, 매뉴얼, 직무기술서, 표준운영지침(SOP), 윤리강령 등이 이에 해당한다. 즉, 행동 통제는 결과 이전의 <strong>행동 자체를 설계하는 방식으로 전략 실행을 제어</strong>하는 것이다.</p>
+<p>행동 통제는 <strong>고위험, 고규제, 고복잡성 환경</strong>에서 필수적이다. 항공, 식품, 의약, 금융, 공공안전 산업에서는 결과보다 행동의 일관성과 정확성이 훨씬 중요하다. 대표적 사례로 <strong>존슨앤드존슨(Johnson &amp; Johnson)</strong>은 타이레놀 사건 이후, 생산-유통-마케팅 전 영역에 걸쳐 품질과 안전 프로토콜을 매뉴얼화하고, 모든 직원이 위기 상황 발생 시 따라야 할 ’신조에 기반한 행동 기준’을 도입했다. 이 시스템은 제품 결함 발생 시 전 세계 어디서든 동일한 방식으로 대응이 이뤄지도록 설계되었다. 즉, 행동 통제를 통해 신뢰와 브랜드 명성을 전략적 자산으로 관리한 셈이다.</p>
+<p>행동 통제는 조직 내부의 <strong>표준화와 예측 가능성</strong>을 제공한다. 특히 신규 입사자나 규모가 급격히 성장한 조직에서 행동 통제는 학습 비용을 줄이고 오류를 예방하는 데 효과적이다. <strong>스타벅스(Starbucks)</strong>는 모든 직원에게 고객 응대, 에스프레소 추출, 위생 기준, 위기 상황 대처 등에 대한 명확한 매뉴얼을 제공하며, 모든 매장에서 유사한 경험을 제공할 수 있는 <strong>행동 기반 일관성</strong>을 확보한다. 브랜드는 동일한 품질의 행동을 통해 유지된다.</p>
+<p>하지만 행동 통제가 잘못 작동하면 조직은 <strong>유연성과 창의성, 주체적 사고</strong>를 상실한다. 절차가 목적이 되고, 규범이 사고를 대체하며, 권한 이양 없이 일방적 통제만 남게 되면 구성원은 수동적 집행자로 전락한다. 2018년, <strong>웰스파고(Wells Fargo)</strong>는 직원에게 과도한 내부 행위 규정을 부과하고, 동시에 과도한 성과 압박을 주는 이중 통제 구조를 운용했다. 결과적으로 직원들은 규정에 위배되는 방식으로 유령 계좌를 생성하거나, 고객 동의 없이 금융 상품을 등록하는 행위를 했고, 이는 조직 전체가 무너지는 위기로 이어졌다. <strong>행동 통제의 과도한 경직성과 이중적 보상 구조가 전략과 윤리의 균형을 붕괴시킨 사례</strong>다.</p>
+<p>행동 통제는 <strong>문화 변화나 사회적 요구에 따라 우선순위가 재조정</strong>되기도 한다. 2020년 미국의 조지 플로이드 사건 이후, 다수의 글로벌 기업들이 인종·성별·정체성에 대한 차별 금지 조항을 행동 규정에 강화했으며, <strong>직원 행동 매뉴얼과 윤리교육, 리더십 평가 항목에도 포용성과 형평성을 반영</strong>했다. 예컨대, <strong>애플(Apple)</strong>은 공식 행동강령에 “내부 회의에서의 발언 비중”까지도 다양성과 포용성 지표로 추적하며, 모든 팀 리더는 이러한 행동 기준을 기반으로 연말 평가를 받는다. 이처럼 행동 통제는 정적인 통제가 아니라, <strong>전략적 방향성과 사회적 기대를 연결하는 실시간 인터페이스</strong>다.</p>
+<p>효과적인 행동 통제를 설계하려면, 단지 규칙을 늘리는 것이 아니라 <strong>보상 구조와의 정렬</strong>이 필요하다. 사람들은 보상받는 방식대로 행동한다. 따라서 의도하지 않은 행동이 보상되면 그 통제 시스템은 전략을 파괴하는 메커니즘이 된다. 예를 들어, 레스토랑 서버가 빠른 테이블 회전율만으로 평가되면, 고객 만족도, 동료 협업, 내부 위생 체크는 뒷전이 될 수 있다. 이 경우 관리자는 단지 속도만이 아니라 팀워크, 고객 피드백, 실수 없는 주문 처리율 등 <strong>행동의 질에 대한 보상 구조</strong>를 병행 설계해야 한다.</p>
+<p>행동 통제는 단순히 “이렇게 하라”고 말하는 지침이 아니다. 그것은 전략이 어떤 방식으로 실행돼야 하는지를 조직이 <strong>구체적 행동 언어로 명시하는 방식</strong>이다. 결과는 우연히 발생하지 않는다. 행동이 예측 가능하고 일관되게 정렬될 때만, 전략은 반복가능하고 지속가능한 시스템이 된다.</p>
+</section>
+<section id="클랜-통제" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="클랜-통제"><span class="header-section-number">10.5.3</span> 클랜 통제</h3>
+<p>조직이 전략을 실행하는 방식에는 다양한 형태가 존재하지만, 그 중 가장 은밀하고도 강력한 방식이 <strong>클랜 통제(clan control)</strong>다. 클랜 통제는 조직 구성원에게 명확한 지시나 수치화된 목표 없이도 <strong>공유된 가치, 규범, 전통, 비공식적 기대</strong>를 통해 바람직한 행동과 태도를 이끌어내는 방식이다. 이는 통제 방식 중 가장 비형식적이며, 동시에 <strong>조직의 문화와 정체성에 깊이 뿌리내린 시스템</strong>이다.</p>
+<p>클랜 통제는 특히 <strong>창의성, 자율성, 혁신이 중요한 환경</strong>에서 효과를 발휘한다. 수치로 측정할 수 없는 창의적 행동이나, 정량적 평가가 왜곡될 수 있는 상황에서 클랜 통제는 일종의 <strong>사회적 기준점(social anchor)</strong> 역할을 한다. 구성원은 상사에게 지시를 받기보다, 옆 동료의 행동과 조직 내 기대에 따라 스스로 방향을 조정한다. 다시 말해, ’규정에 따르는 것’이 아니라 ’<strong>문화적으로 옳다고 여겨지는 방식</strong>’이 행동을 유도한다.</p>
+<p>대표적인 사례는 <strong>애플(Apple)</strong>의 제품 개발 조직이다. 애플의 제품 디자이너나 엔지니어는 구체적인 성과 목표나 일일 생산량 지표보다, “애플다움”이라는 추상적이고 암묵적인 기준을 중심으로 움직인다. “심플하고 직관적인 제품을 만들라”는 KPI가 아니지만, 누구도 어기지 않는 절대적 기준처럼 작동한다. 이 문화는 스티브 잡스의 카리스마가 아닌, 오랜 시간에 걸쳐 축적된 <strong>의식적 경험, 조직 내 에피소드, 채용과 퇴출 메커니즘</strong> 등을 통해 내면화되었다. 결국 애플 구성원들은 의사결정을 할 때 조직의 철학과 브랜드 감각이라는 <strong>공동의 미적·전략적 직관</strong>에 기대게 된다.</p>
+<p>클랜 통제는 또한 <strong>신뢰와 충성심을 중심으로 유지되는 고신뢰 조직</strong>에서 강력하게 작동한다. 특히 원격근무나 글로벌 분산 조직처럼 물리적 거리와 직접적 감독이 불가능한 환경에서, 클랜 통제는 일관된 조직 정체성을 유지하는 핵심 수단이 된다. <strong>GitLab</strong>처럼 전 세계 수천 명의 개발자가 물리적으로 한 번도 만나지 않고 협업하는 조직은, 클랜 통제를 기반으로 <strong>투명성과 자율성의 문화</strong>를 제도화했다. 모든 회의와 문서는 사내 위키에 공개되며, 구성원은 규칙이 아닌 조직 철학에 따라 스스로 결정을 내린다. 이는 명령 중심의 통제가 아닌, <strong>가치 기반의 자기조정(self-governance)</strong>이 전략 실행을 가능하게 하는 사례다.</p>
+<p>한편, 클랜 통제는 위기에 처한 조직의 <strong>재문화화(re-culturalization)</strong> 전략으로도 활용된다. 미국 플로리다주 운전면허국(DMV)은 비효율적이고 무례하다는 민원에 시달리던 중, 조직 내부의 절차나 시스템이 아닌 <strong>직원들의 태도와 관계, 서비스 마인드</strong>를 개선하기 위한 노력을 시작했다. 디즈니와 지역 유통기업 퍼블릭스(Publix)의 고객서비스 교육을 도입하고, <strong>‘서비스는 기술이 아니라 태도’</strong>라는 내부 슬로건을 확산시켰다. 결국 단기적 매뉴얼 변경보다 장기적인 조직 문화를 수정하는 것이 훨씬 더 효과적이라는 교훈을 남겼다.</p>
+<p>그러나 클랜 통제는 자칫하면 <strong>배타성, 정체성 고착, 문화적 보수성</strong>으로 흘러갈 수 있다. 특히 다양한 인종·문화·배경을 가진 구성원이 공존하는 글로벌 조직에서는, 너무 강한 ’내부 문화’가 다양성을 억압하는 위험도 존재한다. 이에 따라 최근 글로벌 기업들은 기존의 클랜 통제를 다양성·형평성·포용성(DEI) 원칙과 결합하려는 시도를 하고 있다. <strong>NASCAR가 경기장에서 남부연합기를 금지하고, 모든 팀이 이를 지지하는 퍼포먼스를 연출한 사건은, 기존의 ’조직 정체성’과 ’시대적 요구’를 통합한 상징적 행위</strong>였다. 클랜 통제도 변화한다. 시대정신과 전략 방향에 따라, 조직은 문화를 새로 짜고 가치의 우선순위를 재설정한다.</p>
+<p>궁극적으로 클랜 통제는 전략적 통제 방식 중 가장 장기적이고 가장 강력한 힘을 발휘한다. 규칙이 없는데도 규칙처럼 작동하는, 말하지 않아도 모두가 아는 기준. 이것이 바로 클랜 통제가 작동하는 방식이다. 전략이 조직 구조에 의해 실행된다면, <strong>조직 문화는 그 전략이 실패하지 않도록 유지하는 마지막 방어선</strong>이다.</p>
+</section>
+<section id="관리-유행-전략적-통제인가-시대적-착각인가" class="level3" data-number="10.5.4">
+<h3 data-number="10.5.4" class="anchored" data-anchor-id="관리-유행-전략적-통제인가-시대적-착각인가"><span class="header-section-number">10.5.4</span> 관리 유행: 전략적 통제인가, 시대적 착각인가?</h3>
+<p>패션이나 음악과 같은 대중문화에서 유행(fads)은 흔히 일시적인 현상으로 간주된다. 그러나 유행은 비즈니스 세계에서도 주기적으로 출현하며, 특히 조직 통제 시스템을 설계하는 과정에서 <strong>경영 유행(management fads)</strong>은 경영진의 선택과 실행을 강하게 흔든다. 문제는, 이러한 유행이 실제로 <strong>조직 성과를 장기적으로 개선하는 전략적 도구인지</strong>, 아니면 <strong>단기적 열광과 감각적 슬로건에 기댄 허상인지</strong>를 구분하기 어렵다는 데 있다.</p>
+<p>20세기 중후반 이후 등장한 수많은 경영 슬로건은 본질적으로 <strong>성과, 행동, 문화(출력, 행동, 클랜 통제)</strong> 중 하나를 강조하며 조직 개선을 시도했다. 하지만 대부분은 <strong>과장된 사례</strong>로 포장되었고, 이로 인해 많은 조직은 의도하지 않은 혼란에 직면했다.</p>
+<p>대표적인 유행 중 하나는 피터 드러커가 소개한 <strong>목표에 의한 관리(MBO)</strong>다. 이는 조직 성과를 개선하기 위해 관리자와 직원이 공동으로 구체적인 목표를 설정하고, 이를 기준으로 평가와 보상을 설계하는 출력 통제 방식이다. 초기에는 엄청난 환영을 받았지만, MBO가 실패한 조직들은 목표가 행동을 왜곡하고, 조직의 무형 가치나 팀워크를 측정하지 못하며, <strong>수치화되지 않는 중요한 요소들이 배제되는 부작용</strong>을 경험했다. 구체적 숫자에 집착한 결과, “고객에 대한 배려”, “윤리적 판단”, “창의성” 등 조직을 지속가능하게 만드는 요소들이 목표관리의 체계에서 누락되었다.</p>
+<p>비슷한 시기, 일본에서 시작된 <strong>품질 서클(Quality Circles)</strong>은 현장 직원들이 정기적으로 모여 품질 개선 아이디어를 제안하는 행동 통제 기반 유행이었다. 미국 기업들은 이를 도입하며 직원 참여 확대와 문제 해결 중심 조직을 꿈꿨지만, 곧 품질만 강조하는 시야 협소성과 의사결정권 부족의 문제에 봉착했다. 결국 품질, 비용, 유연성, 속도 간의 균형 없이 특정 가치만 극단화할 경우, <strong>전략적 비효율성과 조직 피로감이 동시에 발생</strong>한다는 교훈을 남겼다.</p>
+<p>1970년대에 유행한 <strong>감수성 훈련(T-groups)</strong>은 클랜 통제를 강화하려는 시도였다. 구성원이 자기감정과 편견, 직장 내 갈등을 솔직히 토로하는 구조로 설계된 이 프로그램은 초기에 팀워크 향상과 개인 성장에 긍정적 효과를 기대받았지만, 실제 현장에서는 <strong>비난, 심리적 불편, 집단 괴롭힘</strong> 등 부작용이 급격히 증가하며 퇴조했다. 이처럼 가치와 문화를 강조하는 프로그램도 구조적 장치 없이 도입되면, 통제 수단이 아니라 <strong>심리적 폭력의 매개체로 변질될 수 있다.</strong></p>
+<p>1980년대 중반, ’강한 조직문화(strong culture)’는 피터스와 워터맨의 『In Search of Excellence』가 베스트셀러가 되며 전 세계적으로 유행했다. 기업 문화가 강력하면 전략을 자동으로 실행할 수 있다는 주장은 매력적이었지만, 시간이 흐르며 이들 기업 중 상당수가 몰락하거나 구조조정을 거치면서 <strong>문화만으로 지속적 경쟁우위를 확보할 수 없다는 점</strong>이 드러났다. 문화는 전략의 촉매가 될 수 있지만, 그것이 <strong>성과 책임을 대체하거나 행동의 질을 자동 보장하는 장치가 될 수는 없다.</strong></p>
+<p>현대에도 유행은 여전히 존재한다. ‘임파워먼트(empowerment)’, ‘좋은 기업에서 위대한 기업으로(Good to Great)’, ‘바이럴 마케팅’, ‘디자인 씽킹’, ‘OKR’ 등의 개념은 강력한 통찰을 담고 있지만, 이것이 <strong>조직 구조, 인력 구성, 산업 특성, 전략 방향성과 정렬되지 않은 채 무비판적으로 적용되면 단기적 실패 혹은 구조적 왜곡</strong>으로 이어진다. 예를 들어 OKR을 무작정 모든 부서에 강제하면, <strong>창의성이 필요한 팀에서는 오히려 수치화된 목표가 사고를 제약</strong>하고, 협업보다 개인주의를 조장할 수 있다.</p>
+<p>결국 유행이 문제인 것이 아니라, <strong>유행을 무비판적으로 수용하는 경영 의사결정 구조가 문제</strong>다. 우수한 기업은 새로운 아이디어를 <strong>전략적 맥락에 맞게 해석하고, 핵심 원칙만을 선택적으로 흡수하여 자사 상황에 맞게 설계</strong>한다. 클랜 통제를 강화하더라도, 성과와 행동에 대한 책임을 병행 설계하지 않으면 조직은 무책임한 정서 공동체로 퇴행한다. 반대로 출력 통제를 강화하더라도, 이를 둘러싼 가치 정렬과 의미 부여가 없다면 조직은 냉소주의와 이직률 상승에 시달리게 된다.</p>
+<p>조직의 성공은 유행의 수용이 아니라 <strong>전략과 구조, 통제 시스템 사이의 정합성(alignment)</strong>에 달려 있다. 관리 유행은 강력한 아이디어의 촉진자가 될 수 있지만, 그것이 <strong>통제의 균형을 왜곡하거나 조직의 고유한 문화를 지워버리는 도구</strong>가 되어서는 안 된다. 진정한 전략적 통제는 유행을 따르는 것이 아니라, 유행을 <strong>해석하고 편집하는 역량</strong>에서 시작된다.</p>
+</section>
+</section>
+<section id="비즈니스의-형태" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="비즈니스의-형태"><span class="header-section-number">10.6</span> 비즈니스의 형태</h2>
+<p>대부분의 기업은 <strong>이윤 창출</strong>을 목표로 하며, 이익과 손실이 누구에게 귀속되고 어떤 방식으로 처리되는지는 법적 사업 형태에 따라 달라진다. 기업의 법적 구조는 단순한 행정 절차를 넘어, <strong>과세 방식, 법적 책임 범위, 설립 및 운영의 복잡성</strong>에 실질적인 영향을 미친다. 특히 초기 창업자나 투자자에게는 법적 구조의 선택이 자금 조달 가능성과 리스크 통제 역량을 결정짓는 중요한 변수다.</p>
+<p><strong>개인 사업자(Sole Proprietorship)</strong>는 가장 단순하고 빠르게 설립할 수 있는 사업 형태다. 한 명의 소유자가 모든 자산과 수익에 대한 권리를 가지며, 동시에 <strong>모든 부채와 손실에 대해 무한 책임</strong>을 진다. 회계적으로도 법적으로도 소유주와 기업은 동일한 존재로 간주된다. 최근 팬데믹 이후 ’1인 창업’이 증가하면서 배달 음식점, 1인 콘텐츠 제작자, 지역 기반 프리랜서 등이 이 구조를 많이 선택한다. <strong>장점은 설립 용이성과 세금의 단순성</strong>, <strong>단점은 리스크의 개인 귀속</strong>이다. 예를 들어, 음식 배달로 발생한 고객 식중독 사고로 소송이 걸릴 경우, 소유자의 주택이나 자동차도 청구 대상이 될 수 있다.</p>
+<p><strong>파트너십(Partnership)</strong>은 두 명 이상의 파트너가 사업의 소유권과 책임을 공유하는 구조다. 의료, 법률, 회계 등 전문직군에서 자주 채택되며, <strong>전문성이 상호 보완될 수 있다는 점에서 경쟁력을 가질 수 있다</strong>. 그러나 각 파트너는 타인의 행동에도 연대 책임을 지기 때문에, 신뢰 기반이 약한 경우 파괴적 결과를 초래할 수 있다. 예컨대 한 회계 파트너가 고객 자산을 부당하게 운용한 경우, 나머지 파트너도 손해배상 책임에서 자유로울 수 없다. 세금은 각 파트너의 소득세율로 과세되며, 법인 대비 <strong>조세 부담은 낮지만 법적 리스크는 크다</strong>.</p>
+<p><strong>법인(C Corporation)</strong>은 <strong>소유와 경영이 분리되는 구조</strong>로, 주주가 회사의 자본을 공급하고 이사회 및 경영진이 이를 운영한다. 대부분의 중대형 기업, 특히 투자 유치와 주식 시장 상장을 고려하는 경우 이 구조를 택한다. <strong>주주의 책임은 투자한 자본 한도 내로 제한되며</strong>, 이는 리스크 분산에 유리하다. 하지만 수익에 대해 회사가 먼저 법인세를 납부하고, 배당금 지급 시 주주가 다시 소득세를 내야 하는 <strong>이중 과세(double taxation)</strong> 문제가 존재한다. 또한, 법인은 설립과 운영 절차가 복잡하고, 규제 준수가 요구되는 수준도 높다. 예를 들어, 정기적인 감사, 공시 의무, 주주총회 개최 등이 있다.</p>
+<p><strong>S 법인(S Corporation)</strong>은 법인의 법적 책임 제한 구조를 유지하면서, 세금 측면에서는 파트너십처럼 작동하도록 설계된 형태다. 즉, 회사의 수익과 손실은 주주 개인의 소득으로 귀속되어 이중 과세를 회피할 수 있다. 단, <strong>주주 수가 100명으로 제한</strong>되며, 대부분의 대기업은 이 요건을 충족하지 못해 채택이 어렵다. 중소기업이나 패밀리 비즈니스에서 자주 선택되며, 미국의 경우 부동산 개발, 소규모 제조회사 등이 대표적이다.</p>
+<p><strong>유한책임회사(LLC, Limited Liability Company)</strong>는 상대적으로 최근에 각광받는 형태로, <strong>법인의 책임 제한 기능과 파트너십의 유연성을 결합한 하이브리드 구조</strong>다. 소유자는 법적 소송이나 부채에 대해 개인적으로 책임지지 않으며, <strong>경영 방식에 있어 높은 자율성</strong>을 갖는다. 예를 들어, 건축 설계 스타트업이 외부 투자 없이 신속히 창업하고, 파트너 간 수익 분배 비율을 유연하게 설정하고자 할 때 LLC 구조가 효과적이다. 다만 연방 세금 처리 방식은 별도로 선택해야 하며, 주마다 설립과정의 복잡성이나 수수료에 차이가 크다. 최근 미국에서는 AI 개발 스타트업이나 디지털 노마드들이 자주 이 구조를 채택하고 있다.</p>
+<p>결국, 적절한 비즈니스 형태를 선택하려면 단순히 세금이나 책임만이 아니라 <strong>조직 성장 전략, 자본 구조, 향후 투자 계획, 규제 환경</strong>까지 고려해야 한다. 단기적 설립 용이성보다 <strong>장기적인 전략 실행과 리스크 관리에 최적인 형태를 찾는 것이 핵심</strong>이다.</p>
+<table class="table">
+<caption>비즈니스 형태별 핵심 비교</caption>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 29%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>형태</th>
+<th>세금 처리 방식</th>
+<th>소유자의 법적 책임</th>
+<th>설립 및 운영 난이도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>개인 사업자</td>
+<td>개인 소득세율</td>
+<td>무한 책임</td>
+<td>가장 쉬움</td>
+</tr>
+<tr class="even">
+<td>파트너십</td>
+<td>각 파트너의 개인 소득세율</td>
+<td>연대 무한 책임</td>
+<td>쉬움</td>
+</tr>
+<tr class="odd">
+<td>법인(C Corp)</td>
+<td>법인세 + 주주 배당 소득세</td>
+<td>제한적 책임</td>
+<td>가장 어려움</td>
+</tr>
+<tr class="even">
+<td>S 법인</td>
+<td>주주의 개인 소득세율</td>
+<td>제한적 책임</td>
+<td>어려움</td>
+</tr>
+<tr class="odd">
+<td>유한책임회사(LLC)</td>
+<td>선택에 따라 다름</td>
+<td>제한적 책임</td>
+<td>중간 정도</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LLC, 델라웨어 법인, 그리고 스타트업의 전략적 선택</strong></p>
+<p>스타트업이 회사를 설립할 때 가장 먼저 고민하는 것은 <strong>어떤 법적 형태로, 어느 주에서 설립할 것인가</strong>이다. 그 중에서도 LLC(Limited Liability Company) 형태는 창업 초기 기업에게 가장 적합한 구조 중 하나로 평가받는다. LLC는 소유자(멤버)의 개인 자산을 회사의 부채로부터 보호하면서도, 운영은 비교적 유연하고, 세금도 개인소득세 형태로 신고할 수 있어 이중과세를 피할 수 있다.</p>
+<p>미국 내에서 스타트업이 델라웨어(Delaware) 주에 본사를 두는 이유는 명확하다. <strong>델라웨어는 미국 내 가장 비즈니스 친화적인 법률 환경</strong>을 갖추고 있다. 특히, 델라웨어 Chancery Court는 기업 소송에 특화된 독립적인 법원 시스템을 가지고 있어, 법적 안정성과 예측 가능성이 매우 높다. 또한 기업지배구조, 주주권리, M&amp;A 관련 분쟁에 대해 다룬 판례가 풍부해 투자자들은 델라웨어 법인을 선호한다. 이 때문에 실리콘밸리의 스타트업들조차 본사는 캘리포니아에 있어도 법인은 델라웨어에 등록하는 경우가 많다. Airbnb, Stripe, SpaceX, 그리고 대부분의 Y Combinator 출신 기업들도 델라웨어 법인이다.</p>
+<p>델라웨어 주는 또한 Series LLC를 허용하는 몇 안 되는 주 중 하나로, 복수의 자회사나 비즈니스 유닛을 빠르게 생성하고 별도 회계 처리할 수 있는 장점도 제공한다. 창업자들은 빠르게 피봇(pivot)할 수 있고, 투자자들은 세금과 리스크를 명확히 분리할 수 있다. 즉, 델라웨어 법인은 스타트업의 성장과 투자 유치 전략에 특화된 법적 토대라고 할 수 있다.</p>
+<p>하지만 최근 변화가 감지되고 있다. 2024년 12월, 게임 플랫폼 기업 로블록스(Roblox)는 델라웨어에서 네바다(Nevada)로 본사를 이전한다고 발표했다. 이 결정은 단순한 행정이 아니라, 기업 전략과 세무 전략의 변화에서 비롯된 것이다. 네바다는 법인세(corporate income tax)와 개인소득세가 모두 없는 주이다. 또한 델라웨어보다 정보 공개 요건이 덜 엄격하고, 주주 명부나 이사진 정보를 비공개로 유지할 수 있어 기업 기밀 보호에 유리하다. 로블록스는 기업 내부 인사의 발언을 통해, <strong>“운영 투명성의 수준을 유지하면서도, 덜 복잡하고 더 유연한 법적 프레임워크가 필요한 시점”</strong>이라고 밝혔다.</p>
+<p>로블록스의 이전은 단순히 세금 절감 목적이 아니라, 기존 기업지배구조의 부담을 줄이고, M&amp;A 및 주식보상 프로그램 운영의 자율성을 확대하기 위한 전략적 움직임이다. 델라웨어는 법률 안정성에서는 여전히 우위에 있지만, 그만큼 규제와 관리도 까다롭기 때문에, 기업이 일정 규모 이상으로 성장하거나, 제도적 부담이 커질 경우 델라웨어를 떠나는 사례도 점점 늘고 있다.</p>
+<p>로블록스 사례는 향후 다른 테크기업들에게도 델라웨어 중심주의에 대한 재평가의 계기가 될 수 있다. 특히, Web3, DAO 기반 스타트업들은 델라웨어보다 와이오밍(Wyoming), 텍사스(Texas), 네바다(Nevada)로 빠르게 이동하고 있으며, 법인 형태도 점점 C Corporation에서 LLC 또는 Foundation 구조로 전환하는 흐름이 나타난다.</p>
+<p>이처럼 LLC 형태와 설립 주(state)의 선택은 <strong>단순한 법적 결정이 아니라, 투자 유치, 세금 전략, 기업 문화, 데이터 공개 정책 등 종합적인 전략</strong>의 일환이다. 델라웨어는 여전히 ’기본값(default)’으로 유효하지만, 시대 변화와 기업 성장 단계에 따라 더 나은 선택지는 존재한다. 로블록스의 행보는 그 가능성을 증명하고 있다.</p>
+</section>
+<section id="마무리하며" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="마무리하며"><span class="header-section-number">10.7</span> 마무리하며</h2>
+<p>이 장에서는 <strong>전략 실행의 핵심 도구로서 조직 설계와 통제 시스템의 역할</strong>을 살펴보았다. 전략은 말로만 선언되는 것이 아니라, 실질적인 행동과 구조로 구현되어야 하며, 이 과정에서 조직의 형태와 통제 메커니즘은 결정적인 영향을 미친다.</p>
+<p>기업은 전략을 실행하는 과정에서 다양한 조직 구조를 선택하고 조정한다. 단순한 개인사업자부터 다국적 기업까지, 조직 구조는 기업의 규모와 전략 방향성에 따라 매우 다르게 구성된다. 예를 들어, 초기 스타트업은 수평적이고 유기적인 구조로 빠르게 움직이지만, 규모가 커짐에 따라 기능별 혹은 사업부별 구조를 도입하게 된다. 이러한 변화는 단순히 조직도를 바꾸는 것이 아니라, <strong>권한의 분산, 책임의 귀속, 의사결정의 속도와 질을 결정짓는 구조적 토대</strong>를 설계하는 것이다.</p>
+<p><strong>조직 통제 시스템</strong>은 이러한 구조 위에서 전략 실행을 지속적으로 조율하고 수정하는 역할을 한다. 출력 통제는 KPI와 목표 달성을 수치화하고, 행동 통제는 업무 매뉴얼과 표준을 통해 프로세스를 정형화하며, 클랜 통제는 공유된 가치와 문화로 구성원의 자율성과 헌신을 이끌어낸다. 현실에서는 이 세 가지 통제가 혼합적으로 적용된다. 예를 들어, 테슬라는 생산성과 품질을 철저한 출력 통제로 관리하면서도, 혁신을 장려하는 조직문화를 클랜 통제를 통해 유지하고 있다. 이는 <strong>형식과 유연성, 정량성과 정성의 균형</strong>을 통해 전략 실행의 정합성을 확보하는 사례다.</p>
+<p>또한, 기업이 선택하는 <strong>법적 형태</strong>는 조직 구조 및 통제 시스템과 밀접하게 연결된다. LLC나 S법인을 선택한 스타트업은 유연한 의사결정 구조와 세무 전략을 추구하고, 대형 C법인은 외부 투자 유치와 글로벌 확장을 위해 보다 복잡한 지배구조와 통제 체계를 갖추게 된다. 예컨대, 최근 AI 스타트업들이 와이오밍이나 텍사스 주에서 DAO 기반 LLC를 실험하는 것은 기존 구조의 한계를 넘어서려는 시도이며, <strong>법적 형태가 전략 실행을 제한하거나 촉진하는 실제적 장치</strong>임을 보여준다.</p>
+<p>중요한 것은, 구조와 시스템이 전략을 지원하는 수단이 되어야 한다는 점이다. 효율성을 추구한 나머지 기민한 대응 능력을 잃거나, 형식적 통제에 치우쳐 창의성이 억압되는 구조는 오히려 전략 실행의 장애가 된다. 따라서 경영진은 매 순간 구조를 의심하고, 통제 방식을 점검하며, 법적 틀을 전략과 정렬시키는 <strong>조직 설계의 진화적 접근</strong>을 취해야 한다. 전략은 종이 위에만 존재하지 않는다. 그것은 조직이라는 ‘살아있는 시스템’ 안에서 작동하며, 그 작동 방식이야말로 진정한 경쟁우위의 원천이다.</p>
+<p><strong>DAO(Decentralized Autonomous Organization)</strong></p>
+<p>DAO는 기존 기업의 위계적 구조와 달리, 중앙 관리자 없이 코드로 운영되는 <strong>탈중앙화 자율 조직</strong>이다. 블록체인 기술과 스마트 컨트랙트를 기반으로 작동하며, 조직의 규칙과 의사결정 절차가 미리 정해진 코드에 의해 자동으로 실행된다. DAO의 구조는 먼저 스마트 컨트랙트를 통해 조직의 운영 규칙을 프로그래밍하는 것으로 시작된다. 이 규칙은 블록체인 상에 투명하게 기록되며, 누구나 열람하고 검토할 수 있다. DAO에 참여하려면 일반적으로 토큰을 보유해야 하며, 이 토큰은 투표권을 의미한다. 예를 들어 새로운 제안이 올라오면 토큰 보유자들은 이에 대해 찬반 투표를 하며, 일정 조건이 충족되면 자동으로 자금이 집행되거나 의사결정이 실행된다.</p>
+<p>예를 들어 한 DAO가 AI 스타트업에 투자하는 커뮤니티 펀드를 운영한다면, 한 구성원이 특정 스타트업에 대한 투자 제안을 제출한다. 이 제안은 블록체인에 기록되고, 다른 참여자들이 투표한다. 과반수 이상이 찬성하면 DAO는 자동으로 투자금을 지정된 지갑 주소로 전송한다. 이후 해당 스타트업이 성공하면 그 성과가 토큰 보유자에게 이익으로 분배되고, 실패하면 손실을 공유하게 된다.</p>
+<p>DAO의 장점은 명확하다. 첫째, 권력이 중앙에 집중되지 않아 독단적 결정이 어렵고, 다수의 집단적 판단을 반영할 수 있다. 둘째, 모든 트랜잭션이 블록체인에 기록되므로 회계 부정이나 정보 은폐가 불가능에 가깝다. 셋째, 운영이 자동화되어 중간 관리자 없이도 효율적으로 작동한다. 하지만 단점도 있다. DAO의 법적 지위는 대부분의 국가에서 불명확하며, 코드를 악용한 해킹이나 스마트 컨트랙트의 오류는 치명적인 피해를 야기할 수 있다. 또한 탈중앙화 특성상 사고 발생 시 책임 소재가 모호해 법적 분쟁으로 이어질 가능성도 크다.</p>
+<p>실제로 2016년 ‘The DAO’ 사건은 DAO의 리스크를 상징적으로 보여준다. 당시 약 1.5억 달러를 모은 이더리움 기반 DAO는 스마트 컨트랙트의 취약점을 해커가 이용하면서 5000만 달러 이상을 탈취당했다. 이 사건은 이더리움의 하드포크를 촉발했으며, DAO의 신뢰에 큰 타격을 줬다.</p>
+<p>현재는 MakerDAO(스테이블코인 DAI 발행), PleasrDAO(NFT 수집), FlamingoDAO(디지털 자산 투자)와 같은 다양한 분야에서 DAO가 운영되고 있다. 특히 와이오밍 주는 2021년 세계 최초로 DAO에 법적 지위를 부여한 주로, DAO LLC 설립이 가능하다. 이에 따라 최근 AI 스타트업들 중 일부는 ’DAO LLC’를 와이오밍이나 텍사스에 설립하고, 기존 주주·이사회 중심 구조 대신 블록체인 기반 거버넌스를 실험하고 있다.</p>
+<p>DAO는 단순한 기술이 아닌, 조직의 <strong>운영 철학과 권력 분배 방식 자체를 재정의</strong>하는 도전이다.</p>
+<p><strong>DAO 기반 LLC 실험과 전략: 와이오밍·텍사스와 로블록스의 사례</strong></p>
+<p>최근 인공지능 스타트업들은 델라웨어 C법인의 전통적인 구조를 넘어서기 위한 대안으로, 와이오밍과 텍사스에서의 DAO 기반 LLC 실험에 주목하고 있다. 이러한 흐름은 조직 구조의 유연성을 높이고, 분산된 자율 거버넌스와 법적 프레임워크를 통합하려는 전략적 시도다.</p>
+<p>와이오밍은 2021년 미국 최초로 DAO를 법적으로 인정하는 법안을 통과시키며, DAO를 LLC의 하위 형태로 공식화했다. 이 법은 DAO를 스마트컨트랙트로 운영되는 자율조직으로 인정하면서도, 기존의 법적 책임 제한과 세금 혜택을 그대로 제공한다. DAO LLC는 조직 정관(Articles of Organization)에 DAO임을 명시하고, 관련 스마트컨트랙트 주소를 등록해야 하며, 이 계약이 조직의 의사결정 구조를 대체하거나 보완하는 역할을 수행한다. 이를 통해 AI 또는 Web3 스타트업들은 코드 기반 운영체계를 가진 조직을 법적으로도 유효한 구조로 인정받을 수 있게 되었다.</p>
+<p>텍사스는 아직 DAO 관련 독립 입법을 제정하진 않았지만, 블록체인과 DAO에 대한 규제 유연성과 정책 친화성을 통해 비공식적인 실험지로 부상하고 있다. 텍사스는 저렴한 법인세, 빠른 설립 절차, 블록체인 중심 스타트업 생태계 등을 통해 DAO 구조의 시험대가 되고 있으며, 다수의 AI 스타트업들이 텍사스에서 초기 DAO 실험을 시도하고 있다. 특히 텍사스 주정부의 기술 혁신 친화적 기조는 스타트업에게 규제 안정성과 제도적 예측 가능성을 제공해준다.</p>
+<p>이러한 DAO 기반 LLC 구조는 조직의 분산성과 자율성을 유지하면서도, 동시에 법적 책임으로부터 구성원을 보호할 수 있는 하이브리드적 모델을 제시한다. 코드가 곧 법률의 실행 수단이 되는 스마트컨트랙트 기반의 거버넌스는 특히 자동화와 투명성이 중요한 AI 조직에게 최적화된 구조이며, 외부 감사나 투자 유치에서도 높은 신뢰도를 형성할 수 있는 방식이다.</p>
+<p>한편, 2024년 5월 30일에는 로블록스(Roblox)가 기존 델라웨어 법인을 폐쇄하고 네바다 주로 본사 등록지를 이전한다고 발표하며 업계에 큰 주목을 받았다. 로블록스 이사회는 델라웨어의 판례 중심 법체계와 주주 우호적인 소송 환경이 불확실성과 과도한 소송 리스크를 유발한다고 지적하며, 보다 예측 가능한 규정 중심의 법률을 갖춘 네바다로 이동하는 결정을 내렸다. 네바다 주는 법인세와 배당세가 없고, 주주 명단 공개나 이사회 회의록 제출 의무도 델라웨어보다 느슨하여 기업지배구조를 보다 단순하고 폐쇄적으로 유지할 수 있다. 이는 특히 장기적 자율경영과 혁신 보호를 강조하는 플랫폼 기업에게 유리한 법률환경이다.</p>
+<p>로블록스의 결정은 플랫폼 운영이나 물리적 본사 위치에는 영향을 주지 않지만, 전략적으로는 지배구조 안정성 확보, 법적 리스크 최소화, 운영 유연성 강화 등의 이점을 제공한다. 델라웨어 중심의 법인 설립 관행에서 벗어나, 기업이 자신의 전략과 거버넌스 성향에 맞는 주법을 선택하는 흐름을 대표하는 사례로 평가된다.</p>
+<p>이처럼 법적 구조의 선택은 단순한 행정 절차가 아니라, 기업의 조직 철학, 자본 전략, 거버넌스 방향, 혁신 방식 등을 실현하는 핵심 전략 수단이다. 특히 DAO 기반 LLC는 규제 공백을 창의적으로 활용하는 방식으로, 초기 AI 스타트업의 실험적 조직 설계와도 밀접히 연결되고 있다.</p>
+</section>
+<section id="실습-모듈-네트워크-분석-r-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-네트워크-분석-r-실습">실습 모듈 : 네트워크 분석 R 실습</h2>
+<p>페이스북의 친구들 간의 연결을 분석한 네트워크 분석을 실습해보자. 실습 데이터는 Standford의 <a href="https://snap.stanford.edu/data/ego-Facebook.html">SNAP</a>에서 가져온 것으로 위의 데이터를 python으로 실습해 보고 싶은 사람은 Kaggle.com의 <a href="https://www.kaggle.com/code/morecoding/facebook-network?utm_source=chatgpt.com">facebook_network</a>를 참조하기 바란다.</p>
+<p>본 분석은 10명의 페이스북 친구 목록(친구 목록)을 분석하고 검토하여 다양한 유용한 정보를 추출할 것이다. 데이터셋은 위의 Standord SNAP를 참조하기 바란다. 또한, 페이스북 네트워크는 방향성이 없고 가중치가 없다. 왜냐하면 한 사용자가 다른 사용자와 친구가 될 수 있는 것은 단 한 번뿐이기 때문이다. 그래프 분석 관점에서 데이터셋을 살펴보면:</p>
+<ul>
+<li>각 노드는 10개의 친구 목록 중 하나에 속하는 익명화된 페이스북 사용자를 나타낸다.</li>
+<li>각 에지는 이 네트워크에 속하는 두 페이스북 사용자의 친구 관계를 의미한다. 즉, 두 사용자가 페이스북에서 친구가 되어야만 해당 네트워크에서 연결될 수 있다.</li>
+</ul>
+<p>위의 원본 데이터에는 원래 두 가지의 데이터셋이 있다.</p>
+<ul>
+<li><code>edges.csv</code>: 친구 관계를 나타내는 엣지 리스트 (source-target 형태)</li>
+<li><code>nodes.csv</code>: 각 사용자에 대한 속성 (예: 학년, 전공, 성별 등)</li>
+</ul>
+<p>컴퓨터의 한 폴더(예: C:\Projects)에 위의 두 csv 파일을 저장하고, R-studio를 켠 뒤에 우측 하단의 패널에서 Files를 선택하여 위의 두 파일을 저장한 폴더로 이동한다. More옆의 삼각형을 눌러서 드롭다운 메뉴가 나오면, “Set as working directory”를 누른다.</p>
+<p>이후 화면 좌측 상단의 File을 누르고 New File 옆의 R Script를 클릭하여 새로운 R Script 파일에 아래의 명령어를 차례로 넣고 테스트 한다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 필요한 패키지 설치 (처음 한 번만)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"igraph"</span>, <span class="st">"ggraph"</span>, <span class="st">"tidygraph"</span>, <span class="st">"tidyverse"</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 패키지 로드</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggraph)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygraph)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>데이터 불러오기 및 그래프 객체 생성</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 엣지 리스트 불러오기</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>edges <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"edges.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 그래프 객체 생성 (무방향 네트워크)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(edges, <span class="at">directed =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>네트워크 기본 통계 분석</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 전체 노드 수, 엣지 수</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"노드 수:"</span>, <span class="fu">vcount</span>(g), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"엣지 수:"</span>, <span class="fu">ecount</span>(g), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 연결된 컴포넌트 수</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"연결된 컴포넌트 수:"</span>, <span class="fu">components</span>(g)<span class="sc">$</span>no, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 평균 연결 정도</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"평균 degree:"</span>, <span class="fu">mean</span>(<span class="fu">degree</span>(g)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 밀도 (density)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"네트워크 밀도:"</span>, <span class="fu">edge_density</span>(g), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>연결된 컴포넌트</strong></p>
+<p>하나의 노드에서 시작해서 엣지를 따라 모든 노드에 도달할 수 있는 집합으로, 만약 결과가 1이면, 현재 네트워크는 완전히 연결되어 있는 하나의 거대한 컴포넌트로 구성되어 있다는 뜻이며, 모든 노드가 간접적으로라도 연결되어 있다는 의미이다. 만약 결과가 2 이상이면, 네트워크 안에 <strong>단절된 하위 네트워크(클러스터)</strong>가 존재한다는 의미로 서로 연결되지 않은 그룹들이 있다는 뜻이다.</p>
+<p><strong>평균 연결 정도와 밀도</strong></p>
+<p><strong>평균 연결 정도(Average Degree)</strong>는 네트워크 내에서 한 노드가 평균적으로 얼마나 많은 다른 노드들과 연결되어 있는지를 나타내는 지표다. 연결 정도(Degree)는 각 노드가 갖는 엣지(edge)의 수를 의미하며, 평균 연결 정도는 모든 노드의 연결 정도를 평균한 값이다. 이 값이 클수록 각 노드가 다른 노드들과 더 많이 연결되어 있다는 것을 의미하며, 네트워크의 상호작용이 활발함을 보여준다. 무방향 그래프의 경우, 평균 연결 정도는 일반적으로 <span class="math inline">\(( 2 \times \frac{\text{총 엣지 수}}{\text{노드 수}})\)</span>로 계산된다. 예를 들어 노드가 100개이고 엣지가 250개인 그래프라면 평균 연결 정도는 <span class="math inline">\(( 2 \times \frac{250}{100} = 5)\)</span>이다.</p>
+<p><strong>밀도(Density)</strong>는 네트워크의 포화 정도를 나타내는 지표로, 가능한 모든 엣지 중 실제로 존재하는 엣지의 비율을 의미한다. 무방향 그래프에서 밀도는 <span class="math inline">\(( \frac{2 \times \text{엣지 수}}{\text{노드 수} \times (\text{노드 수} - 1)})\)</span>로 계산된다. 밀도는 0에서 1 사이의 값을 가지며, 값이 1에 가까울수록 모든 노드가 서로 연결되어 있다는 뜻이고, 0에 가까울수록 대부분의 노드가 연결되지 않았음을 의미한다. 실제 사회 네트워크나 기업 내 조직 네트워크에서는 밀도가 낮은 경우가 대부분이며, 이로부터 중심성, 연결성, 커뮤니티 구조 등을 분석할 수 있다.</p>
+<p>따라서 평균 연결 정도는 <strong>노드 개별 수준의 연결성</strong>을 보여주고, 밀도는 <strong>전체 네트워크의 구조적 밀집도</strong>를 나타내는 지표로 이해할 수 있다. 두 지표는 함께 해석될 때 네트워크의 상호작용 정도와 구조적 특성을 효과적으로 설명할 수 있다.</p>
+<p><strong>중심성 분석</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Degree 중심성</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)<span class="sc">$</span>degree <span class="ot">&lt;-</span> <span class="fu">degree</span>(g)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Betweenness 중심성</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)<span class="sc">$</span>betweenness <span class="ot">&lt;-</span> <span class="fu">betweenness</span>(g)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Eigenvector 중심성</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)<span class="sc">$</span>eigen <span class="ot">&lt;-</span> <span class="fu">eigen_centrality</span>(g)<span class="sc">$</span>vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>커뮤니티 탐지 (Louvain 알고리즘)</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Louvain 기반 커뮤니티 탐지</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>community <span class="ot">&lt;-</span> <span class="fu">cluster_louvain</span>(g)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(g)<span class="sc">$</span>community <span class="ot">&lt;-</span> <span class="fu">membership</span>(community)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 전체 커뮤니티 수</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"커뮤니티 수:"</span>, <span class="fu">length</span>(<span class="fu">unique</span>(<span class="fu">V</span>(g)<span class="sc">$</span>community)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>전체 커뮤니티 수</strong></p>
+<p><strong>전체 커뮤니티 수</strong>는 네트워크 분석에서 노드들이 얼마나 많은 상호 밀접한 집단으로 나뉘어 있는지를 나타내는 값이다. 커뮤니티란, 네트워크 내에서 노드들이 내부적으로는 서로 <strong>강하게 연결</strong>되어 있지만 외부와는 <strong>약하게 연결</strong>된 집합을 말한다. 다시 말해, 커뮤니티 내부에서는 노드들 간의 상호작용이 빈번하고 연결이 밀접하지만, 외부 노드와는 상대적으로 연결이 드물거나 약한 구조를 이룬다.</p>
+<p>커뮤니티 수는 커뮤니티 감지 알고리즘(예: Louvain, Walktrap, Infomap 등)을 통해 추출되며, 알고리즘에 따라 결과는 다르게 나올 수 있다. 이 수치는 조직, 사회, 또는 플랫폼 내에서 <strong>자연스럽게 형성된 하위 그룹의 개수</strong>를 보여주며, 커뮤니케이션 패턴이나 협업 구조, 정보 확산 경로 등의 이해에 중요한 통찰을 제공한다.</p>
+<p>예를 들어, 한 대학의 Facebook 친구 네트워크에서 커뮤니티 분석을 수행했을 때, 커뮤니티 수가 10이라면 이는 평균적으로 10개의 강하게 연결된 친구 집단(예: 같은 과, 동아리, 기숙사 단위 등)이 존재한다는 것을 의미한다. 각 커뮤니티는 고유의 정체성과 활동 특성을 가질 수 있으며, 네트워크 시각화 시 색상으로 구분되어 표시된다.</p>
+<p>전체 커뮤니티 수는 네트워크의 <strong>분절성(fragmentation)</strong>과 <strong>구조적 다양성</strong>을 판단하는 지표로 활용될 수 있으며, 커뮤니티의 수가 너무 많거나 적은 경우 조직의 통합성, 정보 흐름의 효율성, 또는 분열 위험성을 함께 고려해야 한다.</p>
+<p><strong>네트워크 시각화 (ggraph)</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tidygraph 변환</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tg <span class="ot">&lt;-</span> <span class="fu">as_tbl_graph</span>(g)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 노드 색상: 커뮤니티, 노드 크기: degree</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(tg, <span class="at">layout =</span> <span class="st">"fr"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_link</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> degree, <span class="at">color =</span> <span class="fu">as.factor</span>(community))) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Facebook 네트워크 시각화 (커뮤니티 + 중심성)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>분석 결과 파일 저장 (옵션)</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 노드 속성 저장</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>nodes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="fu">V</span>(g)<span class="sc">$</span>name,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">degree =</span> <span class="fu">V</span>(g)<span class="sc">$</span>degree,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">betweenness =</span> <span class="fu">V</span>(g)<span class="sc">$</span>betweenness,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">eigenvector =</span> <span class="fu">V</span>(g)<span class="sc">$</span>eigen,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">community =</span> <span class="fu">V</span>(g)<span class="sc">$</span>community</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(nodes, <span class="st">"facebook_node_metrics.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습-모듈-un-총회-투표-기반-네트워크-분석-r-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-un-총회-투표-기반-네트워크-분석-r-실습">실습 모듈 : UN 총회 투표 기반 네트워크 분석 R 실습</h2>
+<p><strong>데이터 개요</strong> 이 실습에서는 <code>AgreementScoresAll_Jun2024.csv</code> 데이터를 사용하여 국가 간 투표 유사성에 기반한 네트워크를 구축하고 분석한다. 이 데이터는 각 국가쌍에 대해 1부터 78차 회기까지의 투표 일치도를 수치화한 것이다.</p>
+<p><strong>분석 목표</strong> 1. 투표 유사도 기반 네트워크 시각화 2. 중심성 분석을 통한 주요 국가 식별 3. 커뮤니티 탐지 알고리즘을 통한 투표 블록 분석</p>
+<p><strong>주요 개념</strong> - <strong>노드(Node)</strong>: 유엔 회원국 - <strong>엣지(Edge)</strong>: 두 국가 간의 유사 투표 정도 (agreement score) - <strong>중심성(Centrality)</strong>: 네트워크 상에서 특정 국가의 전략적 위치를 수치화 - <strong>커뮤니티(Community)</strong>: 유사한 투표 행동을 보이는 국가 집단</p>
+<p><strong>실습 내용</strong> R 언어의 <code>igraph</code> 패키지를 이용하여 다음 분석을 수행한다: - 네트워크 생성 - 중심성 분석 (degree, betweenness) - Louvain 알고리즘 기반 커뮤니티 탐지 - 시각화를 통한 이해도 증진</p>
+<p><strong>기대 결과</strong> - <strong>중심 국가</strong>: 미국, 러시아, 중국 등 강대국이 높은 중심성을 가질 수 있음 - <strong>커뮤니티 분포</strong>: 정치 이념, 지역, 경제 동맹에 따라 유사 투표 블록 형성</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 패키지 설치 및 불러오기</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"igraph"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 로드</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AgreementScoresAll_Jun2024.csv"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 0보다 큰 agree만 필터링</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>network_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(agree <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">from =</span> <span class="fu">as.character</span>(ccode1),</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">to =</span> <span class="fu">as.character</span>(ccode2),</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight =</span> <span class="dv">1</span> <span class="sc">/</span> agree  <span class="co"># 유사도 → 거리 (비용)</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(from, to, weight)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 네트워크 생성</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(network_data, <span class="at">directed =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 네트워크 기본 정보 분석</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"노드 수:"</span>, <span class="fu">vcount</span>(g), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"엣지 수:"</span>, <span class="fu">ecount</span>(g), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 중심성 분석 (가중치 사용)</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>degree_centrality <span class="ot">&lt;-</span> <span class="fu">degree</span>(g)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>betweenness_centrality <span class="ot">&lt;-</span> <span class="fu">betweenness</span>(g, <span class="at">weights =</span> <span class="fu">E</span>(g)<span class="sc">$</span>weight, <span class="at">directed =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 일부 출력</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(betweenness_centrality)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 시각화</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  g,</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex.size =</span> <span class="dv">5</span>,</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex.label =</span> <span class="cn">NA</span>,</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">edge.width =</span> <span class="fu">E</span>(g)<span class="sc">$</span>weight <span class="sc">*</span> <span class="dv">5</span>,  <span class="co"># 'weight'로 수정</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"UN 국가 간 투표 유사성 네트워크"</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co"># 커뮤니티 탐지 (Louvain 알고리즘)</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>communities <span class="ot">&lt;-</span> <span class="fu">cluster_louvain</span>(g)</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>  communities,</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  g,</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>  <span class="at">vertex.label =</span> <span class="cn">NA</span>,</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Louvain 커뮤니티 탐지 결과"</span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Chapter9.html" class="pagination-link  aria-label=" &lt;span="" 전략&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">국제화 전략</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Chapter11.html" class="pagination-link" aria-label="<span class='chapter-number'>11</span>&nbsp; <span class='chapter-title'>윤리적 판단과 사회적 책임</span>">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">윤리적 판단과 사회적 책임</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

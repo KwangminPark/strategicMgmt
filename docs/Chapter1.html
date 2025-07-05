@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.531">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>전략경영 - 1&nbsp; 전략경영이란?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Chapter2.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">전략경영</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">외부환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">내부 환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">전략적 이슈의 통합과 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">비즈니스 수준 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">혁신 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기업 수준의 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">국제화 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">전략 실행과 조직 설계</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">윤리적 판단과 사회적 책임</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#시작하며" id="toc-시작하며" class="nav-link active" data-scroll-target="#시작하며"><span class="header-section-number">1.1</span> 시작하며</a>
+  <ul class="collapse">
+  <li><a href="#테슬라의-성장과-도전-그리고-전략적-위기" id="toc-테슬라의-성장과-도전-그리고-전략적-위기" class="nav-link" data-scroll-target="#테슬라의-성장과-도전-그리고-전략적-위기"><span class="header-section-number">1.1.1</span> 테슬라의 성장과 도전, 그리고 전략적 위기</a></li>
+  </ul></li>
+  <li><a href="#전략경영이란-무엇인가" id="toc-전략경영이란-무엇인가" class="nav-link" data-scroll-target="#전략경영이란-무엇인가"><span class="header-section-number">1.2</span> 전략경영이란 무엇인가?</a>
+  <ul class="collapse">
+  <li><a href="#전략경영의-정의" id="toc-전략경영의-정의" class="nav-link" data-scroll-target="#전략경영의-정의"><span class="header-section-number">1.2.1</span> 전략경영의 정의</a></li>
+  </ul></li>
+  <li><a href="#전략의-진화-고정된-계획이-아닌-유기적-시스템으로" id="toc-전략의-진화-고정된-계획이-아닌-유기적-시스템으로" class="nav-link" data-scroll-target="#전략의-진화-고정된-계획이-아닌-유기적-시스템으로"><span class="header-section-number">1.3</span> 전략의 진화: 고정된 계획이 아닌 유기적 시스템으로</a></li>
+  <li><a href="#전략경영의-역사" id="toc-전략경영의-역사" class="nav-link" data-scroll-target="#전략경영의-역사"><span class="header-section-number">1.4</span> 전략경영의 역사</a>
+  <ul class="collapse">
+  <li><a href="#고대에서-배우는-전략의-통찰" id="toc-고대에서-배우는-전략의-통찰" class="nav-link" data-scroll-target="#고대에서-배우는-전략의-통찰"><span class="header-section-number">1.4.1</span> 고대에서 배우는 전략의 통찰</a></li>
+  <li><a href="#전쟁이-남긴-전략적-교훈" id="toc-전쟁이-남긴-전략적-교훈" class="nav-link" data-scroll-target="#전쟁이-남긴-전략적-교훈"><span class="header-section-number">1.4.2</span> 전쟁이 남긴 전략적 교훈</a></li>
+  <li><a href="#현대-전략의-전환점-과학에서-예술로" id="toc-현대-전략의-전환점-과학에서-예술로" class="nav-link" data-scroll-target="#현대-전략의-전환점-과학에서-예술로"><span class="header-section-number">1.4.3</span> 현대 전략의 전환점: 과학에서 예술로</a></li>
+  <li><a href="#윤리와-국제-경쟁의-부상" id="toc-윤리와-국제-경쟁의-부상" class="nav-link" data-scroll-target="#윤리와-국제-경쟁의-부상"><span class="header-section-number">1.4.4</span> 윤리와 국제 경쟁의 부상</a></li>
+  <li><a href="#전략은-살아있는-프레임워크다" id="toc-전략은-살아있는-프레임워크다" class="nav-link" data-scroll-target="#전략은-살아있는-프레임워크다"><span class="header-section-number">1.4.5</span> 전략은 살아있는 프레임워크다</a></li>
+  </ul></li>
+  <li><a href="#마무리하며" id="toc-마무리하며" class="nav-link" data-scroll-target="#마무리하며"><span class="header-section-number">1.5</span> 마무리하며</a></li>
+  <li><a href="#gpt-실습" id="toc-gpt-실습" class="nav-link" data-scroll-target="#gpt-실습">GPT 실습</a>
+  <ul class="collapse">
+  <li><a href="#실습-모듈-1-기업-진단-gpt-실습" id="toc-실습-모듈-1-기업-진단-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-1-기업-진단-gpt-실습">실습 모듈 1: 기업 진단 GPT 실습</a></li>
+  <li><a href="#실습-모듈-2-전략-시나리오-설계-워크숍" id="toc-실습-모듈-2-전략-시나리오-설계-워크숍" class="nav-link" data-scroll-target="#실습-모듈-2-전략-시나리오-설계-워크숍">실습 모듈 2: 전략 시나리오 설계 워크숍</a></li>
+  </ul></li>
+  <li><a href="#gpt-사용-지침서-전략경영-실습을-위한-안내서" id="toc-gpt-사용-지침서-전략경영-실습을-위한-안내서" class="nav-link" data-scroll-target="#gpt-사용-지침서-전략경영-실습을-위한-안내서">GPT 사용 지침서: 전략경영 실습을 위한 안내서</a>
+  <ul class="collapse">
+  <li><a href="#목적" id="toc-목적" class="nav-link" data-scroll-target="#목적">목적</a></li>
+  <li><a href="#사용-전-주의사항" id="toc-사용-전-주의사항" class="nav-link" data-scroll-target="#사용-전-주의사항">사용 전 주의사항</a></li>
+  <li><a href="#gpt-실습-유형" id="toc-gpt-실습-유형" class="nav-link" data-scroll-target="#gpt-실습-유형">GPT 실습 유형</a></li>
+  <li><a href="#좋은-프롬프트-작성-팁" id="toc-좋은-프롬프트-작성-팁" class="nav-link" data-scroll-target="#좋은-프롬프트-작성-팁">좋은 프롬프트 작성 팁</a></li>
+  <li><a href="#비판적-사고-프레임" id="toc-비판적-사고-프레임" class="nav-link" data-scroll-target="#비판적-사고-프레임">비판적 사고 프레임</a></li>
+  <li><a href="#실습-결과물-작성-지침" id="toc-실습-결과물-작성-지침" class="nav-link" data-scroll-target="#실습-결과물-작성-지침">실습 결과물 작성 지침</a></li>
+  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론">결론</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Adapted from *Strategic Management* by Reed Kennedy et al. (2020), CC BY-NC-SA 3.0 https://doi.org/10.21061/strategicmanagement 한국어 번역·부분 개작: 박광민 / Sapientia a Dei (2025) -->
+<section id="시작하며" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="시작하며"><span class="header-section-number">1.1</span> 시작하며</h2>
+<p>전략적 관리란 단순히 기업이 목표를 설정하고 이를 달성하는 수단을 설계하는 행위가 아니다. 그것은 불확실성과 복잡성이 공존하는 시장에서 조직이 생존하고, 성장하며, 지속 가능한 경쟁우위를 확보하기 위한 총체적 사고 방식이다. 변화의 속도가 기하급수적으로 빨라진 오늘날, 성공적인 조직은 전략을 한 번 수립하고 끝나는 일회성 계획이 아닌, 끊임없이 변화하는 외부 세계에 반응하는 동적이고 반복적인 프로세스로 인식하고 있다. 전략적 관리는 바로 그 변화의 흐름 속에서 기업이 내부 자원과 역량을 극대화하며 기회를 포착하고 위협을 선제적으로 차단하기 위한 ’행동 가능한 사고의 틀’이라 할 수 있다.</p>
+<p>오늘날의 경영 환경은 예측 불가능한 사건들로 가득하다. 팬데믹은 글로벌 공급망을 뒤흔들었고, AI와 생성형 기술은 산업 경계를 허물고 있으며, 기후 위기와 ESG 규제는 기업의 존재 목적에 대한 근본적인 질문을 던지고 있다. 이처럼 복잡하고 급변하는 시대에 기업은 단순한 수익 추구를 넘어서, 지속 가능성, 사회적 책임, 기술 적응력까지 포괄하는 넓은 시야를 필요로 한다. 전략적 관리는 이러한 넓은 시야를 구조화하고 실행 가능한 단계로 전환시키는 중심축이 된다.</p>
+<p>전략이라는 개념은 본래 전쟁에서 기원을 찾을 수 있다. 고대 그리스의 ’스트라테고스(strategos)’는 병사들을 전장에서 효율적으로 지휘하는 장군의 능력을 의미했다. 현대 조직도 마찬가지다. 시장이라는 전장 속에서 자원을 어디에, 어떻게 배치할 것인지, 제한된 자원으로 최대 효과를 낼 수 있는 타이밍과 수단은 무엇인지 끊임없이 고민해야 한다. 전략은 더 이상 단순한 목표 설정이 아니라, 명확한 비전 하에서 우선순위를 조정하고, 선택과 집중을 통해 역량을 실현하는 실천적 언어다.</p>
+<p>이 책은 학생들이 전략적 사고와 실행을 연결하는 방법을 체계적으로 학습할 수 있도록 구성되어 있다. 우선, 외부 환경 분석을 통해 사회문화, 기술, 경제, 정치 등 거시 환경의 변화를 해석하고, 경쟁 환경 분석을 통해 Porter의 5 Forces 등 산업 내 구조적 요인을 진단한다. 이어서 자원기반관점(Resource-Based View)과 가치사슬(Value Chain) 분석을 통해 조직 내부의 강점과 약점을 점검하며, 이를 바탕으로 차별화, 원가우위, 집중전략 등 현실적으로 실행 가능한 전략을 설계하게 된다. 궁극적으로는 이러한 전략이 단순히 문서상에 머무르지 않고, 실행 가능하고 측정 가능하며, 조정 가능한 구조로 진화해야 함을 강조한다.</p>
+<p>무엇보다 전략은 윤리적 판단과 무관하지 않다. 2020년대 들어 ’성과를 내는 조직’과 ’신뢰받는 조직’이 동일하지 않다는 사실이 수많은 사례를 통해 드러나고 있다. 윤리적 기준은 전략적 선택의 한계를 설정해주는 나침반이며, 비즈니스의 지속 가능성을 지탱하는 보이지 않는 인프라이다. AI 알고리즘을 통한 고객 분석, ESG를 활용한 녹색 마케팅, 디지털 노동 환경 속의 조직문화 설계 등은 모두 전략과 윤리가 동시에 작동해야만 의미가 있다.</p>
+<p>이 책은 전략을 단순히 이론적으로 설명하는 것이 아니라, 복잡한 현실 속에서 전략적 사고와 실천을 통합하는 역량을 기르도록 돕는다. 독자들은 각 장에서 제시되는 실제 기업 사례와 분석 프레임워크를 통해 단편적 지식이 아닌, 구조화된 사고와 실행 기반의 전략 경영 기술을 체득하게 될 것이다. 또한 전략적 결정이 기업의 생존뿐 아니라 사회 전체의 방향성에까지 영향을 미친다는 점에서, 전략 경영은 21세기 리더가 반드시 갖추어야 할 핵심 역량임을 이 책은 일관되게 강조할 것이다.</p>
+<section id="테슬라의-성장과-도전-그리고-전략적-위기" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="테슬라의-성장과-도전-그리고-전략적-위기"><span class="header-section-number">1.1.1</span> 테슬라의 성장과 도전, 그리고 전략적 위기</h3>
+<p>2021년, 테슬라는 도요타를 제치고 시가총액 기준 세계 1위 자동차 기업에 올랐다. 특히 2021년 10월에는 시가총액이 한때 1조 달러를 돌파하며 전기차 시장의 패러다임 전환을 상징하는 기업으로 자리매김했다. 이러한 고성장은 Model 3와 Model Y의 글로벌 판매 호조, 그리고 전기차 시장의 폭발적인 성장 기대가 복합적으로 작용한 결과였다.</p>
+<p>생산 측면에서도 테슬라는 공격적인 확장 전략을 구사하였다. 2020년 이후 독일 베를린(Giga Berlin), 미국 텍사스(Giga Texas), 중국 상하이(Giga Shanghai) 등에 건설된 대규모 기가팩토리(Gigafactory)를 본격 가동하면서 생산 능력을 대폭 확대했다. 뿐만 아니라 테슬라는 배터리 셀의 내재화(4680 셀)와 AI 학습용 슈퍼컴퓨터(DOJO) 개발, 자체 반도체 생산 등 공급망 수직통합을 위한 전략도 병행하며 기술기반 경쟁우위를 공고히 하고자 했다.</p>
+<p>기술적 측면에서는 인공지능(AI)과 자율주행 기술을 중심으로 한 리더십 강화가 핵심 전략으로 추진되었다. 자율주행 시스템인 FSD(Full Self Driving)는 지속적으로 개선되었으며, 2024년 기준 일부 북미 지역에서는 일반 소비자가 FSD 베타 기능을 직접 사용할 수 있게 되었다. 이와 동시에 테슬라는 자사 AI 모델 훈련을 위한 고성능 슈퍼컴퓨터 ’DOJO’를 개발하며, 단순한 자동차 제조업체를 넘어 AI 중심 기술 기업으로의 전환을 시도하고 있다.</p>
+<p>그러나 테슬라는 동시에 여러 전략적 도전과 위협에 직면해 있다. 첫째, 일론 머스크 개인의 리더십은 한편으로는 강력한 브랜드 자산이지만, 동시에 심각한 리스크 요인으로 작용한다. 2022년 트위터 인수 이후 머스크의 정치적 편향 발언과 경영 집중력 분산은 테슬라의 브랜드 이미지에 부정적 영향을 주었으며, 그의 행동 하나하나가 주가에 민감하게 반응하는 구조를 만들었다.</p>
+<p>둘째, 품질 및 고객 만족 문제도 지속적으로 제기되고 있다. JD Power와 Consumer Reports 등 주요 소비자 조사에서 Model 3와 Model Y의 품질 문제(도장 불량, 전자장비 오류 등)가 반복적으로 지적되었고, 서비스센터 부족 문제까지 더해져 고급차 브랜드로서의 일관성을 약화시켰다.</p>
+<p>셋째, 전기차 시장의 급속한 성장에 따라 경쟁 또한 급격히 심화되고 있다. 도요타, GM, 폭스바겐 등 전통 완성차 기업뿐만 아니라 BYD, 샤오펑, 니오, 리오토 등 중국 기반 신흥 전기차 기업의 부상이 두드러지고 있으며, 실제로 2023년에는 BYD가 분기 기준 전기차 판매량에서 테슬라를 앞지르기도 했다.</p>
+<p>여기에 더해 테슬라는 몇 가지 구조적 위협에 직면해 있다. 첫째는 중국 시장 리스크이다. 테슬라의 최대 해외 생산기지인 상하이 Gigafactory는 미중 간 지정학적 갈등 및 중국 내외 전기차 보조금 정책 변화에 극도로 민감하게 반응한다. 이러한 불확실성은 테슬라의 글로벌 생산 안정성과 수익성에 위협 요인이 되고 있다.</p>
+<p>둘째, 자율주행 기술과 관련한 법적·기술적 리스크가 존재한다. FSD 기술은 아직 완전자율주행 수준에 도달하지 못한 상태에서 과도한 마케팅과 기대를 유도해왔으며, 이로 인해 미국 NHTSA와의 규제 충돌, 사고 보고 증가, 관련 소송 등이 지속되고 있다. 기술 성숙도와 시장 기대 사이의 괴리는 테슬라에 대한 신뢰 기반을 훼손할 위험이 있다.</p>
+<p>셋째, 조직 역량 측면에서도 테슬라는 성장통을 겪고 있다. 2023년부터 2024년 사이, 핵심 자율주행 및 AI 엔지니어들이 구글, 애플, 그리고 다양한 스타트업으로 이직하며 핵심 인재 이탈 현상이 본격화되었다. 이는 고속 성장 기업이 흔히 겪는 조직의 성숙도 부족, 즉 내부 역량의 불균형과 전략 실행력 저하로 이어질 수 있는 구조적 문제로 연결된다.</p>
+<p>결과적으로, 테슬라는 여전히 글로벌 전기차 시장의 선두주자이자 기술 혁신 기업이지만, 동시에 성장 이후의 전략적 전환이 필요한 중요한 시점에 있다. 브랜드 리스크 관리, 품질 기반 경쟁력 확보, 기술 신뢰성 강화, 조직 체계 고도화 등 후속 전략이 병행되지 않는다면, 그들의 선도적 위치는 빠르게 위협받을 수 있다.</p>
+</section>
+</section>
+<section id="전략경영이란-무엇인가" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="전략경영이란-무엇인가"><span class="header-section-number">1.2</span> 전략경영이란 무엇인가?</h2>
+<section id="전략경영의-정의" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="전략경영의-정의"><span class="header-section-number">1.2.1</span> 전략경영의 정의</h3>
+<p>전략경영이란 단순히 목표를 설정하고 실행하는 일련의 활동을 의미하지 않는다. 그것은 불확실하고 역동적인 시장 환경 속에서 기업이 지속적인 경쟁우위를 확보하고, 자원을 효과적으로 배분하며, 이해관계자들에게 의미 있는 가치를 창출하는 복합적 사고체계이자 실행 메커니즘이다. 오늘날 테슬라가 직면하고 있는 문제들은 전략경영의 핵심 질문 ― “왜 어떤 기업은 다른 기업보다 지속적으로 뛰어난 성과를 내는가?” ― 에 대한 답을 찾는 데 적절한 사례를 제공한다. 예를 들어, 전기차 시장의 선도자였던 테슬라는 최근 중국 전기차 기업들의 저가 공세, 배터리 공급망의 불안정, 인공지능 기반 자율주행 기술에 대한 글로벌 규제와 윤리 이슈 등 복합적 위기에 직면해 있다. 일론 머스크라는 비전 중심의 리더십이 경쟁우위였던 시대에서, 이제는 조직 체계, 기술 아키텍처, 생산성, ESG 등 다면적 역량이 총합된 ’전략적 통합 능력’이 성과를 가르는 시대가 된 것이다.</p>
+<p>전략경영은 이러한 복잡한 상호작용을 분석하고 기업이 자사 환경에 적응하거나 이를 선도할 수 있는 실행 전략을 설계하도록 돕는다. 이때 전략경영은 과학적 접근과 창의적 해석이 공존하는 분야다. 재무분석, 산업구조모형, 가치사슬분석, 자원기반관점(RBV) 등 정형화된 분석 도구들은 전략 수립의 과학적 토대를 제공한다. 반면, 위기 대응 시나리오 설계, 기업 정체성 재정의, 파괴적 혁신에 대한 직관적 예측 등은 창의성과 직관이 중요한 영역이다. 전략은 계산된 알고리즘처럼 도출되기도 하지만, 예술적 통찰로부터 도약하기도 한다. 이처럼 전략은 ’과학이자 예술’이며, 그 균형을 유지하는 것이 진정한 전략가의 역량이다.</p>
+<p>전략은 단기적 실행계획이 아니라, 조직이 중장기적으로 어떤 방향을 향해 나아가야 하는지를 정의하는 포괄적 개념이다. 전략은 추상적인 비전과도 다르고, 구체적인 전술과도 다르다. 그것은 조직의 정체성, 시장 내 위치, 이해관계자의 기대, 기술 변화, 자원 제약 등 다양한 요소를 고려하여 조직의 우선순위를 정의하고, 선택과 집중을 가능하게 하는 지침서다. 실제로 전략은 경쟁 환경의 변화에 따라 언제든 수정되거나 재구성될 수 있다. 예컨대 코로나19 팬데믹은 글로벌 공급망 전략, 원격근무 기반 조직 전략, 비대면 고객경험 전략 등을 강제하며 수많은 기업의 전략적 방향을 재정의하게 만들었다.</p>
+<p>전략경영의 주요 목적은 이러한 전략을 단순히 수립하는 것을 넘어서, 이를 조직 전반에 실행 가능한 구조로 정착시키는 데 있다. 이 과정에서 경영진은 자원(자본, 인재, 시간)을 어디에, 얼마나, 어떻게 배분할 것인지를 결정하고, 경쟁우위를 확보할 수 있는 핵심 역량을 계발하며, 기업의 활동이 일관된 방향성 속에서 조화를 이루도록 해야 한다. 다시 말해 전략은 “무엇을 해야 하는가”를 넘어, “무엇을 하지 말아야 하는가”에 대한 기준도 제공한다. 이는 한정된 자원을 가지고 수많은 기회를 앞에 둔 경영진에게 전략이 절제와 통찰의 행위임을 말해준다.</p>
+<p>이 책에서는 전략경영을 정의하고, 그 역사적 발전 과정과 주요 이론적 흐름을 살펴보며, 오늘날 기업이 사용하는 전략관리 프로세스를 단계별로 이해하도록 돕는다. 외부 환경 분석(PESTEL, 산업 구조), 내부 역량 분석(RBV, VRIO), 전략 설계 및 실행, 성과 평가와 피드백까지 전략경영의 전체 흐름을 구체적 사례와 함께 학습한다. 또한, 전략이 단지 경영진의 결정이 아니라 조직 문화, 윤리, 지속 가능성과도 밀접하게 연결되어야 함을 강조하며, 학생들이 전략적 사고를 통해 현실의 문제를 해결할 수 있는 실제적 분석 역량을 기르도록 유도한다.</p>
+<p>전략경영이란 결국, 불확실한 미래를 향해 조직이 일관된 정체성과 방향성을 유지하면서도 유연하게 적응하는 능력을 기르는 과정이다. 그것은 변화의 시대를 살아가는 모든 조직에게 선택이 아닌 필수이며, 전략적 통찰은 오늘날 그 어느 때보다도 요구되는 리더십의 핵심 조건이다.</p>
+</section>
+</section>
+<section id="전략의-진화-고정된-계획이-아닌-유기적-시스템으로" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="전략의-진화-고정된-계획이-아닌-유기적-시스템으로"><span class="header-section-number">1.3</span> 전략의 진화: 고정된 계획이 아닌 유기적 시스템으로</h2>
+<p>전략을 바라보는 전통적 관점은 과거의 계획(의도된 전략), 현실의 실행(실현된 전략), 우연한 대응(긴급 전략)으로 구분했다. 그러나 이러한 이분법적 구분은 오늘날과 같이 불확실성과 속도의 시대에는 더 이상 유효하지 않다. 현대 전략이론은 조직이 고정된 계획이 아닌 유연하고 적응 가능한 전략 시스템, 즉 <strong>전략적 민첩성(strategic agility)</strong>을 통해 경쟁우위를 창출하고 유지한다고 본다. 실제 전략은 사전에 완전히 계획된 결과물이 아니라, 학습, 실험, 적응의 순환 과정을 통해 끊임없이 형성되는 진화적 경로에 가깝다.</p>
+<p>전략적 민첩성이란, 변화하는 외부 환경과 내재된 조직 역량 사이에서 빠르게 감지하고 학습하며 조정할 수 있는 능력이다. 이 관점에서 전략은 ’선언’이 아니라 ’탐색’이다. 조직은 먼저 방향성 있는 전략적 가설을 설정하고, 이를 실행해보며 수치화된 데이터를 기반으로 전략의 유효성을 실험한다. 실패한 전략은 과감히 폐기하거나 전환하며, 성공한 전략은 스케일업을 통해 확장한다. 이를 <strong>전략적 실험(Strategic Experimentation)</strong>이라고 부른다.</p>
+<p>이러한 접근법은 기술 산업이나 스타트업에서만 유효한 것이 아니다. 오히려 성숙한 산업과 대규모 조직일수록 전략적 민첩성과 실험의 체계화는 더욱 중요해진다. 예를 들어, FedEx는 1960년대 중앙 집중형 물류 전략이라는 단일 가설에서 출발했지만, 디지털 전환 시대에는 물류 자동화, 드론 배송, B2C 최적화 등 수많은 전략적 실험을 수행하고 있다. 그 과정에서 ZapMail과 같은 실패도 있었지만, 이러한 실패는 전략적 학습의 기회가 되었고, 이후 글로벌 물류 네트워크 최적화에 기여하는 인프라와 문화로 환원되었다.</p>
+<p>소규모 기업에서도 전략은 실험과 발견의 산물이다. Southern Bloomer는 교도소용 특수 속옷을 제조하던 중 폐기 원단의 활용 가능성을 우연히 발견했고, 이를 통해 총기 청소 패치라는 완전히 새로운 시장을 창출했다. 이 사례는 전략이 반드시 “큰 그림”에서 나오는 것이 아니라, 현장 지식과 우연성, 그리고 이를 수용하는 조직의 감수성에서 비롯될 수 있음을 보여준다. 즉, 전략은 하향식 계획만이 아니라 현장에서의 상향식 탐색의 결과이기도 하다.</p>
+<p>에이본(Avon)도 전략적 전환의 대표적 사례다. 창업자 데이비드 맥코넬은 책 판매에 실패하자, 사은품으로 나눠주던 향수가 오히려 고객의 반응을 끌어낸다는 사실을 파악했고, 전략의 중심을 콘텐츠 유통에서 뷰티 제품 판매로 전환시켰다. 이 과정은 명확히 정해진 계획의 실현이 아니라, 실패에 대한 민감성, 자산의 재해석, 시장 피드백의 수용을 통해 새로운 전략을 발견해내는 과정이었다.</p>
+<p>이처럼 오늘날 전략은 “실행 여부”가 아니라 “적응 여부”로 평가받는다. 성공적인 조직은 전략을 일종의 <strong>가설 주기(Hypothesis Cycle)</strong>로 보고 다음의 구조를 반복한다. 먼저 핵심 가정(Assumption)을 설정하고, 이를 MVP(Minimum Viable Strategy) 수준으로 테스트하며, 피드백을 통해 전략을 조정하거나 버린다. 구글, 넷플릭스, 아마존뿐 아니라 포드, 스타벅스, 유니클로와 같은 전통 기업들도 이러한 전략의 실험문화를 조직문화로 내재화하고 있다.</p>
+<p>이제 전략은 더 이상 “의도한 대로 되었는가?”를 묻는 것이 아니다. 대신 “우리는 얼마나 빨리 실패를 감지하고 학습했는가?”, “우리는 핵심 가설을 얼마만큼 검증했는가?”, “우리는 실제 시장의 언어에 얼마나 귀 기울였는가?”라는 질문으로 대체되어야 한다. 전략은 단일 경로의 끝이 아니라, 열린 지도 위에서의 방향 설정이고, 변화하는 지형을 탐색하며 끊임없이 수정되는 항로다. 오늘날의 전략가는 설계자가 아니라 항해자이다.</p>
+</section>
+<section id="전략경영의-역사" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="전략경영의-역사"><span class="header-section-number">1.4</span> 전략경영의 역사</h2>
+<p>전략이라는 개념은 단순한 전투 기술을 넘어, 복잡하고 예측 불가능한 환경에서 살아남기 위한 생존 기술로 진화해왔다. 전략의 기원은 종종 고대의 전쟁에서 찾곤 하지만, 현대 전략경영은 단순한 군사적 전술을 넘어서 조직의 존속, 혁신, 성장의 프레임워크로 기능한다.</p>
+<section id="고대에서-배우는-전략의-통찰" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="고대에서-배우는-전략의-통찰"><span class="header-section-number">1.4.1</span> 고대에서 배우는 전략의 통찰</h3>
+<p>고대 중국의 손자병법은 여전히 현대 기업의 경영 전략에 깊은 영향을 미치고 있다. 손자는 “싸우지 않고 이기는 것이 최선”이라고 했고, 이는 애플의 전략적 포지셔닝에서 명확하게 드러난다. 애플은 가격 경쟁에 뛰어들지 않고도, 브랜드의 독창성과 경험 중심의 생태계를 통해 시장 지배력을 유지한다. 이는 ‘정면 승부’ 대신, 차별화와 감성적 충성도를 통해 승부를 거는 전략이다. 반면 손자의 36계 중 마지막 전략인 ’줄행랑’은 종종 비겁함으로 해석되곤 하지만, 이는 전략적 후퇴, 즉 오늘날의 “Exit Strategy”로 이해되어야 한다. 스타트업이 시장에서 철수하거나, 대기업이 적자 사업부를 정리하는 것 모두 줄행랑의 현대적 실천이다. 이는 자원을 낭비하지 않고, 생존 가능성을 높이는 합리적 판단이다.</p>
+</section>
+<section id="전쟁이-남긴-전략적-교훈" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="전쟁이-남긴-전략적-교훈"><span class="header-section-number">1.4.2</span> 전쟁이 남긴 전략적 교훈</h3>
+<p>역사는 늘 전략의 실험장이었다. 나폴레옹과 히틀러가 러시아에서 패배한 결정적 원인은 단순히 군사력 부족이 아니라, 환경과 시간이라는 변수에 대한 오판이었다. 이는 오늘날 기업이 외부 환경을 무시하고 장기 계획만 고수할 때 겪는 실패와도 유사하다. 마찬가지로, 프랑스가 독일의 아르덴 숲 침공을 예측하지 못했던 이유는 “상대는 그렇게 하지 않을 것이다”라는 근거 없는 확신 때문이다. 전략경영에서도 가장 큰 위험은 ’자기확신’이며, 환경 변화와 경쟁자의 비정형 행동을 과소평가하는 것이다.</p>
+</section>
+<section id="현대-전략의-전환점-과학에서-예술로" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="현대-전략의-전환점-과학에서-예술로"><span class="header-section-number">1.4.3</span> 현대 전략의 전환점: 과학에서 예술로</h3>
+<p>전략경영이 학문적 체계를 갖추기 시작한 것은 20세기 중반이다. 프레드릭 테일러는 과학적 관리법을 통해 조직을 최적화하려 했지만, 이는 반복 가능한 작업에 국한되었다. 이후 헨리 포드는 조립라인을 도입해 효율성을 극대화했지만, 고객의 다양성이라는 변수를 무시해 전략적 유연성을 놓쳤다. 반면 마이클 포터는 1980년대에 경쟁 전략의 틀을 정립하면서 산업 내 구조적 경쟁 요인을 분석하는 도구를 제시했고, 이는 오늘날까지 전략 이론의 근간이 되고 있다.</p>
+<p><strong>기술 시대의 전략: 아마존과 넷플릭스의 사례</strong></p>
+<p>1995년 제프 베조스는 책 판매라는 좁은 범위를 시작으로 아마존을 글로벌 전자상거래 제국으로 탈바꿈시켰다. 그의 전략은 고객 중심 철학, 물류 인프라, 그리고 기술 투자라는 세 축을 기반으로 했다. 이 과정에서 아마존은 전통 유통 강자들을 밀어냈고, 오늘날 기업 전략의 필수 요소로 디지털 전환과 플랫폼 중심 사고를 떠올리게 만들었다. 넷플릭스 역시 DVD 대여라는 모델에서 스트리밍 서비스, 오리지널 콘텐츠 제작으로 진화하면서 전략적 유연성과 ’선제적 전환’의 중요성을 입증했다. 이들은 모두 손자의 원칙처럼 싸우지 않고 경쟁의 판을 바꾸는 데 성공한 사례이다.</p>
+</section>
+<section id="윤리와-국제-경쟁의-부상" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="윤리와-국제-경쟁의-부상"><span class="header-section-number">1.4.4</span> 윤리와 국제 경쟁의 부상</h3>
+<p>전략은 윤리와도 분리될 수 없다. 엔론과 월드컴 사태는 회계 조작을 통한 단기적 이익 추구가 결국 기업 전체를 붕괴시킨 사례로, 전략 실행에 있어 윤리적 판단이 얼마나 중요한지를 상기시킨다. 동시에 전략은 이제 국경을 넘는 개념이다. 글로벌화된 공급망과 디지털 생태계는 전략을 더 이상 국내 시장에 국한시키지 않는다. 프리드먼이 『세계는 평평하다』에서 지적했듯, 오늘날의 전략은 국경, 산업, 전통의 경계를 넘어야 생존이 가능하다.</p>
+</section>
+<section id="전략은-살아있는-프레임워크다" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="전략은-살아있는-프레임워크다"><span class="header-section-number">1.4.5</span> 전략은 살아있는 프레임워크다</h3>
+<p>과거처럼 하나의 ’정답’이 존재하던 시대는 끝났다. 전략은 점점 더 복잡한 변수와 이해관계 속에서 ’계속 조정되는 설계도’에 가깝다. 고대의 전략이 생존을 위한 전술이었다면, 현대의 전략은 지속 가능성과 혁신을 위한 생태계 구축의 도구이다. 변화하는 시장, 기술, 소비자 행동을 읽는 능력이야말로 전략경영의 핵심 역량이 되었으며, 이에 대한 통찰력을 키우는 것이 이 책의 목표다.</p>
+<p>##전략경영에 대한 평가</p>
+<p>전략경영은 이론적으로는 탁월한 예측과 계획을 통해 미래를 선점하는 도구로 인식되지만, 현실에서는 그 한계와 위험성 또한 뚜렷하게 드러나는 복합적 실천 영역이다. 오늘날처럼 급변하는 비즈니스 환경에서는 ’정확한 예측’이라는 개념 자체가 모순일 수 있으며, 이러한 문제의식은 전략경영에 대한 다층적 비판으로 이어진다.</p>
+<p>무엇보다 전략적 기획이 미래에 대한 확신을 전제로 구성된다는 점에서 전략경영은 본질적으로 ’불확실성’을 견디지 못하는 구조적 취약성을 안고 있다. 마이클 레이너는 그의 저서 『전략 패러독스(The Strategy Paradox)』에서 이 문제를 정면으로 지적한다. 그는 “가장 성공 가능성이 높은 전략이 동시에 가장 실패 가능성이 높은 전략일 수 있다”고 지적하며, 그 이유로 미래에 대한 고정된 신념이 전략 실행을 경직시키기 때문이라고 설명한다. 테슬라의 중국 시장 확장 전략은 이를 잘 보여주는 사례다. 초기에 정부 보조금과 강력한 친환경 정책이라는 ’확신’에 기반해 대규모 생산시설을 구축했지만, 이후 BYD와 같은 로컬 전기차 제조사들의 급부상과 미·중 기술 분쟁 심화는 전략적 유연성 부족이 얼마나 큰 리스크로 작용할 수 있는지를 여실히 보여준다.</p>
+<p>또한 전략경영은 종종 ’생존자 편향’이라는 인지 오류를 내포한다. 살아남은 기업만을 대상으로 전략을 분석하고 성공의 원인을 찾는 것은, 실패한 수많은 기업들의 데이터가 누락된 채 과잉 일반화된 통찰을 제공하는 결과를 낳는다. 예컨대, 애플의 전략이 ’혁신 중심의 생태계 구축’으로 요약될 수 있다 하더라도, 동일한 전략을 채택했으나 실패한 수많은 스타트업의 존재를 배제한다면 이는 사실상 신화를 재생산하는 데 불과하다. 전략경영 이론은 실패한 전략과 실패한 기업에 대한 성찰을 포함할 때에만 진정한 설명력을 획득할 수 있다.</p>
+<p>전략경영이 조직 내 권력구조나 사회적 불평등을 고착화하는 도구로 작용할 수 있다는 비판도 적지 않다. 일례로 다국적 기업의 글로벌 확장 전략이 자주 지역사회 파괴, 환경오염, 저임금 구조의 고착화로 이어졌던 것은, 전략이 단순히 성과지표 달성을 위한 기획이 아니라 사회적 맥락 속에서 작동하는 ’권력의 기술’이라는 점을 보여준다. 특히 ESG(Environmental, Social, Governance) 경영이 표면적으로는 전략적 정당성을 확보하는 장치로 기능하지만, 실질적으로는 경영진의 ’면책권’을 정당화하는 수단이 되기도 한다는 지적은 무시할 수 없다.</p>
+<p>더욱이 전략 도구 자체의 유효성에 대한 의문도 지속적으로 제기된다. 예를 들어, 자원기반관점(Resource-Based View, RBV)은 오랫동안 전략 수립의 주요 틀로 활용되어 왔지만, 빠르게 변화하는 기술·플랫폼 환경에서 ’지속가능한 경쟁우위’라는 개념 자체가 무의미해졌다는 비판을 받고 있다. 오늘날 경쟁우위는 수년이 아닌 수개월 단위로 교체되며, 유튜브나 인스타그램 알고리즘 하나의 변경이 수십만 비즈니스를 몰락시키는 시대에 ’내재된 역량’만으로 승부하는 전략은 지나치게 정태적일 수 있다.</p>
+<p>그렇다면 전략경영은 무의미한가? 그렇지 않다. 오히려 이러한 비판과 반론을 수용하면서 전략적 기획은 더욱 정교하고 유연한 형태로 진화해야 한다. 전략은 더 이상 예측의 도구가 아니라, 변화에 대응하고 불확실성을 설계하는 프레임워크여야 한다. 예를 들어, 민첩한 전략 실행을 위한 ’애자일 전략(Agile Strategy)’이나 ’리얼옵션 이론(Real Option Thinking)’은 전략의 고정된 수립보다, 전략적 가능성을 유보하고 유연하게 대응하는 방식을 강조한다. 현대 기업은 ’완성된 전략’이 아닌, ’전략적 탐색 과정’을 조직화하는 역량을 갖춰야 한다.</p>
+<p>마지막으로, 전략경영을 실행하는 경영자 스스로도 절대적인 확신보다는 전략적 겸손(strategic humility)을 유지해야 한다. 미래는 단지 확장 가능한 과거가 아니라, 때로는 본질적으로 다른 논리와 파괴적 변수를 수반하는 낯선 공간이기 때문이다. 따라서 전략경영은 단지 도구나 이론의 습득이 아니라, 복잡성과 불확실성을 받아들이고 조율할 수 있는 사고방식의 훈련이어야 한다.</p>
+<p>이 책은 전략 경영을 단순히 ‘무엇을 해야 하는가’의 문제로 보지 않는다. 오히려 ‘어떻게 사고할 것인가’, ‘어떻게 실패에 대비할 것인가’, 그리고 ’어떻게 끊임없이 조정하고 변화할 것인가’라는 질문을 통해 전략경영을 보다 입체적이고 현실에 밀착된 실천으로 접근하고자 한다. 그렇기 때문에 이 책에서 제시하는 도구와 이론은 절대적인 해답이 아니라, 변화하는 세계 속에서 스스로 질문하고 설계할 수 있는 지적 장비로 이해되어야 한다.</p>
+</section>
+</section>
+<section id="마무리하며" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="마무리하며"><span class="header-section-number">1.5</span> 마무리하며</h2>
+<p>전략에 대한 탐구는 단순한 경영 기법의 차원을 넘어 인간이 집단을 이끌고 미래를 설계하려는 오랜 시도에서 비롯되었다. 고대 중국의 손자가 『손자병법』에서 “싸우지 않고 이기는 것이 최선의 전략”이라 말했듯이, 전략은 본질적으로 적보다 유리한 위치를 선점하기 위한 지식과 기술, 직관의 융합이다. 이러한 고전적 지혜는 오늘날에도 여전히 유효하다. 예컨대 넷플릭스는 디즈니, HBO 등과의 정면충돌 대신, 오리지널 콘텐츠 중심의 고유한 생태계를 구축하며 ’차별적 포지셔닝’이라는 전략적 원칙을 현대적으로 실천했다. 이는 손자가 강조한 “형세를 조정해 적과의 직접 충돌 없이도 승기를 잡는다”는 논리와 맞닿아 있다.</p>
+<p>현대 전략경영은 고전의 지혜 위에 데이터 기반의 분석, 조직행동론, 기술혁신 이론 등 다양한 학제 간 통찰을 얹어 체계적으로 진화해 왔다. 초기에는 주로 군사 전략에서 영향을 받았지만, 20세기 중반 이후 전략은 더 이상 전쟁의 은유만이 아니라 기업이 자원을 배분하고 방향성을 설정하는 핵심 프레임워크로 자리 잡았다. 특히 1980년대 마이클 포터의 산업구조 분석(5 Forces)이나 일반 전략론은 기업들이 자신이 처한 경쟁 환경을 진단하고, 어디에서 싸우고 어디에서 피할지를 결정하게 하는 도구로 기능했다.</p>
+<p>하지만 전략은 단순히 분석의 결과만은 아니다. 오늘날 기업이 직면하는 문제는 수치로 설명되지 않는 불확실성과 예측 불가능성의 영역에 더 가까워졌다. 팬데믹 이후 공급망이 무너지고, AI 기술이 급속히 확산되며, 기후위기로 인해 기업의 존재 목적까지 다시 쓰여야 하는 상황에서 전략은 더 이상 ’정답 찾기’가 아니라 ’지속적인 탐색과 조정의 기술’이 되었다. 이런 의미에서 전략경영은 과학과 예술이 동시에 요구되는 복합적 사고 과정이다. 과학은 분석과 데이터에 기반한 구조적 의사결정을 의미하고, 예술은 맥락적 판단과 창의적 대응, 감각적 직관을 요구한다.</p>
+<p>예를 들어, 스타벅스는 단순한 커피 판매를 넘어 고객의 감성과 생활방식을 설계하는 전략을 채택함으로써 브랜드 충성도를 극대화했다. 반면, 동일한 시장에서 싸우던 던킨도너츠는 한국 시장에서 프리미엄 시장과의 접점을 찾지 못해 전략적 후퇴를 선택했다. 이는 ’줄행랑도 전략이다’라는 고사성어 36계 중 마지막 계책인 ’주위상(走爲上)’을 기업 차원에서 실천한 예시라 할 수 있다. 즉, 전략적 철수는 단순한 패배가 아닌, 리스크를 감수하지 않고 다시 도약할 기회를 마련하는 전략적 자산이 될 수 있다.</p>
+<p>이처럼 전략경영은 단순히 ‘무엇을 할 것인가’를 묻는 과정이 아니다. 그것은 기업이 ‘왜 존재하는가’, ‘무엇을 향해 나아갈 것인가’, ’어떤 방식으로 적응하고 재구성할 것인가’를 끊임없이 질문하게 만드는 과정이다. 그리고 이러한 질문은 정해진 해답이 아니라 조직 구성원들과의 토론, 실험, 실패와 반복을 통해 살아 움직이는 형태로 구체화된다.</p>
+<p>또한 전략경영은 조직 외부뿐 아니라 내부의 설계 문제이기도 하다. 전략은 경영진 몇 명의 머릿속에서 나오는 것이 아니라, 일선에서 시장을 체감하는 실무자들, 데이터를 해석하는 분석가들, 고객의 소리를 듣는 서비스 제공자들과 연결되어야 한다. 최근의 애자일(Agile) 조직 모델은 전략의 수립과 실행을 분리하지 않고, 현장에서 바로 전략을 조정하며 실험하는 방식으로 전환하고 있다. 이는 전략이 ’수립’되는 것이 아니라 ’진화’되고 ’학습’되어야 한다는 현대적 전략 패러다임의 핵심을 반영한다.</p>
+<p>결국 전략경영은 단순한 매뉴얼이 아니라, 변화에 대한 민감성과 미래에 대한 감각, 그리고 인간 행동에 대한 깊은 이해가 필요한 고차원적 실천이다. 이 책에서 다루는 전략 도구들은 기업이 환경을 진단하고, 자원을 효과적으로 배치하며, 장기적 방향성을 수립하는 데 필요한 이론적 기반을 제공하지만, 그것을 어떻게 해석하고 적용할지는 각 조직의 특성과 맥락, 그리고 리더십의 철학에 따라 달라질 수 있다.</p>
+<p>전략은 경영의 가장 이성적인 영역처럼 보일 수 있지만, 그 깊숙한 곳에서는 인간의 판단, 신념, 두려움, 창의성 같은 요소가 강하게 작용한다. 그렇기 때문에 전략경영을 공부한다는 것은 단지 기업의 성공공식을 배우는 것이 아니라, 복잡한 세계를 살아가는 조직이 어떻게 변화에 적응하고, 스스로의 존재 이유를 재정의하며, 실패를 넘어 생존과 번영을 모색할 수 있는지를 고민하는 과정이기도 하다.</p>
+</section>
+<section id="gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="gpt-실습">GPT 실습</h2>
+<p>이 장에서는 전략 관리의 개념과 역사적 발전에 대해 살펴보았다. 이제 GPT를 사용하여 전략 관리에 대한 이해를 심화할 수 있는 몇 가지 연습을 해보도록 하자.</p>
+<section id="실습-모듈-1-기업-진단-gpt-실습" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="실습-모듈-1-기업-진단-gpt-실습">실습 모듈 1: 기업 진단 GPT 실습</h3>
+<p>다음은 전략경영 분석을 위해 GPT를 활용하는 방법에 대한 연습이다. 다음의 예제 프롬프트에 따라 GPT(혹은 다른 LLM)를 사용하여 기업의 전략적 진단을 수행해 보자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>다음 항목에 따라 <span class="op">**</span>[기업명]<span class="op">**</span>의 대한민국 시장을 기준으로 한 전략경영 분석을 작성하세요: </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> 조직의 미션과 비전: 위 기업의 미션과 비전을 상세히 설명해주세요.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> 외부 환경(PESTLE 분석): 정치적, 경제적, 사회적, 기술적, 법적, 환경적 요인들을 포함하여 위 기업의 외부 환경을 분석해주세요.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> 산업 구조(Porter의 <span class="dv">5</span> Forces): 위 기업이 속한 산업의 경쟁력과 매력을 평가하기 위해 Porter의 <span class="dv">5</span> Forces(기존 경쟁자 간의 경쟁, 잠재적 진입자의 위협, 대체재의 위협, 공급자의 협상력, 구매자의 협상력)를 사용하여 분석해주세요.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> 내부 자원과 역량(RBV 기반): 자원기반관점(RBV)에 따라 위 기업의 내부 자원과 역량을 분석해주세요. 여기에는 핵심 역량, 강점 및 약점을 포함하세요.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> 주요 전략적 이슈 도출: 상기의 분석을 바탕으로 위 기업이 직면한 주요 전략적 이슈를 도출하고 이에 대한 설명을 작성해주세요.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>마지막으로, 다음 항목을 포함하는 SWOT 요약표를 작성해주세요:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Strengths (강점)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Weaknesses (약점)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Opportunities (기회)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Threats (위협)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>위의 프롬프트는 예제에 불과합니다. 본인의 AI 역량에 맞춰 프롬프트를 개선하고 보다 정교한 프롬프트로 변경해 봅시다. 프롬프트의 결과를 바탕으로 <strong>1페이지 리포트</strong>를 만들어 제출하세요. 리포트는 표지가 필요 없으며 1페이지 안에 모든 내용을 담아야 합니다. 리포트는 정해진 형식은 없으나 본인이 주장하는 바가 분명하게 드러나야 합니다. 단순히 GPT의 결과를 복사하여 붙여 넣는 것은 아무 의미가 없습니다. GPT의 결과를 바탕으로 본인의 생각을 정리하고, 본인이 주장하는 바를 명확히 하여 리포트를 작성하세요.</p>
+<p><strong>TIP 1:</strong> ChatGPT의 GPTs에서 프롬프트라고 검색하면 프롬프트를 보다 개선해주는 GPT를 찾을 수 있습니다. 이 GPT를 사용하여 프롬프트를 개선해 보세요.</p>
+<p><strong>TIP 2:</strong> PromptPerfect라는 서비스가 있습니다. 이 서비스는 프롬프트를 개선해주는 서비스로, 무료로 사용할 수 있습니다. 이 서비스를 사용하여 프롬프트를 개선해 보세요. 유사한 수 많은 다른 서비스가 있으니 개인적으로 찾아보는 것도 좋습니다.</p>
+</section>
+<section id="실습-모듈-2-전략-시나리오-설계-워크숍" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="실습-모듈-2-전략-시나리오-설계-워크숍">실습 모듈 2: 전략 시나리오 설계 워크숍</h3>
+<p>위에서 분석한 결과를 바탕으로 전략 시나리오를 설계하는 워크숍을 진행해 봅시다. 다음의 프롬프트를 이용하여 GPT를 사용해 전략 시나리오를 설계해 보자.여기서 전략 시나리오는 기업이 직면한 주요 전략적 이슈에 대한 다양한 대응 방안을 제시하는 것이다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>위에서 분석한 <span class="op">**</span>[기업명]<span class="op">**</span>의 분석결과를 바탕으로 <span class="op">**</span>[기업명]<span class="op">**</span>이<span class="op">/</span>가 향후 <span class="dv">5</span><span class="er">년</span> 내 직면할 수 있는 시나리오 <span class="dv">3</span><span class="er">가지를</span> 예측해줘.   </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>각 시나리오에 대해 가능한 전략적 대응 방안을 제시해줘. 전략적 대응방안은 ①비용, ②위험, ③성과 예상을 함께 분석해줘. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>GPT가 응답한 시나리오와 전랴적 대응 방안이 합리적인지 평가해 봅시다. GPT가 제시한 시나리오와 전략적 대응 방안이 실제 기업의 상황에 맞는지, 그리고 현실적인지 본인이 직접 검토하고 문제가 있다면 추가적인 수정요구를 통해 보다 현실적이고 논리적이며 구체화된 결과를 얻어야 합니다.</p>
+<p>본인이 작성한 시나리오와 전략적 대응 방안을 바탕으로 <strong>1페이지 리포트</strong>를 작성하세요. 리포트는 표지가 필요 없으며 1페이지 안에 모든 내용을 담아야 합니다. 세 가지의 시나리오 중, 가장 비 현실적이고 논리적이지 않은 시나리오 결과를 선택하여 본인이 어떻게 GPT와 대화를 해서 보다 현실적이고 논리적인 결과를 도출한 과정을 작성하여 제출하세요.</p>
+<p>AI는 만능이 아니지만 분명히 생산성의 향상과 효과적 결과를 도출하는데에 큰 도움이 될 것입니다. 중요한 것은 여러분들이 AI를 어떻게 활용할 것인가에 대한 고민과 노력이 필요합니다. AI는 도구일 뿐이며, 여러분의 창의력과 비판적 사고가 결합되어야 최상의 결과를 얻을 수 있습니다. 이제 필요한 것은 AI 리더쉽입니다. AI 리더쉽은 AI를 활용하여 조직의 목표를 달성하고, 혁신을 이끌어내는 능력을 의미합니다. 여러분이 AI 리더가 되어 전략 경영 분야에서 성공적인 결과를 도출해 내길 바랍니다.</p>
+</section>
+</section>
+<section id="gpt-사용-지침서-전략경영-실습을-위한-안내서" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="gpt-사용-지침서-전략경영-실습을-위한-안내서">GPT 사용 지침서: 전략경영 실습을 위한 안내서</h2>
+<section id="목적" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="목적">목적</h3>
+<p>이 가이드는 전략경영 수업에서 GPT를 활용한 실습 활동을 효과적으로 수행하기 위한 지침서이다. GPT는 전략적 사고를 보조하는 <strong>대화형 시뮬레이터</strong>로, 분석 도구나 아이디어 발산 도구로 활용될 수 있다. 단, GPT는 <strong>인공지능 기반 생성모델</strong>로서 다음과 같은 <strong>한계와 유의점</strong>이 존재한다.</p>
+</section>
+<section id="사용-전-주의사항" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="사용-전-주의사항">사용 전 주의사항</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정답 제공 X</strong></td>
+<td>GPT는 항상 정답을 제공하지 않으며, 정보의 정확성은 <strong>사용자의 검토</strong>가 필수이다.</td>
+</tr>
+<tr class="even">
+<td><strong>자료 출처 불명확</strong></td>
+<td>GPT의 응답은 사실처럼 보이나 <strong>출처 없는 주장</strong>이 섞여 있을 수 있다.</td>
+</tr>
+<tr class="odd">
+<td><strong>논리적 오류 가능성</strong></td>
+<td>전략 이론을 적용할 때 <strong>개념 오용이나 모순</strong>이 있을 수 있으므로 비판적으로 해석해야 한다.</td>
+</tr>
+<tr class="even">
+<td><strong>편향된 응답</strong></td>
+<td>문화적, 정치적, 성별/지역적 편향이 무의식적으로 포함될 수 있다.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gpt-실습-유형" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="gpt-실습-유형">GPT 실습 유형</h3>
+<table class="table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>실습 유형</th>
+<th>활용 목적</th>
+<th>예시 프롬프트</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>기업 분석</td>
+<td>기업의 전략을 다양한 프레임워크로 분석</td>
+<td><code>스타벅스의 SWOT 분석을 해줘.</code></td>
+</tr>
+<tr class="even">
+<td>시나리오 설계</td>
+<td>불확실한 미래 시나리오에 대응 전략 제시</td>
+<td><code>전기차 시장의 위기 시나리오 3개와 대응 전략 제안해줘.</code></td>
+</tr>
+<tr class="odd">
+<td>전략 비교</td>
+<td>전략적 선택지 비교 및 평가</td>
+<td><code>삼성전자의 M&amp;A 전략과 자체 개발 전략을 비교 분석해줘.</code></td>
+</tr>
+<tr class="even">
+<td>전략 창의성 토론</td>
+<td>전략은 과학인가 예술인가에 대한 사고 유도</td>
+<td><code>전략을 창의적 사고로 재해석해줘.</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="좋은-프롬프트-작성-팁" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="좋은-프롬프트-작성-팁">좋은 프롬프트 작성 팁</h3>
+<ul>
+<li><strong>구체적이고 명확한 지시</strong>
+<ul>
+<li>좋은 케이스: “5 Forces로 분석해줘”<br>
+</li>
+<li>나쁜 케이스: “분석해줘”</li>
+</ul></li>
+<li><strong>맥락과 대상 기업을 명시</strong>
+<ul>
+<li>“한국 시장에서의 현대차 전략을 SWOT으로 정리해줘”</li>
+</ul></li>
+<li><strong>결과물 형식을 요청</strong>
+<ul>
+<li>“표 형식으로 정리해줘”<br>
+</li>
+<li>“100자 이내 요약 포함해줘”</li>
+</ul></li>
+</ul>
+</section>
+<section id="비판적-사고-프레임" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="비판적-사고-프레임">비판적 사고 프레임</h3>
+<p>GPT의 응답을 그대로 받아들이지 말고, 다음 질문을 통해 <strong>비판적 사고</strong>를 훈련</p>
+<p>1.<span class="math inline">\(\;\)</span> 이 전략은 <strong>사실에 근거하고 있는가?</strong></p>
+<p>2.<span class="math inline">\(\;\)</span> 제시된 전략은 <strong>실행 가능성과 지속 가능성</strong>이 있는가?</p>
+<p>3.<span class="math inline">\(\;\)</span> 누락된 관점은 없는가? (예: 경쟁사 반응, 비용 구조 등)</p>
+<p>4.<span class="math inline">\(\;\)</span> 이 전략은 <strong>누구에게 유리하고 불리한가?</strong> (이해관계자 분석)</p>
+<p>5.<span class="math inline">\(\;\)</span> 내가 이 전략을 CEO로서 <strong>실행할 것인가? 왜?</strong></p>
+</section>
+<section id="실습-결과물-작성-지침" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="실습-결과물-작성-지침">실습 결과물 작성 지침</h3>
+<p>1.<span class="math inline">\(\;\)</span> <strong>GPT 응답 요약</strong> (핵심 주장 또는 분석 내용 정리)</p>
+<p>2.<span class="math inline">\(\;\)</span> <strong>학생의 비판적 피드백</strong> (동의 여부, 누락 요소 지적 등)</p>
+<p>3.<span class="math inline">\(\;\)</span> <strong>대안 전략 제시</strong> (자신의 관점에서 새로운 전략 또는 수정 제안)</p>
+</section>
+<section id="결론" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="결론">결론</h3>
+<p>GPT는 전략경영 실습에 있어 <strong>사고 실험 도구</strong>이며, 정답 제공자가 아니다.<br>
+가장 중요한 것은 “GPT가 말하는 것”이 아니라, <strong>학생이 어떻게 생각하고 반응하는가</strong>이다.</p>
+<blockquote class="blockquote">
+<p>“전략은 분석만으로 완성되지 않는다. 질문하는 사람이 전략을 만든다.”</p>
+</blockquote>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link  aria-label=" preface"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Chapter2.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>조직 성과 측정</span>">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

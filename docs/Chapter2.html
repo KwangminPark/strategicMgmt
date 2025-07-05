@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.531">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>전략경영 - 2&nbsp; 조직 성과 측정</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Chapter3.html" rel="next">
+<link href="./Chapter1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">전략경영</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">외부환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">내부 환경 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">전략적 이슈의 통합과 분석</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">비즈니스 수준 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">혁신 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기업 수준의 전략 선택</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">국제화 전략</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">전략 실행과 조직 설계</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">윤리적 판단과 사회적 책임</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#시작하며" id="toc-시작하며" class="nav-link active" data-scroll-target="#시작하며"><span class="header-section-number">2.1</span> 시작하며</a></li>
+  <li><a href="#비전-미션-목표" id="toc-비전-미션-목표" class="nav-link" data-scroll-target="#비전-미션-목표"><span class="header-section-number">2.2</span> 비전, 미션, 목표</a>
+  <ul class="collapse">
+  <li><a href="#스타벅스에-대한-도전" id="toc-스타벅스에-대한-도전" class="nav-link" data-scroll-target="#스타벅스에-대한-도전"><span class="header-section-number">2.2.1</span> 스타벅스에 대한 도전</a></li>
+  <li><a href="#팬데믹-이후의-전략적-전환과-새로운-도전" id="toc-팬데믹-이후의-전략적-전환과-새로운-도전" class="nav-link" data-scroll-target="#팬데믹-이후의-전략적-전환과-새로운-도전"><span class="header-section-number">2.2.2</span> 팬데믹 이후의 전략적 전환과 새로운 도전</a></li>
+  <li><a href="#비전의-중요성" id="toc-비전의-중요성" class="nav-link" data-scroll-target="#비전의-중요성"><span class="header-section-number">2.2.3</span> 비전의 중요성</a></li>
+  <li><a href="#미션-사명-선언문" id="toc-미션-사명-선언문" class="nav-link" data-scroll-target="#미션-사명-선언문"><span class="header-section-number">2.2.4</span> 미션 (사명) 선언문</a></li>
+  <li><a href="#스타벅스를-통해-본-비전과-미션의-관계-한-잔의-커피로-세상을-바꾸는-여정" id="toc-스타벅스를-통해-본-비전과-미션의-관계-한-잔의-커피로-세상을-바꾸는-여정" class="nav-link" data-scroll-target="#스타벅스를-통해-본-비전과-미션의-관계-한-잔의-커피로-세상을-바꾸는-여정"><span class="header-section-number">2.2.5</span> 스타벅스를 통해 본 비전과 미션의 관계: “한 잔의 커피로 세상을 바꾸는 여정”</a></li>
+  <li><a href="#smart-목표를-이용한-비전과-미션의-추구" id="toc-smart-목표를-이용한-비전과-미션의-추구" class="nav-link" data-scroll-target="#smart-목표를-이용한-비전과-미션의-추구"><span class="header-section-number">2.2.6</span> SMART 목표를 이용한 비전과 미션의 추구</a></li>
+  <li><a href="#기업-가치" id="toc-기업-가치" class="nav-link" data-scroll-target="#기업-가치"><span class="header-section-number">2.2.7</span> 기업 가치</a></li>
+  </ul></li>
+  <li><a href="#조직-성과-측정" id="toc-조직-성과-측정" class="nav-link" data-scroll-target="#조직-성과-측정"><span class="header-section-number">2.3</span> 조직 성과 측정</a>
+  <ul class="collapse">
+  <li><a href="#조직-성과-복잡계-이론적-접근" id="toc-조직-성과-복잡계-이론적-접근" class="nav-link" data-scroll-target="#조직-성과-복잡계-이론적-접근"><span class="header-section-number">2.3.1</span> 조직 성과: 복잡계 이론적 접근</a></li>
+  <li><a href="#균형성과표balanced-scorecard-다차원적-성과-평가의-도구" id="toc-균형성과표balanced-scorecard-다차원적-성과-평가의-도구" class="nav-link" data-scroll-target="#균형성과표balanced-scorecard-다차원적-성과-평가의-도구"><span class="header-section-number">2.3.2</span> 균형성과표(Balanced Scorecard): 다차원적 성과 평가의 도구</a></li>
+  <li><a href="#재무적-성과-측정-숫자-너머의-전략적-통찰" id="toc-재무적-성과-측정-숫자-너머의-전략적-통찰" class="nav-link" data-scroll-target="#재무적-성과-측정-숫자-너머의-전략적-통찰"><span class="header-section-number">2.3.3</span> 재무적 성과 측정: 숫자 너머의 전략적 통찰</a></li>
+  <li><a href="#고객-성과-충성도-경험-기대치의-총합" id="toc-고객-성과-충성도-경험-기대치의-총합" class="nav-link" data-scroll-target="#고객-성과-충성도-경험-기대치의-총합"><span class="header-section-number">2.3.4</span> 고객 성과: 충성도, 경험, 기대치의 총합</a></li>
+  <li><a href="#내부-프로세스-성과-효율성에서-민첩성으로" id="toc-내부-프로세스-성과-효율성에서-민첩성으로" class="nav-link" data-scroll-target="#내부-프로세스-성과-효율성에서-민첩성으로"><span class="header-section-number">2.3.5</span> 내부 프로세스 성과: 효율성에서 민첩성으로</a></li>
+  <li><a href="#학습-및-성장-성과-역량의-확장성과-혁신의-촉진력" id="toc-학습-및-성장-성과-역량의-확장성과-혁신의-촉진력" class="nav-link" data-scroll-target="#학습-및-성장-성과-역량의-확장성과-혁신의-촉진력"><span class="header-section-number">2.3.6</span> 학습 및 성장 성과: 역량의 확장성과 혁신의 촉진력</a></li>
+  </ul></li>
+  <li><a href="#애자일과-kpi-전략경영의-전환점과-외식산업에서의-응용" id="toc-애자일과-kpi-전략경영의-전환점과-외식산업에서의-응용" class="nav-link" data-scroll-target="#애자일과-kpi-전략경영의-전환점과-외식산업에서의-응용"><span class="header-section-number">2.4</span> 애자일과 KPI: 전략경영의 전환점과 외식산업에서의 응용</a></li>
+  <li><a href="#마무리하며" id="toc-마무리하며" class="nav-link" data-scroll-target="#마무리하며"><span class="header-section-number">2.5</span> 마무리하며</a></li>
+  <li><a href="#실습-모듈-1-기업-분석-gpt-실습" id="toc-실습-모듈-1-기업-분석-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-1-기업-분석-gpt-실습">실습 모듈 1: 기업 분석 GPT 실습</a></li>
+  <li><a href="#실습-모듈-2-기업-분석-gpt-실습" id="toc-실습-모듈-2-기업-분석-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-2-기업-분석-gpt-실습">실습 모듈 2: 기업 분석 GPT 실습</a></li>
+  <li><a href="#실습-모듈-3-국내기업-분석-gpt-실습" id="toc-실습-모듈-3-국내기업-분석-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-3-국내기업-분석-gpt-실습">실습 모듈 3: 국내기업 분석 GPT 실습</a></li>
+  <li><a href="#실습-모듈-4-국내기업-분석-gpt-실습" id="toc-실습-모듈-4-국내기업-분석-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-4-국내기업-분석-gpt-실습">실습 모듈 4: 국내기업 분석 GPT 실습</a></li>
+  <li><a href="#실습-모듈-5-국내-커피숍-시장에서-스타벅스-분석-gpt-실습" id="toc-실습-모듈-5-국내-커피숍-시장에서-스타벅스-분석-gpt-실습" class="nav-link" data-scroll-target="#실습-모듈-5-국내-커피숍-시장에서-스타벅스-분석-gpt-실습">실습 모듈 5: 국내 커피숍 시장에서 스타벅스 분석 GPT 실습</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">조직 성과 측정</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Adapted from *Strategic Management* by Reed Kennedy et al. (2020), CC BY-NC-SA 3.0 https://doi.org/10.21061/strategicmanagement 한국어 번역·부분 개작: 박광민 / Sapientia a Dei (2025) -->
+<section id="시작하며" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="시작하며"><span class="header-section-number">2.1</span> 시작하며</h2>
+<p>전략경영의 출발점은 조직이 스스로에게 던져야 할 세 가지 핵심 질문으로 요약된다.</p>
+<p>첫째, 우리는 현재 어디에 있는가?</p>
+<p>둘째, 우리는 어디로 가고 있는가?</p>
+<p>셋째, 우리는 어떻게 그 목표에 도달할 것인가?</p>
+<p>첫 번째 질문에 답하기 위해 조직은 현재 자신의 위치를 진단하고, 과거의 성과를 검토하며, 외부 환경 속에서의 상대적 위치를 평가해야 한다. 전통적으로 이는 재무제표 분석, 손익분기점 계산, 수익성 지표 등을 통해 수행되며, 업계 평균이나 주요 경쟁사와의 비교를 통한 벤치마킹도 중요한 도구로 활용된다. 그러나 오늘날 전략적 성과는 단지 재무 수치만으로는 충분히 평가될 수 없다. 비재무적 지표, 특히 직원 만족도, 이직률, 생산성, 고객 충성도, 브랜드 인지도, ESG 점수 등은 조직의 건강성과 지속가능성을 가늠하는 데 점점 더 중요한 역할을 하고 있다. 예컨대, 구글은 직원 몰입도와 협업 문화의 강점을 통해 혁신 역량을 강화했고, 애플은 고객 경험을 정성적 척도로 삼아 제품 설계와 마케팅 전략을 정밀하게 조율해왔다.</p>
+<p>조직이 현재의 위치를 명확히 인식한 후에는, 두 번째 질문인 ’우리는 어디로 가고 있는가?’에 대한 답을 고민해야 한다. 이 질문은 곧 비전의 문제다. 비전은 단순한 목표가 아니라, 조직이 장기적으로 도달하고자 하는 바람직한 미래의 상태를 묘사한다. 비전은 기업의 정체성과 지향점을 선언하는 동시에, 내부 구성원들에게 일관된 방향성을 제공하는 나침반의 역할을 한다. 넷플릭스는 ’전 세계 사람들에게 재미있는 콘텐츠를 자유롭게 전달하는 것’을 비전으로 삼고, 기존 방송 산업의 관행을 완전히 바꾸는 플랫폼 중심 전략을 설계하였다. 비전은 기업의 존재 이유인 사명(Mission)과 분리되어선 안 되며, 조직의 핵심 가치(Core Values)와도 긴밀히 연결되어야 한다. 예를 들어, 파타고니아(Patagonia)는 “지구를 구하기 위한 사업을 한다”는 미션 하에 친환경 비즈니스 모델과 노동 윤리를 비전과 일치시켜 글로벌 소비자들의 신뢰를 구축해왔다.</p>
+<p>세 번째 질문인 ’우리는 어떻게 거기에 도달할 것인가?’는 전략경영의 핵심에 해당한다. 이는 목표를 실현하기 위해 어떤 경로를 택할 것인지에 관한 것으로, 전략의 수립과 실행 과정을 모두 포함한다. 전략은 조직의 자원과 역량을 고려하여 외부 환경과의 상호작용 속에서 경쟁우위를 확보하기 위한 의사결정의 일련의 과정이다. 전략은 정적인 문서가 아니라, 변화하는 시장 조건과 고객의 기대에 민감하게 반응하며 진화하는 동적인 로드맵이다. 예컨대, 스타벅스는 코로나19 이후 디지털 전환 전략을 가속화하며 모바일 오더, 구독 서비스, 고객 맞춤형 리워드 프로그램을 중심으로 비접촉형 고객 경험을 재설계하였고, 이를 통해 오프라인 매장의 수익 구조를 회복하는 데 성공했다.</p>
+<p>전략 수립은 단지 최고경영진의 몫이 아니며, 조직 내 다양한 이해관계자와의 협력을 통해 완성된다. 주주, 고객, 직원, 공급업체, 지역사회 등 다양한 이해당사자의 기대와 요구를 통합적으로 고려해야 하며, 전략이 실행 가능한 수준에서 수립되고 정량적·정성적 지표를 통해 모니터링되어야 한다. 전략경영은 명확한 방향을 제시하는 동시에 유연성을 담보해야 하며, 목표 지향성과 환경 적응력을 동시에 갖춘 균형 감각이 요구된다.</p>
+<p>결국 전략경영이란 조직이 자신을 성찰하고 미래를 설계하며, 변화 속에서 일관된 목표를 향해 나아가는 과정을 체계화하는 활동이다. ’우리가 어디에 있는가’라는 냉정한 인식에서 출발하여, ’우리는 어디로 가야 하는가’라는 집단적 비전으로 나아가고, ’어떻게 그곳에 도달할 것인가’라는 전략적 사고와 실행 역량으로 이어지는 이 전환의 흐름 속에서, 전략경영의 본질이 살아 숨 쉬게 된다.</p>
+</section>
+<section id="비전-미션-목표" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="비전-미션-목표"><span class="header-section-number">2.2</span> 비전, 미션, 목표</h2>
+<section id="스타벅스에-대한-도전" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="스타벅스에-대한-도전"><span class="header-section-number">2.2.1</span> 스타벅스에 대한 도전</h3>
+<p>2011년 3월 30일은 스타벅스가 워싱턴주 시애틀에 첫 매장을 연 지 40주년이 되는 날이었다. 초라하게 시작한 스타벅스는 재정적 목표와 사회적 목표의 중요성을 강조하면서 세계 최대의 커피전문점 회사로 성장했다. 수십 개 국가에 수천 개의 매장을 설립하면서 스타벅스는 여러 흥미로운 경험을 했다.</p>
+<p>2007년 초, 스타벅스는 매우 성공적인 것으로 보였고 주식의 가치는 주당 <span class="math inline">\(\$ 35\)</span> 였다. 그러나 2008년이 되자 경제는 둔화되고 커피 업계의 경쟁은 치열해졌으며 스타벅스의 실적은 실망스러워졌다. 놀라운 반전으로 스타벅스의 주가는 연말까지 주당 10달러 미만으로 떨어졌고, 불안에 떠는 주주들은 스타벅스의 하락세가 계속될지, 아니면 한때 승승장구하던 회사가 다시 부활할지 궁금해했다.</p>
+<p>8년 전에 최고경영자에서 물러났던 카리스마 있고 선구적인 스타벅스 창업자 하워드 슐츠가 구출에 나섰다. 슐츠는 다시 지휘봉을 잡고 사명 선언문을 강조하며 회사를 정상화하기 위해 노력했다: “한 번에 한 사람, 한 잔, 한 동네에서 인간의 정신을 고무하고 키우는 것”을 강조했다. 실적이 저조한 약 천 개의 매장이 영구적으로 문을 닫았고, 다른 수천 개의 매장은 바리스타들이 영감을 주는 음료를 만들 수 있도록 재교육을 받을 수 있도록 몇 시간 동안 문을 닫았다. 스타벅스 매장에서 고객의 입맛을 사로잡는 주요 향이 아침 샌드위치가 아닌 커피가 될 수 있도록 음식 제공을 개선했다.</p>
+<p>스타벅스 창립 40주년이 되었을 때 슐츠는 회사를 다시 정상으로 돌려놓았고, 주가는 다시 주당 35달러를 넘어섰다. 2011년 3월, 슐츠는 “지난 3년 동안 우리는 회사를 완전히 변화시켰고, 스타벅스의 건강 상태는 상당히 양호하다”고 상황을 요약했다. “하지만 지금은 축하하거나 승리의 한 바퀴를 달릴 때가 아니라고 생각합니다. 아직 해야 할 일이 많이 남아 있습니다.” 슐츠는 2017년에 두 번째로 은퇴했고, 후임으로 케빈 존슨 COO가 임명되었다. 스타벅스는 2019년 3월 중국 선전에 30,000번째 매장을 오픈하며 독주 체제를 이어가고 있다. 2020년 코로나19 팬데믹 기간 동안 스타벅스와 존슨은 위기 상황에 대처하는 방식에 대해 찬사를 받았다. 1단계의 완화 및 억제 조치를 시행하여 드라이브 스루와 배달로만 이용을 제한했다. 직원들은 근무 여부에 관계없이 급여를 받았다. 그런 다음 2단계의 모니터링 및 적응 단계가 시행되어 점진적으로 매장을 재개장했다. 매장 개점 결정은 본사가 아닌 현지에서 이루어졌다. Johnson은 직원과 고객의 건강과 복지를 우선시하고, 그들이 근무하는 지역 사회 및 정부 관계자와 긍정적이고 건설적인 역할을 수행한다는 원칙을 강조했다.</p>
+</section>
+<section id="팬데믹-이후의-전략적-전환과-새로운-도전" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="팬데믹-이후의-전략적-전환과-새로운-도전"><span class="header-section-number">2.2.2</span> 팬데믹 이후의 전략적 전환과 새로운 도전</h3>
+<p>코로나19 팬데믹은 스타벅스가 고객과 만나고 운영을 설계하는 방식을 근본적으로 변화시키는 계기가 되었다. 팬데믹 이후 스타벅스는 디지털 전환을 가속화하면서, 모바일 앱을 중심으로 한 주문, 결제, 로열티 프로그램을 핵심 전략 플랫폼으로 강화했다. 2022년 기준, 미국 내 매출의 75% 이상이 앱을 통해 발생할 만큼 앱 기반 고객 접점이 중요해졌으며, 이는 맞춤형 마케팅 전략 강화와 더불어 운영 효율성 확보에도 크게 기여했다. 이러한 전략의 연장선상에서 스타벅스는 Web3 기술을 활용한 새로운 로열티 프로그램인 ’스타벅스 오디세이(Starbucks Odyssey)’를 시범 도입하며 NFT와 블록체인 기술을 실험적으로 통합하기도 했다. 특히 중국 시장에서는 알리페이, 위챗페이와 같은 현지 플랫폼과의 통합을 강화하면서 지역 맞춤형 서비스를 확대하였다.</p>
+<p>한편 도시 중심의 유동 인구 감소와 원격 근무 확산은 대형 매장 중심의 기존 점포 전략에 구조적 변화를 요구했다. 이에 스타벅스는 고정 좌석 중심의 대형 매장 수를 줄이고, 픽업과 배달에 최적화된 ‘스타벅스 픽업’ 매장 등 모바일 기반 소형 포맷 매장을 확대하였다. 이러한 구조 재편 과정에서 미국 내 400여 개의 기존 매장이 폐쇄되었으며, 도시 외곽 지역과 고속도로 인근 등 새로운 수요 기반에 대응하기 위한 점포 재배치 전략이 함께 전개되었다.</p>
+<p>이와 동시에 스타벅스는 사회적 책임과 노동 문제 사이에서 긴장에 직면했다. 팬데믹 이후 ESG 전략에 대한 관심이 높아지는 가운데, 미국 내 수많은 매장에서 노동조합 설립 움직임이 본격화되었고, 이에 대한 스타벅스의 대응은 반(反)노조적이라는 비판을 받았다. 특히 2023년까지 약 350개 매장이 노조에 가입하면서, 근로 조건 개선과 급여 인상, 자동화 대응에 대한 노사 갈등이 지속적으로 확산되었다.</p>
+<p>2022년에는 CEO 케빈 존슨이 은퇴하면서 하워드 슐츠가 다시 임시 CEO로 복귀하였고, 그는 조직의 방향성을 재정립하기 위한 ’리인벤션 전략(Reinvention Plan)’을 발표하였다. 이 전략은 파트너(직원) 중심의 조직문화 회복과 기술투자 확대, 운영 효율성 개선을 중심에 두었다. 이후 2023년 3월에는 인도계 경영자인 락스먼 내러심한(Laxman Narasimhan)이 정식 CEO로 취임하면서 스타벅스의 리더십은 다시 한번 변화를 맞이하게 되었다.</p>
+<p>글로벌 시장에서도 스타벅스는 도전에 직면했다. 특히 최대 성장시장인 중국에서는 현지 브랜드의 급성장과 규제 리스크, 지정학적 긴장이 동시에 작용하며 전략적 불확실성이 확대되었다. 중국 현지 브랜드와의 경쟁은 스타벅스의 프리미엄 브랜드 이미지와 시장점유율에 압박을 가하고 있으며, 팬데믹 이후 변화한 중국 소비자의 기호 변화 역시 새로운 전략적 대응을 요구하고 있다. 그럼에도 불구하고 스타벅스는 2025년까지 중국 내 9,000개 매장 오픈이라는 목표를 유지하고 있으며, 수익성과 현지화의 균형이라는 과제를 안고 전진 중이다.</p>
+<p>결과적으로 스타벅스는 팬데믹 이후의 불확실한 경영 환경 속에서도 ’커피 그 이상의 경험’을 제공하는 브랜드로서의 정체성을 유지하고자 하며, 디지털 중심의 소비자 경험 강화, 유연한 점포 전략, 사회적 책임과 수익성의 조화를 추구하는 방향으로 전략적 실험을 지속하고 있다.</p>
+</section>
+<section id="비전의-중요성" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="비전의-중요성"><span class="header-section-number">2.2.3</span> 비전의 중요성</h3>
+<p>탁월한 전략 리더와 그렇지 못한 전략 리더의 차이는 단지 지식이나 기술의 유무로만 설명되기 어렵다. 전략적 리더십의 진정한 차이는 구성원들에게 영감을 불어넣고, 집단적 에너지를 조직의 비전과 방향으로 결집시키는 능력에서 비롯된다. 하워드 슐츠는 스타벅스를 단순한 커피 판매점이 아니라 ’제3의 공간’이라는 문화적 아이콘으로 탈바꿈시켰다. 그는 직원들에게 단순한 임금 노동자가 아닌 브랜드의 ’파트너’로서 자긍심을 갖게 했으며, 고객에게는 집과 직장을 잇는 심리적 안식처로 스타벅스를 인식하게 만들었다. 이러한 전환의 동력은 탁월한 비전 수립과 그것을 현실로 구현하는 리더십에서 비롯되었다.</p>
+<p>비전은 전략 리더가 조직 구성원에게 방향성을 제시하고, 동기를 부여하며, 공동의 목적을 공유하도록 만드는 핵심 도구다. 워렌 베니스는 “리더와 관리자 모두 시스템을 움직이지만, 리더는 그것이 어디로 가야 하는지를 설명할 수 있어야 한다”고 강조한 바 있다. 조직의 비전은 단순한 구호나 장식적 문장이 아니라, 조직이 미래에 어떤 모습으로 존재하길 원하는지에 대한 열망의 선언이다. 잘 구성된 비전은 조직의 존재 목적과 핵심 가치에 기반해 구성원들이 추구해야 할 방향을 제시하며, 동시에 전략적 판단의 나침반 역할을 한다.</p>
+<p>실제로 강력한 비전 선언문은 조직 내부뿐 아니라 외부 이해관계자에게도 강력한 메시지를 전달한다. 예를 들어 Avon의 비전인 “전 세계 여성들의 제품, 서비스, 자아실현 욕구를 가장 잘 이해하고 충족시키는 회사가 되는 것”은 고객 중심성과 여성 역량 강화라는 조직의 핵심 가치를 압축적으로 담고 있다. 이 비전은 단지 향후 방향성을 묘사하는 데 그치지 않고, 직원들이 그 목표를 실현하기 위한 행동 기준과 우선순위를 설정할 수 있도록 안내한다. 마찬가지로, 알루미늄 제조업체 Alcoa는 “고객, 주주, 지역사회 및 직원의 눈에 비친 세계 최고의 회사가 되는 것”이라는 대담한 비전을 내세우며, 모든 구성원이 세계적 수준의 품질과 윤리를 추구하도록 독려한다. 이처럼 비전은 그 자체로 조직 구성원들에게 높은 기준을 제시하며, 행동의 정당성과 전략적 선택의 기준을 제공한다.</p>
+<p>그러나 현실에서는 비전을 수립하는 일 자체가 결코 쉬운 과제가 아니다. 글로벌 기업 임원 1,500명을 대상으로 한 한 연구에 따르면, 응답자의 98%가 효과적인 전략 리더의 가장 중요한 자질로 ’강력한 비전 수립 능력’을 꼽았다. 동시에 이들 중 90%는 자신이 실제로 강력한 비전을 만들어낼 수 있는 능력에 대해 회의적인 반응을 보였다. 이처럼 비전은 리더가 갖추어야 할 가장 필수적인 자질이지만, 가장 확보하기 어려운 자산이기도 하다. 놀랍지 않게도, 상당수의 조직은 아예 공식적인 비전 선언문을 보유하고 있지 않으며, 형식적으로 선언된 비전조차도 직원들 사이에서 체화되지 못한 채 형식적 구호로 전락하는 경우가 많다. 실제로 비전이 존재하더라도, 그것이 조직 전반에 공유되고 실천되지 않는다면 전략적 방향성을 확보하는 데 실패할 수밖에 없다.</p>
+<p>훌륭한 비전은 조직이 달성하고자 하는 목표를 분명히 하고, 이를 통해 전략 수립과 실행이 일관된 궤도로 진행될 수 있도록 한다. 비전은 미션(존재 이유), 핵심 가치(행동 기준), 전략(달성 방법), 조직문화(구성원 행동 양식)와 통합되어야 하며, 이 요소들이 조화를 이룰 때 조직은 지속적인 성장과 혁신의 토대를 마련할 수 있다. 예컨대, 테슬라는 “지속가능한 에너지로의 전환을 가속화하는 것”을 비전으로 삼고 있으며, 이는 단지 전기차 생산에 국한되지 않고 태양광 발전, 에너지 저장장치, 소프트웨어 플랫폼까지 연결된 생태계 전략으로 확장된다. 파타고니아는 “지구를 구하는 데 도움이 되는 사업을 한다”는 선언을 통해 친환경 경영을 브랜드 정체성으로 구축하였고, 실제로 이 비전을 기반으로 소비자 충성도와 투자자 신뢰를 동시에 확보하고 있다. 이러한 비전들은 단순한 문구가 아니라, 전사적 전략과 행동양식, 그리고 문화 그 자체를 형성하는 기반이 된다.</p>
+<p>궁극적으로 비전은 기업이 장기적으로 어떤 존재가 되기를 희망하는지를 선언하는 미래 지향적 성찰이며, 조직 내부의 통합된 행동을 가능하게 하는 전략적 기제이다. 진정한 전략 리더는 강력한 비전을 제시하고, 그것을 구체적 전략과 연결시키며, 구성원들이 그 비전을 자발적으로 내면화할 수 있도록 설계할 수 있는 사람이다. 기업의 지속가능한 경쟁우위는 이러한 비전의 명료성과 실행력에서 비롯된다.</p>
+<p>오늘날 기업들이 추구하는 비전 중 일부는 다음과 같다.</p>
+<div id="tbl-vision" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-vision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: 기업의 비전
+</figcaption>
+<div aria-describedby="tbl-vision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 65%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기업</th>
+<th>Vision Statement</th>
+<th>핵심 키워드·초점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>“To inspire and nurture the human spirit – one person, one cup and one neighborhood at a time.”</td>
+<td>휴먼 스피릿, 지역사회, 경험 기반 프리미엄</td>
+</tr>
+<tr class="even">
+<td><strong>Amazon</strong></td>
+<td>“To be Earth’s most customer-centric company where customers can find and discover anything they might want to buy online.”</td>
+<td>고객집착, 다양성, 온라인 접근성</td>
+</tr>
+<tr class="odd">
+<td><strong>Google (Alphabet)</strong></td>
+<td>“To provide access to the world’s information in one click.”</td>
+<td>정보 접근성, 보편성, 기술혁신</td>
+</tr>
+<tr class="even">
+<td><strong>Samsung Electronics</strong></td>
+<td>“To inspire the world with our innovative technologies, products and design that enrich people’s lives and contribute to a better global society.”</td>
+<td>혁신, 삶의 질, 사회공헌</td>
+</tr>
+<tr class="odd">
+<td><strong>Tesla</strong></td>
+<td>“To accelerate the world’s transition to sustainable energy.”</td>
+<td>지속가능성, 에너지 전환, 급진적 실행</td>
+</tr>
+<tr class="even">
+<td><strong>Unilever</strong></td>
+<td>“To be the global leader in sustainable business, demonstrating how our purpose-led, future-fit business model drives superior performance.”</td>
+<td>지속가능 경영, 목적-성과 통합, 글로벌 리더십</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="미션-사명-선언문" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="미션-사명-선언문"><span class="header-section-number">2.2.4</span> 미션 (사명) 선언문</h3>
+<p>조직의 사명(Mission)은 그 조직이 왜 존재하는지를 설명하는 핵심적인 출발점이다. 사명 선언문은 조직의 목적, 사회적 역할, 존재 이유를 명시하며, “우리는 누구인가?”라는 근본적인 질문에 답을 제시한다. 이는 단지 내부 직원뿐 아니라, 외부의 주요 이해관계자—고객, 투자자, 파트너, 지역사회 등—에게도 기업의 정체성과 방향성을 전달하는 수단이다. 조직이 복잡하고 경쟁적인 환경 속에서 지속가능한 전략을 수립하고 실행하기 위해서는 먼저 자신이 무엇을 위해 존재하는지를 분명히 해야 하며, 이 질문에 대한 가장 정제된 형태의 응답이 바로 사명 선언문이다.</p>
+<p>하워드 슐츠가 스타벅스를 재건하던 시기, 그는 스타벅스의 존재 목적에 대해 근본적인 성찰을 거쳤고, 이를 바탕으로 사명 선언문을 다시 확립했다. 그가 제시한 스타벅스의 사명은 “한 번에 한 사람, 한 잔, 한 동네에서 인간의 정신을 고무하고 키우는 것”이었다. 이 짧은 문장은 단순히 커피를 판매하는 기업이 아니라, 지역사회에서의 관계와 인간적 경험을 중시하는 기업으로서 스타벅스의 본질을 보여준다. 사명 선언문은 제품이나 이윤에 대한 언급 없이도 조직이 어떤 방식으로 사회에 기여하고자 하는지를 강력하게 전달할 수 있어야 하며, 스타벅스는 이를 효과적으로 구현한 사례 중 하나다.</p>
+<p>사명 선언문은 과거와 현재를 기반으로 하되, 단기적 운영 목표나 재무 성과를 넘어서 <strong>조직의 정체성</strong>과 <strong>사회적 가치</strong>를 반영한다. 구글의 사명인 “전 세계의 정보를 정리하여 보편적으로 접근 가능하고 유용하게 만드는 것”은 정보 민주화에 대한 철학을 담고 있으며, 이 사명은 구글이 검색엔진이라는 단일 서비스에서 출발하여 Gmail, Google Maps, Google Scholar, Android OS 등으로 확장해가는 모든 전략의 기반이 된다. 사명은 이처럼 기업의 전략적 다각화와 자원 배분의 근거를 제공하며, 장기적 비전과도 정렬되어야 한다.</p>
+<p>기업이 이해관계자들의 신뢰와 지지를 얻기 위해서는, 그들이 공감할 수 있는 사명을 제시해야 한다. 파타고니아의 “우리는 지구를 구하는 데 도움이 되는 비즈니스를 한다”라는 선언은 단지 친환경 경영이라는 슬로건을 넘어서, 실제로 매출의 1%를 환경단체에 기부하고, 재생섬유 사용률을 높이며, ’수선해서 쓰기 캠페인’을 전개하는 실천 전략으로 연결된다. 이처럼 사명은 기업이 사회에서 어떤 역할을 자처하는지를 보여주며, 이해관계자들에게 “왜 이 회사를 지지해야 하는가”에 대한 답을 제공한다.</p>
+<p>한편, 사명 선언문은 내부 전략적 기능의 우산 역할도 한다. 조직의 중장기 전략, 단기 목표, 운영 계획은 모두 사명의 틀 안에서 수립되어야 하며, 만약 전략이 사명과 어긋난다면 전략이 수정되어야 한다. 혹은 전략이 명확히 타당함에도 사명과 충돌한다면, 조직은 사명 자체를 재정의해야 할 수도 있다. 예를 들어, 넷플릭스는 과거 DVD 대여 서비스를 운영하던 시절에도 “전 세계 사람들에게 훌륭한 콘텐츠를 즐기는 방식을 혁신하는 것”을 사명으로 삼았다. 이 사명은 이후 스트리밍으로의 전환, 오리지널 콘텐츠 제작, 글로벌 진출 등의 전략적 변화에도 유연하게 대응할 수 있는 기반을 제공했다.</p>
+<p>잘 정립된 사명은 조직의 모든 의사결정과 행동의 기준이 되며, 전략적 일관성과 조직 정체성을 유지하는 데 결정적인 역할을 한다. 그러나 많은 기업들이 여전히 명확한 사명을 갖고 있지 않거나, 사명이 존재하더라도 그것이 조직 구성원들에게 체화되지 못하는 문제가 존재한다. 실제로 글로벌 경영진을 대상으로 한 조사에서, 상당수의 리더들이 사명의 중요성은 인식하고 있으나 자신이 속한 조직의 사명을 명확히 설명하지 못하는 경우가 많았다. 또한 현장에서 일하는 구성원들이 사명을 인지하고 그 의미에 공감하며 업무에 반영하지 못할 경우, 사명은 선언문에 불과한 형식적 장식으로 전락한다.</p>
+<p>결국 조직의 사명은 기업의 전략적 정체성, 운영 방향, 그리고 사회적 존재 이유를 하나의 문장에 압축한 선언이며, 이는 전략과 문화를 연결하는 교량 역할을 한다. 사명이 명확하고 실제 전략과 연결되어 있을 때, 조직은 변화하는 환경 속에서도 중심을 잃지 않고 지속가능한 방식으로 나아갈 수 있다. 그렇기 때문에 전략경영은 항상 ’사명에서 시작되고, 사명으로 귀결되어야 한다’는 점을 잊어서는 안 된다.</p>
+<div id="tbl-mission" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: 기업의 사명 선언문
+</figcaption>
+<div aria-describedby="tbl-mission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기업명</th>
+<th>미션 (Mission Statement)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>스타벅스 (Starbucks)</strong></td>
+<td><strong>“To inspire and nurture the human spirit – one person, one cup, and one neighborhood at a time.”</strong><br>사람, 한 잔의 커피, 하나의 지역 사회를 통해 인간 정신을 고취하고 돌보는 것.</td>
+</tr>
+<tr class="even">
+<td><strong>아마존 (Amazon)</strong></td>
+<td><strong>“To be Earth’s most customer-centric company, where customers can find and discover anything they might want to buy online, and endeavors to offer its customers the lowest possible prices.”</strong><br>세계에서 가장 고객 중심적인 기업이 되어, 고객이 원하는 것을 온라인에서 찾고 구매할 수 있도록 하며, 최저가를 제공하려는 것.</td>
+</tr>
+<tr class="odd">
+<td><strong>구글 (Google)</strong></td>
+<td><strong>“To organize the world’s information and make it universally accessible and useful.”</strong><br>세상의 정보를 체계화하고, 모두가 접근 가능하며 유용하게 만드는 것.</td>
+</tr>
+<tr class="even">
+<td><strong>삼성전자 (Samsung Electronics)</strong></td>
+<td><strong>“Inspire the world, create the future.”</strong><br>세상을 감동시키고 미래를 창조한다.<br>※ 부가적 설명: 혁신적인 기술과 제품을 통해 더 나은 세상을 만드는 것.</td>
+</tr>
+<tr class="odd">
+<td><strong>테슬라 (Tesla)</strong></td>
+<td><strong>“To accelerate the world’s transition to sustainable energy.”</strong><br>전 세계가 지속 가능한 에너지로 전환하는 속도를 높이는 것.</td>
+</tr>
+<tr class="even">
+<td><strong>유니레버 (Unilever)</strong></td>
+<td><strong>“To make sustainable living commonplace.”</strong><br>지속 가능한 삶을 일상화하는 것.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>각 미션은 단순한 문장이지만, 기업의 전략, 문화, 제품 개발 방향성에 강력한 영향력을 미치며, 비전 및 핵심가치와 함께 조직의 정체성을 형성한다. 얼마 전만 해도 사명 선언문은 몇 단락에 달하기도 했지만, 기업들이 직면한 문제는 직원들이 사명을 기억하거나 말로 표현할 수 없다는 것이 문제였다. 사명 선언문이 진화하면서 짧고 기억하기 쉬워졌고, 조직의 사명을 알고 실천하는 것은 직원들의 참여도와 만족도를 높이는 데 도움이 된다. 비전(Vision)과 미션(Mission)의 관계를 명확하게 이해하기 위한 실천적 사고 틀로 다음과 같은 ‘등산’ 비유 모델을 생각해 볼 수 있다. 이 비유는 경영학, 조직심리학, 전략학에서 실제로 자주 인용되는 방식과 유사하다.</p>
+<div id="tbl-vision-mission-strategy-values" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-vision-mission-strategy-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.3: 비전, 미션, 전략, 가치의 관계
+</figcaption>
+<div aria-describedby="tbl-vision-mission-strategy-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 53%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>설명</th>
+<th>비유 (등산)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>비전 (Vision)</strong></td>
+<td>우리가 궁극적으로 도달하고자 하는 <strong>미래 상태</strong> 또는 <strong>궁극적 목표</strong>를 정의함</td>
+<td>산 정상 (목표 지점)</td>
+</tr>
+<tr class="even">
+<td><strong>미션 (Mission)</strong></td>
+<td>그 비전을 향해 나아가기 위한 <strong>현재 우리의 역할과 존재 이유</strong>, 즉 <strong>오늘 무엇을 왜 하는가</strong>를 명시</td>
+<td>등반의 방식 (왜 이 산을 오르며, 어떤 자세로 오를 것인가)</td>
+</tr>
+<tr class="odd">
+<td><strong>전략 (Strategy)</strong></td>
+<td>비전을 향해 가기 위한 <strong>구체적 경로</strong>를 설계하는 계획, 목표를 향한 중장기 행동 계획</td>
+<td>등산 경로와 방법 (도구, 팀워크, 일정 등)</td>
+</tr>
+<tr class="even">
+<td><strong>가치 (Values)</strong></td>
+<td>등산 과정에서 우리가 <strong>절대적으로 지켜야 할 원칙</strong>, 즉 우리의 <strong>행동 기준과 문화</strong></td>
+<td>등산 중 지켜야 할 규범 (예: 안전, 환경 존중, 협동)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="스타벅스를-통해-본-비전과-미션의-관계-한-잔의-커피로-세상을-바꾸는-여정" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="스타벅스를-통해-본-비전과-미션의-관계-한-잔의-커피로-세상을-바꾸는-여정"><span class="header-section-number">2.2.5</span> 스타벅스를 통해 본 비전과 미션의 관계: “한 잔의 커피로 세상을 바꾸는 여정”</h3>
+<p>스타벅스의 비전은 단순한 커피 회사를 넘어, 사람들의 삶과 지역 사회에 깊은 영향을 미치는 문화적 아이콘이 되는 것이다. 즉, 스타벅스는 단지 좋은 커피를 파는 회사가 아니라, 전 세계 수억 명의 일상 속에서 <strong>‘제3의 공간(third place)’</strong>으로 자리매김하는 것을 궁극적인 이상으로 삼고 있다. 이 비전은 다음과 같이 표현된다:</p>
+<blockquote class="blockquote">
+<p><strong>“To inspire and nurture the human spirit - one person, one cup, and one neighborhood at a time.”</strong></p>
+<p><strong>“사람 한 명, 한 잔의 커피, 하나의 지역 사회를 통해 인간 정신을 고취하고 돌보는 것.”</strong></p>
+</blockquote>
+<p>여기서 핵심은 단순한 시장 점유율이나 매출 증대가 아닌, <strong>‘영감’과 ‘돌봄’(Inspire &amp; Nurture)</strong>이라는 비물질적 가치에 있다. 이 비전은 스타벅스가 왜 지역사회와의 관계, 직원 복지, 공정무역 커피 등 <strong>윤리적 소비(Ethical Consumption)</strong>에 투자하는지를 설명하는 근본적 기준이다. 반면, 스타벅스의 미션은 이 이상을 실현하기 위한 오늘의 실천 방식을 구체화한 것이다. 미션은 다음과 같다:</p>
+<blockquote class="blockquote">
+<p><strong>“With every cup, with every conversation, with every community – we nurture the limitless possibilities of human connection.”</strong></p>
+<p><strong>“모든 커피 한 잔, 모든 대화, 모든 커뮤니티 속에서 우리는 인간 연결의 무한한 가능성을 키운다.”</strong></p>
+</blockquote>
+<p>즉, 비전이 ’왜 존재하는가’를 말한다면, 미션은 ’무엇을 하고 있는가’를 설명한다. 스타벅스는 이를 실현하기 위해 각 매장을 단순한 ’판매 공간’이 아닌 경험 공간으로 설계해 왔다. 다음과 같은 사례들이 있다:</p>
+<p><strong>사례 1: 하워드 슐츠의 이탈리아 여행과 제3의 공간 개념</strong></p>
+<p>스타벅스의 전 CEO 하워드 슐츠(Howard Schultz)는 1983년 이탈리아 밀라노를 방문했을 때 현지의 카페 문화를 체험하며 깊은 감명을 받았다. 단순히 커피를 마시는 장소가 아니라, 사람들이 교류하고 휴식하며 삶을 나누는 공공적 사적 공간으로서의 카페 문화가 매우 인상적이었던 것이다. 이때의 경험은 훗날 스타벅스가 미국과 전 세계에 ‘제3의 공간’ 개념을 도입하는 결정적 계기가 된다. 그는 “사람들이 사무실과 가정을 제외하고 머무를 수 있는, 편안하고 따뜻한 공간을 만들고 싶다”고 선언했고, 이 비전은 스타벅스의 정체성과 전략에 깊이 새겨지게 된다. 이탈리아의 감성을 글로벌 미션으로 번역한 대표적 사례라 할 수 있다.</p>
+<p><strong>사례 2: 공정무역 커피와 윤리적 소비</strong></p>
+<p>2000년대 초반, 스타벅스는 커피 생산국에서 벌어지는 노동 착취와 환경 파괴 문제에 대해 글로벌 시민사회로부터 비판을 받기 시작했다. 이에 스타벅스는 공정무역(Fair Trade) 인증 커피 도입을 본격화하고, 윤리적 공급망 프로그램(C.A.F.E. Practices)을 도입한다. 이 선택은 단기적으로는 원가 상승이라는 리스크를 동반했지만, 장기적으로는 ’우리 회사는 커피 한 잔을 넘어서서, 인간과 지구를 생각한다’는 메시지를 사회 전반에 각인시켰다. 이것은 미션을 통해 비전을 실현한 전형적인 사례다.</p>
+<p><strong>사례 3: Black Lives Matter 운동과 스타벅스의 대응</strong></p>
+<p>2020년, 미국 전역에서 Black Lives Matter 운동이 확산될 때, 스타벅스는 초기에 직원들의 BLM 상징 표현(예: 티셔츠, 배지 등)을 제한하는 내부 정책을 시행했다가 비판 여론이 거세지자, 이를 철회하고 아예 자사 로고와 BLM 문구가 들어간 유니폼을 공식 제공하는 쪽으로 정책을 전환했다. 이 역시 <strong>“우리는 지역사회와 함께 하며, 인간의 연결과 존엄성을 지지한다”</strong>는 스타벅스 미션의 실천이자, 비전의 현실화로 볼 수 있다. 단순히 “커피 회사”로서가 아니라, 사회적 감수성과 윤리적 리더십을 가진 문화 브랜드로서의 위상을 강화한 결정적 장면이었다. 물론 이 과정에서 스타벅스의 화장실에서의 인종차별 사건 등 여러 논란이 있었지만, 전반적으로는 비전과 미션을 통해 사회적 책임을 다하려는 노력을 보여주었다.</p>
+<p><strong>결론: 비전은 북극성이고, 미션은 나침반이다</strong></p>
+<p>스타벅스 사례에서 보듯, 비전은 ’우리가 궁극적으로 어떤 존재가 되고 싶은가’를 제시하는 미래지향적 선언이고, 미션은 ’오늘 우리가 왜 존재하며 무엇을 할 것인가’에 대한 실행 지침이다.</p>
+<p>이 두 요소는 따로 존재하는 것이 아니라, 서로를 통해 강화된다. 비전이 없다면 미션은 목적 없는 활동이 되고, 미션이 없다면 비전은 실현되지 않는 꿈에 그친다. 스타벅스가 전 세계 80개국 이상에서 매일 수천만 잔의 커피를 판매하면서도 브랜드 신뢰를 유지하는 이유는, 이 두 축이 강하게 연결되어 있기 때문이다. 그리고 그 연결은 때로 한 잔의 커피, 때로는 한 명의 바리스타, 때로는 하나의 지역사회에서 조용히 실현된다.</p>
+</section>
+<section id="smart-목표를-이용한-비전과-미션의-추구" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="smart-목표를-이용한-비전과-미션의-추구"><span class="header-section-number">2.2.6</span> SMART 목표를 이용한 비전과 미션의 추구</h3>
+<p>조직의 비전과 미션은 그 자체로 강력한 영감을 불러일으킬 수 있지만, 그것만으로는 행동을 이끌어내기에 부족하다. 비전은 조직이 되고자 하는 미래의 모습을, 미션은 조직이 존재하는 근본적인 이유를 설명하지만, 이 둘을 일상적인 행동으로 전환하려면 더 구체적이고 실행 가능한 목표가 필요하다. 바로 이때 필요한 것이 SMART 목표이다.</p>
+<p>SMART는 Specific(구체적이고), Measurable(측정 가능하며), Achievable(달성 가능하고), Realistic(현실적이며), Time-bound(시간 제한이 있는)라는 다섯 가지 기준을 갖춘 목표를 의미한다. SMART 목표는 조직 구성원들에게 명확한 방향성과 기대 수준을 전달하고, 전략 실행의 기준과 진척 상황을 객관적으로 추적할 수 있는 프레임워크를 제공한다. 비전과 미션이 감성과 의미의 언어라면, SMART 목표는 행동과 실행의 언어다.</p>
+<p>실제로 많은 성공적인 조직은 이 원칙에 따라 비전을 구체적인 목표로 세분화하고, 각 목표가 전략적 우선순위에 부합하는지 주기적으로 점검한다. 테슬라의 비전은 “지속가능한 에너지로의 전환을 가속화하는 것”이다. 이 추상적 문장을 SMART하게 구현하기 위해 테슬라는 다음과 같은 목표를 설정했다. “2023년까지 연간 전기차 생산량 150만 대 달성”, “2025년까지 1만 개 슈퍼차저망 글로벌 구축”, “2030년까지 태양광 패널과 배터리 저장장치 생산량 연 1TWh 확보”. 이들 목표는 모두 구체적이고, 수치 기반이며, 기한이 명확하고, 조직의 역량을 고려한 범위 내에서 설정되어 있다.</p>
+<p>또한, SMART 목표는 단지 전략 실행의 수단일 뿐 아니라, 구성원 개인의 업무 방향성을 설정하는 데도 큰 역할을 한다. 아마존은 “고객 집착(Customer Obsession)”이라는 비전적 원칙을 가지고 있으며, 이를 구현하기 위해 직원 개개인의 목표까지 SMART 구조로 정렬하는 ‘역방향 목표설계’(Working Backwards) 기법을 활용한다. 예를 들어, 고객 반품율을 3개월 안에 20% 감소시키기 위해 어떤 부서에서 어떤 조치를 취할 것인지, 데이터는 어떻게 측정할 것인지, 결과는 어떻게 피드백할 것인지가 모두 명확하게 설정된다.</p>
+<p>SMART 목표의 또 다른 강점은 실행 이후의 전략 피드백 루프를 가능하게 만든다는 점이다. 조직이 목표를 달성했는지 여부는 단지 성과의 측정이 아니라, 전략 자체의 유효성을 검증하는 수단이 된다. 목표가 일관되게 달성되지 않는다면, 이는 전략이 비현실적이거나 실행 역량과 단절되어 있음을 의미할 수 있으며, 반대로 목표가 너무 쉽게 달성된다면 전략이 지나치게 보수적일 가능성도 있다. 따라서 SMART 목표는 단순한 할 일 목록이 아니라, 전략 실행과 조직 학습을 동시에 가능하게 하는 구조적 장치다.</p>
+<p>한편, 목표를 달성한 이후의 전략적 공백기 역시 매우 중요하다. 이 시점은 조직이 성취에 안주할지, 혹은 새로운 도전을 설정할지를 결정하는 전환의 순간이기 때문이다. 미국 우주개발 프로그램은 이 점에서 중요한 교훈을 제공한다. 1969년 아폴로 11호의 달 착륙이라는 역사적 목표를 달성한 직후, NASA는 새로운 장기 전략 수립에 실패했고, 이후 수십 년간 유인 우주 탐사에서의 혁신 동력이 약화되었다. 우주 물리학자 베르너 폰 브라운은 “달에 갔던 그 집중력과 열정을 유지했다면, 1980년대 초에 인간은 이미 화성에 도달했을 것”이라고 말했지만, 후속 목표가 SMART하게 수립되지 못한 결과, 미국의 우주 전략은 수십 년간 정체 상태에 머물렀다.</p>
+<p>이와는 대조적으로, 넷플릭스는 DVD 대여라는 1차 목표를 달성한 이후 스트리밍 플랫폼으로의 전환이라는 과감한 SMART 목표를 설정했고, 이후에는 자체 콘텐츠 제작, 글로벌 확장, 광고 기반 요금제 도입 등 끊임없이 새로운 도전과제를 설정해왔다. 이러한 지속적 목표 재설정은 넷플릭스를 단순한 콘텐츠 유통 기업이 아니라 글로벌 콘텐츠 생태계의 주역으로 자리잡게 만들었다.</p>
+<p>결국, SMART 목표는 단지 성과 관리 도구가 아니라 전략경영의 엔진이다. 효과적인 비전과 미션이 상징적인 방향성을 제공한다면, SMART 목표는 그 방향을 따라 실제로 조직을 움직이는 추진력이다. 이를 통해 전략은 단지 수립되는 것이 아니라, 실현되고 검증되고, 필요할 경우 재설계될 수 있는 살아있는 시스템이 된다. 전략이 행동이 되기 위해서는 반드시 SMART 목표를 통해 구체화되어야 하며, 그것이야말로 전략경영이 단순한 이상이 아닌 현실이 되는 출발점이다.</p>
+<div id="tbl-smart-goal-example" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-smart-goal-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.4: SMART 목표의 예
+</figcaption>
+<div aria-describedby="tbl-smart-goal-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>SMART 요소</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Specific <br>(구체적)</strong></td>
+<td>2025년까지 저소득 지역 커뮤니티에 **지역사회 기여형 매장 (Community Store)**을 50개 추가로 개설한다.</td>
+</tr>
+<tr class="even">
+<td><strong>Measurable <br>(측정 가능)</strong></td>
+<td>신규 Community Store 개수(50개), 지역사회 참여 프로그램 건수, 고용 창출 수(직접 고용 1,000명 이상).</td>
+</tr>
+<tr class="odd">
+<td><strong>Attainable <br>(달성 가능)</strong></td>
+<td>과거 10년간 평균 연 4~6개 수준의 Community Store 오픈 실적을 고려할 때, 연 10개는 도전적이지만 기존 인프라를 통해 달성 가능.</td>
+</tr>
+<tr class="even">
+<td><strong>Realistic <br>(현실적)</strong></td>
+<td>기존에 미국 내 Harlem, Watts, Ferguson 등에서 운영 중인 지역 기여형 매장 모델의 확장판으로, 기존 경험을 토대로 시행 가능. 스타벅스 재무 안정성과 브랜드 가치로 사회적 투자 설득도 용이.</td>
+</tr>
+<tr class="odd">
+<td><strong>Time-bound <br>(기한 명시)</strong></td>
+<td>목표 기한: <strong>2026년 12월 31일까지</strong> (3년 내 50개 매장 오픈 완료).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="기업-가치" class="level3" data-number="2.2.7">
+<h3 data-number="2.2.7" class="anchored" data-anchor-id="기업-가치"><span class="header-section-number">2.2.7</span> 기업 가치</h3>
+<p>조직의 비전과 사명은 기업이 무엇을 지향하고, 왜 존재하는지를 설명하지만, 그것만으로는 조직의 행동 양식을 구체적으로 규율하기 어렵다. 이때 중요한 역할을 하는 것이 바로 기업 가치(Value Statement)이다. 기업 가치는 조직이 어떤 원칙과 신념을 중심으로 운영되어야 하는지를 명확히 규정하는 일련의 핵심 신념 체계이며, 이는 단순한 슬로건이 아니라 조직 내외부의 행동 규범이자 전략적 판단의 나침반 역할을 한다.</p>
+<p>예를 들어 Google은 “사용자에게 집중하면 나머지는 저절로 따라온다”, “빠르게 하는 것이 더 낫다”, “악하지 말자(Don’t be evil)”와 같은 일련의 가치들을 명시적으로 선언하며, 이들이 제품 개발, 고객 지원, 조직문화 전반에 관철되도록 했다. 이처럼 명시된 가치들은 조직 구성원에게 어떤 행동이 장려되고 어떤 행동이 제한되는지를 직관적으로 알려주며, 인사 제도나 경영 판단에서 중요한 기준점이 된다.</p>
+<p>한국의 경우도 최근 기업들은 가치 기반 경영을 강화하고 있다. 삼성전자는 ‘인재와 기술을 바탕으로 최고의 제품과 서비스를 창출하여 인류 사회에 기여한다’는 미션 아래, 핵심 가치로 ‘인재중시’, ‘최고지향’, ‘변화선도’, ‘정도경영’, ’상생추구’를 채택하고 있으며, 이들은 인사 정책, 기술 개발 전략, 협력사 평가 기준 등에 일관되게 반영된다.</p>
+<p>기업 가치 선언문은 전략 수립과도 밀접한 관련이 있다. 새로운 전략이 기존의 가치와 충돌할 경우, 그 전략은 수정되거나 폐기되어야 한다. 예를 들어, 지속가능성을 가치로 선언한 기업이 비용 절감을 위해 환경 오염이 심한 공급업체와 계약을 체결한다면, 이는 조직 내외부에서 강한 반발을 일으키고, 장기적으로 브랜드 신뢰를 손상시킬 것이다. 전략은 단기 수익뿐 아니라 가치 정렬(consistency with values)을 전제로 할 때 비로소 조직 전체의 지지를 받을 수 있다.</p>
+<p>가치는 또한 위기 상황에서 조직이 어떤 결정을 내려야 할지 판단의 기준이 되기도 한다. 예를 들어 코로나19 팬데믹 초기, 많은 기업들이 일시적 해고나 대규모 감원을 선택한 반면, Airbnb는 “친절과 인간 중심(Humanity at the core)”이라는 가치를 기반으로 감원을 최소화하고, 퇴직자에게는 별도의 구직 지원 네트워크를 제공했다. 이 결정은 단기적으로 비용이 들었지만, Airbnb의 브랜드 이미지와 내부 조직문화에는 장기적으로 긍정적인 영향을 미쳤다.</p>
+<p>요컨대, 기업 가치 선언문은 단순한 수사의 나열이 아니라 전략 실행의 규범적 기반이자 조직 운영의 윤리적 인프라이다. 조직의 전략이 얼마나 정교한지보다 중요한 것은, 그것이 조직이 약속한 가치와 얼마나 일관된 방식으로 추진되느냐이다. 잘 정립된 가치 체계는 조직이 변화와 위기 속에서도 일관된 방향성을 유지하고, 구성원과 고객으로부터 신뢰를 얻는 데 결정적인 역할을 한다.</p>
+<div id="tbl-core-values" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-core-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.5: 기업의 핵심 가치 선언문
+</figcaption>
+<div aria-describedby="tbl-core-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기업명</th>
+<th>핵심 가치 선언문 (Core Values)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>스타벅스 (Starbucks)</strong></td>
+<td>• <strong>Creating a culture of warmth and belonging</strong>, where everyone is welcome. <br>• <strong>Delivering our very best</strong> in all we do, holding ourselves accountable for results. <br>• <strong>Acting with courage</strong>, challenging the status quo, and finding new ways to grow our company and each other. <br>• <strong>Being present</strong>, connecting with transparency, dignity, and respect.</td>
+</tr>
+<tr class="even">
+<td><strong>아마존 (Amazon)</strong></td>
+<td>• Customer Obsession<br>• Ownership<br>• Invent and Simplify<br>• Are Right, A Lot<br>• Learn and Be Curious<br>• Hire and Develop the Best<br>• Insist on the Highest Standards<br>• Think Big<br>• Bias for Action<br>• Frugality<br>• Earn Trust<br>• Dive Deep<br>• Have Backbone; Disagree and Commit<br>• Deliver Results</td>
+</tr>
+<tr class="odd">
+<td><strong>구글 (Google)</strong></td>
+<td>• Focus on the user and all else will follow<br>• It’s best to do one thing really, really well<br>• Fast is better than slow<br>• Democracy on the web works<br>• You don’t need to be at your desk to need an answer<br>• You can make money without doing evil<br>• There’s always more information out there<br>• The need for information crosses all borders<br>• You can be serious without a suit<br>• Great just isn’t good enough</td>
+</tr>
+<tr class="even">
+<td><strong>삼성전자 (Samsung Electronics)</strong></td>
+<td>• People<br>• Excellence<br>• Change<br>• Integrity<br>• Co-prosperity<br><br></td>
+</tr>
+<tr class="odd">
+<td><strong>테슬라 (Tesla)</strong></td>
+<td>• Move fast<br>• Do the impossible<br>• Constantly innovate<br>• Think like owners<br>• Reason from first principles<br>• We are all in<br>• Respect and do the right thing<br><br></td>
+</tr>
+<tr class="even">
+<td><strong>유니레버 (Unilever)</strong></td>
+<td>• Integrity<br>• Responsibility<br>• Respect<br>• Pioneering<br><br></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="조직-성과-측정" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="조직-성과-측정"><span class="header-section-number">2.3</span> 조직 성과 측정</h2>
+<section id="조직-성과-복잡계-이론적-접근" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="조직-성과-복잡계-이론적-접근"><span class="header-section-number">2.3.1</span> 조직 성과: 복잡계 이론적 접근</h3>
+<p>조직 성과는 단순히 재무제표상의 숫자나 주가 변동으로 파악될 수 있는 문제가 아니다. 그것은 조직이 세운 비전, 사명, 목표를 실현하는 과정에서의 실행력, 시장 반응, 외부 환경 변화에 대한 대응력을 모두 종합적으로 반영한다. 전략 경영에서 성과를 측정한다는 것은 단순한 숫자를 나열하는 것이 아니라, 그 숫자 뒤에 있는 맥락과 의미, 그리고 그 결과가 나올 수밖에 없었던 내적·외적 조건들을 함께 해석하는 일이다.</p>
+<p>현대 기업 환경은 그 어느 때보다 복잡해졌다. 코로나19 팬데믹 이후 항공사와 호텔 산업은 거의 정지 상태에 이르렀고, 반면 재택근무와 디지털 전환을 지원하는 Zoom, Shopify, Amazon 등은 급속히 성장했다. 하지만 이러한 변화는 일시적인 것이었으며, 이후 시장은 다시 조정 국면에 들어갔다. 예컨대, Netflix는 팬데믹 기간 동안 급격한 가입자 증가를 경험하면서 공격적으로 콘텐츠를 투자하고 가격을 인상했지만, 팬데믹 완화 이후에는 가입자 이탈과 수익성 악화를 동시에 겪었다. 그 시점의 전략은 ’그 당시’에는 타당해 보였지만, 후속 결과는 전혀 다른 신호를 던져주었다.</p>
+<p>이러한 사례는 전략적 판단과 성과 간의 간극이 항상 존재한다는 사실을 보여준다. 즉, 훌륭한 전략이 항상 훌륭한 결과로 이어지는 것은 아니며, 반대로 실패처럼 보인 선택이 시간이 지나 성공으로 재평가될 수도 있다. 예를 들어, 마이크로소프트는 2010년대 초반까지 모바일 사업에서 잇따른 실패를 경험했지만, 결국 Office 365와 Azure를 중심으로 클라우드 전환에 집중한 전략이 장기적으로는 대전환의 기초가 되었다. 전략은 항상 불완전한 정보 속에서 내려지는 판단이며, 그에 따른 성과는 시간의 흐름과 외부 변수에 따라 다르게 드러날 수밖에 없다.</p>
+<p>조직 성과를 해석할 때 또 하나 중요한 요소는 지표의 선택과 해석이다. 어떤 기업은 매출 중심의 성과를 강조하고, 다른 기업은 이익률, 또는 시장 점유율을 중시한다. 그러나 동일한 수치도 기준에 따라 완전히 다르게 해석될 수 있다. 예를 들어, A사의 영업이익률이 18%라 하더라도 업계 평균이 25%라면, 이는 성과 저하로 해석될 수 있다. 반면 전년도 자체 수치가 10%였다면, 같은 수치가 ’회복세’로 해석될 수도 있다. 중요한 것은 수치 자체가 아니라 그것이 <strong>어떤 벤치마크와 비교되는가</strong>이며, 여기서 경영자의 해석력이 전략적 통찰과 연결된다.</p>
+<p>성과는 또한 기술적 혁신과 구조적 전환에 따라 재해석되기도 한다. 예컨대, 2022년 이후 OpenAI의 GPT 모델이 기업 현장에 도입되면서 R&amp;D, 콘텐츠 제작, 고객 응대, 교육 서비스 등 다양한 영역에서 생산성과 품질의 기준 자체가 달라졌다. 기존에는 한 명의 카피라이터가 하루에 3개의 광고 문안을 작성했다면, 이제는 AI를 활용해 수십 개의 실험적 문안을 생성하고 테스트할 수 있는 환경이 열렸다. 따라서 조직 성과를 단지 기존의 KPI 기준으로만 측정할 경우, 변화하는 기술 환경에 대한 적응 능력을 간과할 수 있다.</p>
+<p>궁극적으로 조직의 성과는 복잡한 생태계 내에서 진화하는 동적 결과이다. 그것은 전략이 수립된 당시의 의도, 실행 과정에서의 조율력, 예측 불가능한 외부 충격, 그리고 결과 해석의 틀까지 모두 포함하는 다층적인 구성물이다. 단일 지표에 의존하거나 과거의 기준으로 현재를 해석하려는 시도는 오히려 전략적 판단을 왜곡시킬 수 있다. 전략 경영의 본질은 정답을 찾는 것이 아니라, 불확실성과 상호작용 속에서 <strong>지속적으로 학습하고 조정해나가는 과정</strong>에 있다. 그리고 성과는 그 과정의 스냅샷일 뿐, 절대적인 평가가 아니라 상대적인 피드백이다.</p>
+<div id="tbl-org-performance-measurement" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-org-performance-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.6: 조직 성과 측정 및 벤치마크
+</figcaption>
+<div aria-describedby="tbl-org-performance-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 12%">
+<col style="width: 33%">
+<col style="width: 12%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>측정 지표 유형</th>
+<th>조직에의 적용<br><strong>핵심 지표</strong></th>
+<th>조직에의 적용<br><strong>비교 기준</strong></th>
+<th>개인에의 적용<br><strong>핵심 지표</strong></th>
+<th>개인에의 적용<br><strong>비교 기준</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>유동성 지표</strong><br>의무를 제때 이행할 수 있는지를 이해하는 데 유용함</td>
+<td>유동비율<br>(유동자산 / 유동부채)</td>
+<td>비율이 1.0 미만이면 기업이 청구서를 제때 지불할 수 없다는 것을 의미함</td>
+<td>당좌예금 잔고</td>
+<td>매달 갚아야 할 채무를 감당할 수 있는 현금이 충분한가?</td>
+</tr>
+<tr class="even">
+<td><strong>레버리지 지표</strong><br>부채 수준이 과도한지를 이해하는 데 유용함. 레버리지는 차입금의 활용 정도를 의미함</td>
+<td>부채비율<br>(총 부태 / 총 자산)</td>
+<td>경쟁사의 부채비율과 비교. 업종에 따라 부채 활용 정도가 다름. 예: 자동차 산업은 공장 설비에 많은 자본이 들어가므로 부채비율이 높은 편</td>
+<td>부채대비소득비율<br>(월 부채 상환액 / 월 소득)</td>
+<td>부채대비소득비율이 40%를 넘으면 신용 위험이 높아질 수 있음</td>
+</tr>
+<tr class="odd">
+<td><strong>수익성 지표</strong><br>실제로 어느 정도 이익이 창출되고 있는지를 파악하는 데 유용함</td>
+<td>순이익<br>(세후 수익)</td>
+<td>전년도 순이익. 증가할 경우 기업의 이익이 긍정적인 방향으로 가고 있다는 신호</td>
+<td>순이익<br>(세후 이입)</td>
+<td>연간 지출을 감당하고 은퇴 준비를 할 수 있을 만큼 수입이 충분한가?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="균형성과표balanced-scorecard-다차원적-성과-평가의-도구" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="균형성과표balanced-scorecard-다차원적-성과-평가의-도구"><span class="header-section-number">2.3.2</span> 균형성과표(Balanced Scorecard): 다차원적 성과 평가의 도구</h3>
+<p>오늘날 기업의 성공은 단순히 매출이나 이익 같은 재무적 지표로만 측정할 수 없다. 치열한 경쟁, 빠른 기술 변화, ESG와 같은 사회적 기대의 부상, 직원 역량의 중요성 증대 등 다양한 요소들이 기업의 지속가능성과 전략적 성과에 영향을 미치기 때문이다. 이러한 현실에서 하버드 비즈니스 스쿨의 로버트 카플란(Robert Kaplan) 교수와 데이비드 노튼(David Norton) 교수는 1992년, 성과 평가의 새로운 패러다임을 제시하며 균형성과표(Balanced Scorecard)를 개발했다. 이 프레임워크는 단기 수익에 집착하는 경영 관행의 한계를 극복하고, 조직이 장기적인 가치를 창출할 수 있도록 돕는 일종의 전략적 나침반 역할을 한다.</p>
+<p>균형성과표는 조직의 성과를 단일한 지표가 아닌 네 가지 핵심 관점에서 통합적으로 평가한다. 첫째, ’재무 관점’은 조직의 수익성, 비용 구조, 투자 수익률과 같은 전통적인 성과를 평가하는 데 집중한다. 둘째, ’고객 관점’은 고객 만족도, 충성도, 시장 점유율과 같은 외부 이해관계자의 평가를 반영한다. 셋째, ’내부 프로세스 관점’은 제품 개발, 품질 관리, 운영 효율성 등 조직 내부의 핵심 활동을 다룬다. 마지막으로, ’학습과 성장 관점’은 직원의 역량 개발, 조직 문화, 정보 인프라와 같이 미래의 성장을 가능하게 하는 기반 역량을 점검한다.</p>
+<p>이 네 가지 관점은 단순히 독립적인 항목이 아니라 상호작용하는 시스템으로 작동한다. 예를 들어, 고객 만족도 향상을 위해 내부 프로세스를 개선하고 직원 역량을 강화해야 하며, 이러한 개선이 장기적으로 재무 성과로 연결된다는 인과적 사고가 중요하다. 이를 통해 조직은 성과의 원인과 결과를 구분하고 전략의 실행력을 높일 수 있다. 예컨대, DHL은 배송 시간 단축을 목표로 내부 프로세스를 재설계하고, 이를 고객만족도로 연결시켰으며, 결국 시장 점유율 확대와 매출 증대로 이어지는 선순환을 이뤘다.</p>
+<p>균형성과표는 단순한 보고서가 아니라 전략적 실행 프레임워크다. 대표적으로 애플은 스티브 잡스 복귀 이후, 제품 혁신뿐 아니라 고객 경험, 매장 운영, 공급망 효율화, 직원 역량 강화까지 전방위적인 목표를 설정하고 이를 균형 있게 관리하면서 기업 가치를 회복했다. 또한 현대자동차그룹은 ’품질경영’이라는 전략적 키워드를 중심으로 고객 불만 처리속도, 리콜율, 서비스 만족도, 교육 이수율 등을 지표로 설정해 균형성과표를 전사적으로 확산시켰다.</p>
+<p>성과 측정의 도구로서 균형성과표가 지닌 가장 큰 강점은 다음과 같다. 첫째, 단기 수익 중심의 전략 판단에서 벗어나 장기적인 가치 창출에 집중할 수 있다. 둘째, 다양한 조직 구성원들이 동일한 전략적 목표를 공유하고 각자의 위치에서 기여할 수 있도록 지침을 제공한다. 셋째, 조직 내부의 구조와 문화, 기술, 학습 시스템이 전략 실행에 어떻게 연결되는지를 가시화할 수 있다.</p>
+<p>이제 성과를 측정한다는 것은 단순히 숫자를 계산하는 것이 아니라, 조직이 어디로 향하고 있으며, 어떤 과정으로 그것을 실현해나가고 있는지를 입체적으로 진단하는 작업이다. 비유하자면, 기업 경영은 계기판 없는 비행기를 조종하는 것과 같다. 고도계는 매출과 이익을 알려줄 수 있지만, 연료(조직문화), 속도(프로세스 개선), 방향(고객의 반응), 날씨(외부 환경)는 전혀 다른 차원의 정보를 제공한다. 균형성과표는 이 모든 요소를 통합적으로 시각화할 수 있는 전략적 계기판인 셈이다.</p>
+<p>디지털 시대를 살아가는 조직에게 균형성과표는 선택이 아니라 필수다. 단기적 숫자보다 지속가능한 성장의 구조를 설계해야 하는 시대, 조직은 ’무엇을 얼마나 벌었는가’보다 ’무엇을 어떻게 만들어냈는가’를 측정할 수 있어야 한다. 균형성과표는 바로 이 질문에 답을 제시하는 전략 도구로 자리매김하고 있다.</p>
+<div id="tbl-balanced-scorecard-perspectives" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-balanced-scorecard-perspectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.7: 발란스 스코어 카드의 네 가지 관점
+</figcaption>
+<div aria-describedby="tbl-balanced-scorecard-perspectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 32%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>성과 항목 (Scorecard Point)</th>
+<th>정의 (Definition)</th>
+<th>스스로에게 물어볼 수 있는 질문 (You could ask yourself…)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>재무적 측정 지표</strong><br>(Financial measures)</td>
+<td>자산 수익률, 주가 등과 같은 지표로 효율성과 수익성을 나타냄</td>
+<td><strong>“어떻게 하면 나의 재산을 늘릴 수 있을까?”</strong><br>측정 요소에는 현금, 저축 계좌, 은퇴 준비 등이 포함될 수 있음.</td>
+</tr>
+<tr class="even">
+<td><strong>고객 관련 지표</strong><br>(Customer measures)</td>
+<td>신규 고객 수나 재방문 고객 비율 등 고객 유치와 만족도를 나타냄</td>
+<td><strong>“나의 사회적 네트워크는 얼마나 강할까?”</strong><br>시간이 지남에 따라 새로 맺는 인간관계의 수가 이를 반영할 수 있음.</td>
+</tr>
+<tr class="odd">
+<td><strong>내부 프로세스 지표</strong><br>(Internal business process measures)</td>
+<td>고객 응대 속도, 신제품 출시까지 걸리는 시간 등 조직의 운영 효율성과 관련됨</td>
+<td><strong>“현재 일에서 더 나아지고 있는가?”</strong><br>업무 효율성 개선, 예를 들어 작업 완료까지 걸리는 시간을 추적하면 도움이 됨.</td>
+</tr>
+<tr class="even">
+<td><strong>학습 및 성장 지표</strong><br>(Learning and growth measures)</td>
+<td>직원이 매년 습득하는 새로운 기술의 평균 수 등 미래에 대한 대비와 관련됨<br>형식적 교육보다 실제 학습의 중요성을 강조함</td>
+<td><strong>“미래를 위해 어떤 기술을 지금 개발해야 할까?”</strong><br>새 기술 습득은 측정이 어렵지만, 자격증 취득이나 학위 수료 등은 구체적 기준이 될 수 있음.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="재무적-성과-측정-숫자-너머의-전략적-통찰" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="재무적-성과-측정-숫자-너머의-전략적-통찰"><span class="header-section-number">2.3.3</span> 재무적 성과 측정: 숫자 너머의 전략적 통찰</h3>
+<p>재무적 성과는 전통적으로 기업의 건강 상태를 가장 직접적으로 나타내는 지표로 여겨져 왔다. 실제로 대부분의 경영진과 투자자들은 기업의 이익, 수익 성장, 비용 효율성, 자산 활용도 등 수치화된 데이터를 통해 조직의 전략적 선택이 실제로 성과로 이어졌는지를 판단한다. 이러한 재무 측정은 단순한 숫자를 넘어, 조직이 시장에서 어떤 위치에 있으며, 전략이 실제로 얼마나 실행되고 있는지를 보여주는 일종의 ’전략적 결과물’이다.</p>
+<p>기업은 일반적으로 연례보고서(Annual Report)나 IR 자료를 통해 핵심 재무 성과 지표를 주주에게 공개한다. 예를 들어, 스타벅스는 2019년 연례보고서에서 매출 증가율, 순이익, 영업이익률, 자유현금흐름(Free Cash Flow) 등을 공개하며 향후 투자자 신뢰 확보에 주력했다. 특히 북미 시장의 성장세와 글로벌 확장 전략의 성과를 수치로 보여주며, 전략의 정당성을 재무지표를 통해 증명한 것이다.</p>
+<p>하지만 단순히 “얼마를 벌었는가”만으로는 충분하지 않다. 전략적 재무 분석이란, 숫자 속에 담긴 의도를 해석하고, 시장 환경과 경쟁자의 흐름을 고려해 조직의 상대적 위치를 평가하는 행위이기도 하다. 예컨대 2024년 기준 애플과 테슬라의 ROE(Return on Equity)는 각각 150%와 28% 수준으로 보고되었지만, 이 수치는 각 기업의 자본 구조와 성장 전략, 재투자 정책에 대한 해석 없이는 단순 비교로는 무의미하다.</p>
+<p>이처럼 재무적 성과 측정은 크게 세 가지 접근 방식으로 나눌 수 있다. 첫째, 전통적인 <strong>재무 기반 분석</strong>은 수익성, 유동성, 레버리지 등 핵심 비율을 기반으로 조직의 내재적 역량을 점검한다. 예를 들어 매출총이익률(Gross Margin)이 하락하고 있다면 원가 통제에 문제가 있음을 시사할 수 있고, 자기자본이익률(ROE)이 높은 경우에는 자본을 효과적으로 활용하고 있는 것으로 해석된다. 둘째, <strong>시장 기반 측정</strong>은 주가, 시가총액, PER(Priced to Earnings Ratio) 등을 통해 외부 투자자들이 해당 조직의 전략과 미래를 어떻게 평가하고 있는지를 반영한다. 이는 종종 브랜드 가치, ESG 평가, CEO의 신뢰도 같은 비정량적 요소까지 포함된다. 마지막으로, <strong>일반적 측정방식</strong>은 산업 평균 또는 경쟁사 벤치마크와의 비교를 포함하며, 기업 간 상대적 우위를 식별하는 데 유용하다.</p>
+<p>실제로 기업 간 비교 시 단순 수치 자체보다는 맥락이 중요하다. 예를 들어, B2B SaaS 업계에서 40% 이상의 매출총이익률은 흔한 수치지만, 외식업체에서 같은 수치는 예외적으로 높은 것이다. 따라서 동일 업종, 동일 국가, 유사 규모의 경쟁군과 비교하는 ’수평적 벤치마킹’이 필수적이다.</p>
+<p>더불어 재무 지표는 ’결과’일 뿐 ’원인’은 아니다. 예를 들어 한 식품 유통기업의 순이익률이 급격히 하락했다고 해도 이는 단순한 전략 실패 때문이 아닐 수 있다. ESG 규제 강화에 따른 친환경 포장재 투자, 원자재 수급난으로 인한 단가 인상 등 전략 외적인 외생변수도 작용할 수 있기 때문이다. 따라서 오늘날의 재무 성과 측정은 반드시 산업 내외부 변수, 비재무적 요소와 함께 통합적으로 해석되어야 하며, 숫자만으로 판단하기보다는 <strong>‘스토리와 데이터의 연결’</strong>이 핵심이다.</p>
+<p>재무적 성과 측정의 가장 큰 딜레마는 다음과 같다. 숫자는 명확하나, 그것이 말하는 것은 모호할 수 있다는 점이다. 결국 전략적 통찰은 단순한 수치를 바라보는 것이 아니라, 그 수치를 만들어낸 ’전략적 선택의 결과’를 되짚어보고 다음 선택의 방향을 결정하는 데 있다. <strong>수치는 과거를 보여주지만, 통찰은 미래를 설계한다.</strong></p>
+<div id="tbl-financial-ratios" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-financial-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.8: 주요 재무 비율
+</figcaption>
+<div aria-describedby="tbl-financial-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 46%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>비율 (Ratio)</th>
+<th>공식 (Formula)</th>
+<th>목적 (Purpose)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>수익성 비율 (Profitability Ratios)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>매출총이익률 (Gross Margin)</strong></td>
+<td>총이익 / 총매출<br>(Gross Profit / Total Revenue)</td>
+<td>매출 중 원가(COGS), 판매 수수료 등에 직접 관련된 비율</td>
+</tr>
+<tr class="odd">
+<td><strong>순이익률 (Net Profit Margin)</strong></td>
+<td>순이익 / 순매출<br>(Net Profit / Net Revenue)</td>
+<td>매출 1달러당 얼마의 이익을 얻었는지를 측정</td>
+</tr>
+<tr class="even">
+<td><strong>자기자본이익률 (Return on Equity, ROE)</strong></td>
+<td>순이익 / 자기자본<br>(Net Profit / Shareholder Equity)</td>
+<td>주주 자본 대비 수익성, 즉 자본을 얼마나 잘 활용하는지를 나타냄</td>
+</tr>
+<tr class="odd">
+<td><strong>총자산이익률 (Return on Assets, ROA)</strong></td>
+<td>순이익 / 총자산<br>(Net Profit / Total Assets)</td>
+<td>자산을 활용한 수익 창출 효율성</td>
+</tr>
+<tr class="even">
+<td><strong>효율성 비율 (Efficiency Ratios)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>재고회전율 (Inventory Turnover)</strong></td>
+<td>매출원가 / 평균재고<br>(COGS / Average Inventory)</td>
+<td>재고 관리의 효율성을 측정</td>
+</tr>
+<tr class="even">
+<td><strong>매출채권회전율 (Accounts Receivable Turnover)</strong></td>
+<td>순외상매출 / 평균외상매출금<br>(Net Credit Sales / Average Accounts Receivable)</td>
+<td>매출채권 회수 관리의 효율성을 평가</td>
+</tr>
+<tr class="odd">
+<td><strong>레버리지 비율 (Leverage Ratio)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>부채비율 (Debt Ratio)</strong></td>
+<td>총부채 / 총자산<br>(Total Liabilities / Total Assets)</td>
+<td>자산 중 부채로 조달된 비율</td>
+</tr>
+<tr class="odd">
+<td><strong>유동성 비율 (Liquidity Ratio)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>유동비율 (Current Ratio)</strong></td>
+<td>유동자산 / 유동부채<br>(Current Assets / Current Liabilities)</td>
+<td>현금, 재고 등 단기 자산으로 단기 부채를 감당할 수 있는 능력</td>
+</tr>
+<tr class="odd">
+<td><strong>시가총액 (Market Capitalization)</strong></td>
+<td>유통주식 수 × 주가<br>(Outstanding Shares × Share Price)</td>
+<td>기업의 시장가치 (총 주식 가치)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>기업의 성과를 평가하는 또 다른 중요한 축은 <strong>시장 기반 분석</strong>이다. 이는 조직이 내부에서 어떤 전략을 실행했는가에 초점을 맞추는 것이 아니라, 그 결과가 시장에서 어떤 반응을 이끌어냈는지를 살펴보는 방식이다. 특히 외부 투자자, 경쟁사, 산업 전반의 맥락에서 특정 기업이 어떻게 평가되고 있는지를 보여주는 수치들이 여기에 포함된다.</p>
+<p>가장 대표적인 시장 기반 지표 중 하나는 시장 점유율(Market Share)이다. 이는 특정 기업이 전체 산업 내에서 얼마만큼의 매출 기여를 하고 있는지를 나타내는 지표다. 예를 들어, 2024년 기준으로 글로벌 스마트폰 시장에서 애플은 약 23%의 매출 점유율을 차지하고 있으며, 이는 고가 전략과 브랜드 충성도를 기반으로 한 프리미엄 포지셔닝 전략의 효과를 수치로 보여준다. 이처럼 시장 점유율은 단순한 매출 수치 이상의 의미를 지닌다. 이는 곧 소비자의 선택을 얼마나 효과적으로 확보하고 유지하고 있는지를 나타내는 전략적 결과로 해석할 수 있기 때문이다.</p>
+<p>또 다른 핵심 시장 지표는 주가수익비율(Price-Earnings Ratio, P/E Ratio)이다. 이 지표는 한 기업의 주식 가격이 그 회사의 수익성 대비 얼마나 고평가 혹은 저평가되고 있는지를 보여준다. 예컨대, 테슬라의 2023년 말 P/E 비율은 약 70배를 초과했는데, 이는 수익성 대비 주가가 지나치게 높다고 볼 수도 있지만 동시에 시장이 해당 기업의 미래 성장성에 얼마나 큰 프리미엄을 부여하고 있는지를 반영하는 것이기도 하다. 따라서 P/E 비율은 단순히 “낮을수록 좋은 지표”가 아니라, 시장의 기대치와 성장 잠재력을 해석하는 창이 되는 것이다.</p>
+<p>물론 시장 기반 분석은 재무 비율만큼 구체적이지 않다는 한계도 있다. 투자자 심리, 뉴스에 따른 단기 주가 변동, 거시경제 변수 등 수많은 외생변수의 영향을 받기 때문이다. 따라서 기업 전략가들은 이러한 지표를 절대적인 기준으로 삼기보다는, 자사 전략이 시장 기대와 정렬되고 있는지를 평가하는 보완적 수단으로 활용해야 한다.</p>
+<p>이와 더불어 <strong>일반적인 정량 분석</strong> 방식 역시 전략적으로 활용될 수 있다. 예컨대, 추세 분석은 연도별 매출 증감, 고객 수, 방문자 수, 앱 설치 수 등 시간에 따른 변화 패턴을 분석해 미래의 성과 예측에 도움을 준다. 기업이 직접 수집한 트랜잭션 로그 데이터나 고객 행동 데이터를 활용해 주요 KPI의 연간 추세를 예측할 수 있고, 이를 바탕으로 전략적 목표를 조정하거나 신규 전략을 설계할 수 있다.</p>
+<p>산업별 벤치마크 분석도 중요한 분석 기법이다. 이는 단순히 자사의 성과를 내부적으로 평가하는 것이 아니라, 같은 산업 내 경쟁사들과의 상대적 위치를 파악하는 데 활용된다. 예를 들어, 똑같이 ROA(Return on Assets)가 8%인 기업이 있더라도, 해당 산업의 평균이 5%라면 이는 뛰어난 수익성과 효율성을 의미하지만, 산업 평균이 12%인 경우엔 성과 개선의 여지가 있는 것으로 해석된다. 특히 ESG(Environmental, Social, Governance) 기준이나 고객 리텐션율, 평균 응답속도 같은 비재무적 벤치마크도 최근 전략 평가에서 중요성이 급격히 커지고 있다.</p>
+<p>마지막으로, 전략적 성과 관리는 단순히 현재 상태를 평가하는 데 그쳐서는 안 된다. 성과 지표는 ’무엇을 하고 있는가’를 평가하는 도구일 뿐, ’무엇을 해야 하는가’를 이끄는 나침반이 되어야 한다. 전략은 항상 시장이라는 살아있는 환경에서 작동하는 것이며, 성과 측정은 그 전략이 현실에 얼마나 부합하는지를 진단하는 과정이다. 따라서 재무, 시장, 산업 데이터를 결합한 다각적 평가를 통해 조직은 더 정교하고 민첩한 전략적 조정을 실현할 수 있다.</p>
+</section>
+<section id="고객-성과-충성도-경험-기대치의-총합" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="고객-성과-충성도-경험-기대치의-총합"><span class="header-section-number">2.3.4</span> 고객 성과: 충성도, 경험, 기대치의 총합</h3>
+<p>고객 성과는 단순히 몇 명의 고객이 구매했는가를 넘어서, 고객이 조직을 어떻게 인식하고, 경험하며, 다시 찾을 것인가에 대한 통찰을 제공한다. 이는 “고객이 우리를 어떻게 바라보는가?”라는 질문에 대한 전략적 해답이다. 고객 확보 비용(Customer Acquisition Cost, CAC)보다 고객 생애 가치(Customer Lifetime Value, CLV)를 높이는 것이 현대 전략의 핵심이 된 시대에, 고객 성과는 단기 거래가 아니라 장기 관계로 전환시키는 능력을 반영한다.</p>
+<p>스타벅스는 고객 충성도와 반복 구매 행동을 유도하기 위한 전략적 노력을 전방위적으로 전개해 왔다. 그 중심에는 ’스타벅스 리워드’라는 로열티 프로그램이 있다. 사용자는 모바일 앱을 통해 구매할 때마다 별(Star)을 적립하고, 이를 음료나 푸드, 굿즈 등으로 교환할 수 있다. 이 프로그램은 단순한 할인 이벤트를 넘어 고객의 행동 데이터를 수집하고 분석하는 기반으로 작동한다. 최근에는 앱 기반 주문의 편리함, 매장별 대기 시간 정보 제공, 개인 맞춤형 쿠폰 제공 등의 기능까지 포함되면서 고객 경험 전체를 통제하고 향상시키는 플랫폼이 되었다.</p>
+<p>또한 스타벅스는 고객 접점에서의 감성 품질 관리에도 공을 들이고 있다. 예컨대 바리스타가 고객의 이름을 직접 부르고 주문을 기억하는 경험은 브랜드와의 정서적 유대감을 강화하는 방식이다. 이처럼 고객 성과는 단지 만족도 조사 결과로 측정되는 것이 아니라, 고객 여정 전체에서 얼마나 ’기억에 남는 경험’을 만들고, 그로 인해 브랜드 로열티와 추천 의향이 얼마나 상승했는지를 종합적으로 파악해야 한다.</p>
+</section>
+<section id="내부-프로세스-성과-효율성에서-민첩성으로" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="내부-프로세스-성과-효율성에서-민첩성으로"><span class="header-section-number">2.3.5</span> 내부 프로세스 성과: 효율성에서 민첩성으로</h3>
+<p>내부 비즈니스 프로세스 성과는 “우리가 무엇을 잘해야 하는가?”라는 질문에 대한 전략적 응답이다. 이는 생산성과 품질을 넘어, 변화 대응 능력과 프로세스의 민첩성까지 포함하는 영역이다. 조직이 효율성을 얼마나 잘 달성하고 있는지를 넘어서, 변화에 얼마나 빠르고 유연하게 적응하는지를 평가하는 데 초점이 옮겨가고 있다.</p>
+<p>스타벅스는 내부 운영 프로세스 개선을 위한 실험적 접근을 통해 업무 효율을 끌어올리고 있다. 매장에서의 주문 처리 시간을 단축시키기 위한 프로젝트의 일환으로, 직원들에게 ’미스터 포테이토 헤드’를 조립하게 하여 손의 움직임, 도구 배치, 협업 방식 등 실제 서비스 상황과 유사한 조건에서 작업 속도 향상 전략을 실험하는 방식이 도입되었다. 이러한 유사 시뮬레이션 훈련은 매장 간 속도 격차를 줄이고, 전체 시스템 효율을 통제 가능하게 만든다.</p>
+<p>또한 최근 스타벅스는 대기 시간 절감을 위해 인공지능 기반 수요 예측 시스템을 일부 매장에 도입하고 있다. 날씨, 요일, 행사 일정 등을 실시간으로 반영해 재고와 인력을 조정하는 스마트 오퍼레이션 전략은 내부 프로세스를 정적이 아니라 동적으로 관리하게 만든다. 내부 프로세스 성과는 더 이상 매뉴얼 최적화에 머물지 않고, 데이터를 통한 학습과 자동화 수준으로 진화하고 있는 것이다.</p>
+</section>
+<section id="학습-및-성장-성과-역량의-확장성과-혁신의-촉진력" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="학습-및-성장-성과-역량의-확장성과-혁신의-촉진력"><span class="header-section-number">2.3.6</span> 학습 및 성장 성과: 역량의 확장성과 혁신의 촉진력</h3>
+<p>학습 및 성장 성과는 “우리가 미래에도 경쟁력을 유지할 수 있는가?”에 대한 질문이며, 이는 조직의 지속 가능성과 직결되는 문제다. 이 영역의 핵심은 ’조직 구성원의 변화 적응력’과 ’조직 차원의 지식 창출 능력’에 있다. 이는 기술 도입보다 사람의 성장과 문화의 진화를 의미한다.</p>
+<p>스타벅스는 직원의 성장이 곧 조직의 경쟁력이라는 관점을 적극적으로 실현하고 있다. 대표적으로 스타벅스는 애리조나 주립대학교(ASU)와의 파트너십을 통해 ’스타벅스 칼리지 성과 프로그램’을 운영하며, 매장 직원들이 온라인 학위 과정을 통해 학위를 취득할 수 있도록 전액 학비를 지원하고 있다. 이는 단순한 복지 차원이 아니라, 향후 매니지먼트 레벨에서 필요한 역량을 미리 확보하고, 로열티 높은 내부 인재를 양성하기 위한 장기 전략이다.</p>
+<p>또한 코로나19 이후 스타벅스는 비대면 소비 문화와 변화하는 고객 니즈에 대응하기 위해 ’피벗 팀(Pivot Team)’이라는 전담 조직을 구성하여 매장 운영방식을 빠르게 전환하였다. 이는 팬데믹이라는 환경 변화 속에서 학습과 실행이 동시에 일어나는 학습형 조직의 대표적 사례라 할 수 있다.</p>
+<p>결국 학습과 성장은 단지 교육 시간이나 훈련 횟수를 측정하는 것이 아니라, 얼마나 빠르게 조직이 변화에 적응하고 새로운 가치를 창출할 수 있는지, 그리고 그것이 전략 실행력으로 연결되고 있는지를 판단하는 기준이 되어야 한다. 학습하는 조직이 아닌 경우, 그 전략은 과거의 유산일 뿐 미래의 기회가 되지 못한다.</p>
+<p><strong>스타벅스의 피벗팀(Pivot Team) – 팬데믹 시대의 학습형 조직 전략</strong></p>
+<p>2020년, 코로나19 팬데믹이 전 세계를 강타하면서 대면 소비 중심의 외식·카페 산업은 전례 없는 위기에 직면했다. 스타벅스 역시 매장 내 좌석 이용 제한, 고객 접촉 최소화, 인력 운영의 불확실성 등 복합적인 문제에 직면하게 되었으며, 기존의 운영 방식은 더 이상 유효하지 않았다.</p>
+<p>이에 대응하기 위해 스타벅스는 미국 본사 차원에서 <strong>‘Pivot Team(피벗팀)’</strong>이라 불리는 전담 조직을 신속히 구성했다. 피벗팀의 핵심 임무는 단순히 위기를 견디는 것이 아니라, 비즈니스 모델 자체를 근본적으로 재정의하고 학습 기반으로 새로운 운영 전략을 실험, 검증, 실행하는 것이었다.</p>
+<p>피벗팀은 다음과 같은 방식으로 작동하였다. 우선, 다양한 지역의 점포 운영 데이터를 수집하고, 해당 지역의 보건 규제, 고객 유입 변화, 테이크아웃/드라이브 스루 수요의 급증 등을 분석했다. 이 데이터를 바탕으로 각 점포에 <strong>적합한 운영 프로토콜(Operating Prototype)</strong>을 빠르게 개발해 적용한 뒤, 실시간으로 피드백을 수집하고 조정하는 구조를 가졌다. 예를 들어, 시애틀 지역 일부 매장은 테이크아웃 전용 매장으로 재설계되었고, 뉴욕 일부 매장은 ’모바일 오더 픽업 스테이션(Mobile Pickup Point)’으로 기능을 전환했다. 이러한 조치는 본사에서 일방적으로 지시한 것이 아니라, 현장의 목소리를 수렴하고 분석하여 실험과 적용을 반복하는 순환적 학습 구조를 통해 결정되었다.</p>
+<p>이 과정에서 피벗팀은 기존의 정형화된 KPI나 표준화된 오퍼레이션 매뉴얼 대신, <strong>“적응력”, “속도”, “교차 기능 협업(Cross-functional collaboration)”</strong>을 주요 성과 지표로 사용했다. 즉, 변화하는 외부 환경에 얼마나 신속히 적응하고, 실행 결과를 얼마나 빠르게 학습하여 시스템 전반에 전파할 수 있는지가 핵심이었다.</p>
+<p>이 전략은 단기간 내 가시적 성과를 창출했다. 예를 들어, 미국 내 스타벅스 매장의 90% 이상이 불과 3개월 만에 새로운 운영 형태로 전환되었고, 팬데믹 기간 동안에도 드라이브 스루와 모바일 오더 중심의 매출은 전년 대비 10% 이상 증가했다. 또한, 기존의 정규직 중심 운영 모델에 비해 유연 근무 및 분산 팀 기반 운영이 가능해지면서, 인력 유지율도 일정 수준 이상 유지되었다.</p>
+<p>스타벅스의 피벗팀 사례는 내부 비즈니스 프로세스 혁신의 대표적인 사례일 뿐 아니라, 조직이 학습과 성장의 성과 지표를 어떻게 실천적으로 구현할 수 있는지를 보여주는 학습형 조직의 교과서적 사례로 평가된다. 이 팀은 단지 위기를 관리한 것이 아니라, 위기를 전략적 실험의 기회로 전환시킨 조직 학습의 구심점이었다.</p>
+</section>
+</section>
+<section id="애자일과-kpi-전략경영의-전환점과-외식산업에서의-응용" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="애자일과-kpi-전략경영의-전환점과-외식산업에서의-응용"><span class="header-section-number">2.4</span> 애자일과 KPI: 전략경영의 전환점과 외식산업에서의 응용</h2>
+<p>전통적인 전략경영 프레임워크는 상대적으로 안정된 환경을 전제로 한다. 연간 목표를 설정하고 정기적으로 KPI(핵심성과지표)를 측정하며 관리하는 방식은 예측 가능한 세계에서는 유효했다. 그러나 팬데믹, 디지털 전환, MZ세대 중심의 소비 변화, ESG 기반 소비자 감수성의 확대 등 복합적인 환경 변화 속에서, 기존 KPI 기반 경영은 민첩하게 대응하기 어렵고 실행도 느려지는 경향이 있다.</p>
+<p>이러한 상황에서 애자일(Agile) 접근법은 전략 실행 방식 자체를 변화시킨다. 애자일은 본래 소프트웨어 개발에서 출발한 실천적 프레임워크로, 짧은 주기의 반복, 실험, 그리고 피드백 루프를 통해 불확실성 속에서도 빠른 학습과 적응을 가능하게 한다. 오늘날 이 개념은 IT 영역을 넘어, 인사조직, 마케팅, 전략 등 다양한 경영 활동으로 확장되고 있다.</p>
+<p>애자일과 KPI의 연결은 단지 ’지표를 더 자주 보는 것’이 아니라, 지표의 목적 자체를 ’평가’가 아닌 ’학습과 실험의 나침반’으로 전환하는 데 있다. 이러한 전환을 통해 조직은 고정적인 목표 추구보다, 동태적이고 실험 가능한 목표 시스템을 설계할 수 있게 된다. 이를 통해 조직은 변화에 더 빠르게 반응하고, 실질적인 실행력을 강화하며, 내부 학습역량을 증폭시킨다.</p>
+<p>전 세계적으로 이미 많은 기업들이 애자일 KPI 시스템을 도입하고 있다. 넷플릭스는 시청 완료율, 탐색 시간, 장르 이동률 등 유동적인 실험 기반 KPI를 설정하여 고객 경험을 개선해 왔고, 에어비앤비는 전통적인 예약률보다 ‘비대면 예약 전환율’, ‘호스트 응답 속도’ 등의 새로운 KPI를 실험적으로 도입하여 팬데믹 상황에 빠르게 적응한 바 있다.</p>
+<p>애자일 KPI 시스템은 보통 전략목표를 작은 실험 가능한 단위로 분해하고, 각 단위를 단기 반복 사이클에서 테스트한 후, 피드백 기반으로 조정하는 구조를 갖는다. 이 방식은 목표가 고정되지 않고, 시장과 조직 내부의 반응에 따라 조정된다는 점에서 전통 KPI 체계와 구별된다. 동시에 Cross-functional 팀 단위로 권한을 분산시켜 실험 설계와 결과 해석을 실행자에게 위임함으로써 학습 주체의 주도성도 확보할 수 있다.</p>
+<p>이제 외식산업에서 이 구조를 어떻게 적용할 수 있을지를 살펴보자. 외식산업은 그 어떤 산업보다 소비자의 감정, 트렌드, 경험 기반 선택에 민감하다. 따라서 빠르게 변화하는 고객 니즈에 대응하기 위해서는 정적인 KPI보다 유동적이고 실험 가능한 애자일 KPI 시스템이 훨씬 더 적합하다.</p>
+<p><strong>외식산업에 적용 가능한 애자일 KPI 시나리오 3종</strong></p>
+<p>첫 번째 시나리오는 ‘테이블 회전율 최적화’ 실험이다. 한 프랜차이즈 레스토랑에서는 평일 점심 시간에 테이블 회전율이 낮은 문제가 발생했다. 이 문제를 해결하기 위해 매장 관리자들은 식사 주문 후 제공까지 걸리는 평균 시간을 KPI로 설정하고, ’사전 주문 시스템’을 일주일 간 도입해 보았다. 측정된 KPI는 테이블 회전율, 고객 대기시간, 평균 객단가였다. 이 결과를 바탕으로 사전 주문 옵션을 점심 메뉴에만 상시화하는 전략으로 전환하였다.</p>
+<p>두 번째 시나리오는 ’신메뉴 실험과 반복’이다. 신메뉴 개발팀은 과거 연 2회 대규모 메뉴 리뉴얼을 진행했으나, 시장 반응이 미미했다. 이에 따라 매장 단위로 ’테스트 메뉴’를 주 1회 출시하고, KPI로는 해당 메뉴의 판매량, 고객 재구매율, SNS 언급량, 매장 직원의 추천 빈도를 설정하였다. 이 데이터를 주 단위로 집계하고, 상위 성과 메뉴만 정식 채택하였다. 결과적으로 신메뉴의 성공률과 고객 반응도가 향상되었으며, R&amp;D 비용도 절감되었다.</p>
+<p>세 번째 시나리오는 ’고객 클레임 감소를 위한 응대 실험’이다. 한 커피 브랜드는 고객 불만율이 높아짐에 따라, 클레임 해결 시간, 재방문율, CS 응대 만족도 점수를 KPI로 설정하였다. 각 매장은 CS 응대 프로토콜을 다르게 설계하고 2주간 테스트하였다. 이후 클레임 처리 시간이 가장 짧고, 고객 만족도가 높았던 응대 방식을 전 매장에 확산하였다. 이 실험을 통해 고객 이탈률이 눈에 띄게 감소했으며, 내부적으로도 고객 응대에 대한 학습문화가 정착되었다.</p>
+<p>애자일과 KPI의 연계는 전략 실행을 <strong>고정된 목표 추적</strong>에서 <strong>지속적인 실험과 학습</strong>으로 전환시키는 경영 철학의 진화이다. 특히 외식산업과 같이 고객 접점에서의 민감성이 높은 분야에서는 애자일 KPI 모델이 실질적인 경쟁 우위를 제공할 수 있다. KPI를 매출·비용 중심에서 고객 경험, 팀 실험, 직원 성장 중심으로 재설계하고, 이를 주 단위로 실험하고 반영하는 구조는 향후 외식산업의 생존과 혁신을 가를 핵심 도구가 될 것이다.</p>
+</section>
+<section id="마무리하며" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="마무리하며"><span class="header-section-number">2.5</span> 마무리하며</h2>
+<p>이 장에서는 경영진이 조직을 전략적으로 이끌고자 할 때 직면하는 몇 가지 도전 과제에 대해 설명했다. 경영진은 조직을 발전시키는 데 도움이 되는 비전, 사명, 가치, 목표가 있는지 확인해야 한다. 성과를 평가하기 위한 측정 기준과 지표는 신중하게 선택해야 하고, 균형성과표는 기업이 진행 상황을 측정하는 데 사용할 수 있는 도구이다. 경영진이 전략적으로 조직을 성공적으로 이끌면 조직은 경쟁 우위를 확보하고 성공을 달성할 수 있는 좋은 기회를 얻게 될 것이다.</p>
+</section>
+<section id="실습-모듈-1-기업-분석-gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-1-기업-분석-gpt-실습">실습 모듈 1: 기업 분석 GPT 실습</h2>
+<p>다음은 전략경영 분석을 위해 GPT를 활용하는 방법에 대한 연습이다. 다음의 예제 프롬프트에 따라 GPT(혹은 다른 LLM)를 사용하여 기업의 전략적 진단을 수행해 보자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 10-K 리포트 분석 프롬프트</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>첨부된 10-K 리포트를 기반으로 다음과 같이 체계적으로 분석해 주세요.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 분석 요청사항</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. 기업 개요</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**기업명**: <span class="co">[</span><span class="ot">회사명을 정확히 기재</span><span class="co">]</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**본사 위치**: </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**주요 사업 영역**: </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**설립연도**: </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. 비전 및 미션 분석</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>회사의 공식 비전/미션 선언문 (정확한 인용)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>비전/미션이 사업 전략과 어떻게 연결되는지 분석</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>경쟁사 대비 차별화 포인트 식별</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. 핵심 전략 키워드 (5개)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>빈도 분석을 통한 상위 5개 전략 키워드 추출</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>각 키워드의 맥락과 중요성 설명</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>키워드 간 상호 연관성 분석</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. 재무 성과 종합 분석 (최근 5년간)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>| 재무지표 | 2024년 | 2023년 | 2022년 | 2021년 | 2020년 |</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>|----------|--------|--------|--------|--------|--------|</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>| 총매출 (백만달러) | | | | | |</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>| 총이익 (백만달러) | | | | | |</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>| 총자산 (백만달러) | | | | | |</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>| 매출총이익률 (%) | | | | | |</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>| 자기자본이익률 ROE (%) | | | | | |</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>| 총자산이익률 ROA (%) | | | | | |</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>| 재고회전율 (회) | | | | | |</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>| 부채비율 (%) | | | | | |</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>| 유동비율 (배) | | | | | |</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>**재무 트렌드 분석:**</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>5년간 매출 성장률 및 추세</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>수익성 지표 변화 패턴</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>재무 안정성 평가</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>주요 리스크 요인 식별</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. ESG 전략 및 실행 계획</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**환경(Environmental)**: 탄소중립, 친환경 이니셔티브, 환경 목표</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**사회(Social)**: 직원 복지, 지역사회 기여, 고객 만족, 다양성 및 포용성</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**지배구조(Governance)**: 이사회 구성, 투명성, 윤리경영, 컴플라이언스</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ESG 관련 정량적 목표 및 KPI</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## 출력 형식 요구사항</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>각 섹션별로 구조화하여 작성</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>재무 데이터는 반드시 표 형식으로 정리</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>10-K 문서의 구체적인 섹션 번호 또는 페이지 번호 인용</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>핵심 내용은 불릿 포인트로 요약</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>계산이 필요한 비율은 공식을 적용하여 산출</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>**참고사항:**</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>모든 재무 데이터는 10-K 문서에서 직접 추출</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>데이터가 없는 항목은 "N/A" 또는 "자료 없음"으로 표시</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>이 분석이 투자 의사결정이나 기업 연구에 활용될 수 있도록 객관적이고 정확한 정보 추출에 중점</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>효과적인 활용 방법:</strong></p>
+<ul>
+<li><p><strong>파일 업로드</strong>: 10-K PDF 파일을 대화창에 직접 업로드</p></li>
+<li><p><strong>단계별 분석</strong>: 복잡한 문서의 경우 항목별로 나누어 질문</p></li>
+<li><p><strong>추가 질문</strong>: 초기 분석 후 구체적인 부분에 대해 심화 질문</p></li>
+<li><p><strong>비교 분석</strong>: 여러 회사의 10-K를 비교 분석할 때도 동일한 프롬프트 활용</p></li>
+</ul>
+<div id="tbl-sec-filings-summary" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sec-filings-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.9: 주요 SEC 공시 문서 요약
+</figcaption>
+<div aria-describedby="tbl-sec-filings-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>문서명</th>
+<th>핵심 내용 요약</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Form 10-K (연간보고서)</strong></td>
+<td>기업의 연간 재무 상태, 사업 개요, 경영진 분석 등을 포함한 종합 보고서. 장기적 전략 이해에 필수.</td>
+</tr>
+<tr class="even">
+<td><strong>Form 10-Q (분기보고서)</strong></td>
+<td>분기별 실적 및 재무 상태, 시장 환경 변화 등을 반영한 보고서. 단기 변동 파악에 유용.</td>
+</tr>
+<tr class="odd">
+<td><strong>Form 8-K (수시보고서)</strong></td>
+<td>기업에 영향을 줄 수 있는 주요 사건 발생 시 제출. 인수합병, 계약 체결, 임원 교체 등 포함.</td>
+</tr>
+<tr class="even">
+<td><strong>Proxy Statement (DEF 14A)</strong></td>
+<td>주주총회 관련 보고서. 경영진 보상, 의결권 행사 관련 정보 포함. 주주권 행사 및 경영 감시에 중요.</td>
+</tr>
+<tr class="odd">
+<td><strong>Form 4</strong></td>
+<td>임원·이사의 주식 거래 내역 보고서. 내부자의 매매 패턴을 통해 기업 전망 간접 파악 가능.</td>
+</tr>
+<tr class="even">
+<td><strong>Form S-1 (기업공개 등록신청서)</strong></td>
+<td>IPO 준비 기업이 제출. 사업 모델, 재무·위험 정보, 경영진 분석 포함. 투자 판단의 핵심 정보 제공.</td>
+</tr>
+<tr class="odd">
+<td><strong>Form 13F-HR</strong></td>
+<td>기관투자자의 보유 주식 포트폴리오 공개. 대형 펀드의 투자 동향 및 섹터별 관심 종목 파악에 유용.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>데이터 다운로드 방법</strong></p>
+<ul>
+<li><p>https://www.sec.gov/edgar/search/ 접속</p></li>
+<li><p>SBUX 검색 (SBUX는 스타벅스의 티커 심볼)</p></li>
+<li><p>Filed data range: Last 5 years</p></li>
+<li><p>Brows filing types 클릭</p></li>
+<li><p><code>10-K</code> 선택 후 Filter 클릭</p></li>
+<li><p>좌측 메뉴 필터링 후 시간대별 다시 정렬</p></li>
+<li><p>10-K (Annual Report)라고 되어 있는 것 중 가장 최근의 것을 열고 pdf 로 저장</p></li>
+<li><p>저장 후 위의 프롬프트를 사용하여 분석</p></li>
+</ul>
+</section>
+<section id="실습-모듈-2-기업-분석-gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-2-기업-분석-gpt-실습">실습 모듈 2: 기업 분석 GPT 실습</h2>
+<p>앞에서는 PDF 파일을 업로드하고 프롬프트를 분석했다. 이번에는 웹에서 직접 기업 정보를 수집하고 분석하는 방법을 연습해 보자.</p>
+<p><strong>Python 설치</strong></p>
+<p>https://www.python.org/downloads/ 에서 Python 설치</p>
+<p>설치 후, 명령 프롬프트(Windows) 또는 터미널(Mac/Linux)에서 <code>python --version</code> 명령어로 설치 확인</p>
+<p><strong>가상환경 설정</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 가상환경설정</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m venv .venv</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 가상환경 활성화</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>설치 방법</strong></p>
+<p>필요한 패키지 설치:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>SEC API 키 설정: - <a href="https://sec-api.io/">SEC-API</a> 웹사이트에서 API 키를 발급 - 프로젝트 루트 디렉토리에 <code>.env</code> 파일을 생성하고 다음 내용을 추가</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>SEC_API_KEY<span class="op">=</span>your_api_key_here</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>SEC_EMAIL<span class="op">=</span>your_email_here</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>사용 방법</strong></p>
+<p>스크립트를 실행하려면 다음 명령어를 사용</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> edgar_crawler.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>실행이 완료되면 최신 10-K 파일이 텍스트 형식으로 저장됩니다. 파일명은 <code>SBUX_10K_[제출일자].txt</code> 형식으로 생성</p>
+<p><strong>requirements.txt 파일 내용</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sec<span class="op">-</span>api<span class="op">==</span><span class="fl">1.0.17</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>python<span class="op">-</span>dotenv<span class="op">==</span><span class="fl">1.0.0</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>requests<span class="op">==</span><span class="fl">2.31.0</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>파일 작성방법</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">notepad</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>edgar_crawler.py 파일 내용</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sec_api <span class="im">import</span> QueryApi</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># .env 파일에서 환경 변수 로드</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> EdgarCrawler:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.api_key <span class="op">=</span> os.getenv(<span class="st">'SEC_API_KEY'</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.email <span class="op">=</span> os.getenv(<span class="st">'SEC_EMAIL'</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.api_key:</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"SEC API 키가 설정되지 않았습니다. .env 파일에 SEC_API_KEY를 설정해주세요."</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.email:</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"이메일이 설정되지 않았습니다. .env 파일에 SEC_EMAIL을 설정해주세요."</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.queryApi <span class="op">=</span> QueryApi(api_key<span class="op">=</span><span class="va">self</span>.api_key)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_latest_10k(<span class="va">self</span>, ticker):</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">        주어진 티커의 가장 최근 10-K 파일의 URL을 가져옵니다.</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>        query <span class="op">=</span> {</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"query"</span>: {</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>                <span class="st">"query_string"</span>: {</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"query"</span>: <span class="ss">f"ticker:</span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss"> AND formType:</span><span class="ch">\"</span><span class="ss">10-K</span><span class="ch">\"</span><span class="ss">"</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">"from"</span>: <span class="st">"0"</span>,</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>            <span class="st">"size"</span>: <span class="st">"1"</span>,</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">"sort"</span>: [{<span class="st">"filedAt"</span>: {<span class="st">"order"</span>: <span class="st">"desc"</span>}}]</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> <span class="va">self</span>.queryApi.get_filings(query)</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> response[<span class="st">'filings'</span>]:</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"'</span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">' 기업의 10-K 파일을 찾을 수 없습니다."</span>)</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>        filing <span class="op">=</span> response[<span class="st">'filings'</span>][<span class="dv">0</span>]</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>        <span class="co"># SEC EDGAR의 실제 문서 URL 생성</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        accession_no <span class="op">=</span> filing[<span class="st">'accessionNo'</span>].replace(<span class="st">'-'</span>, <span class="st">''</span>)</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        cik <span class="op">=</span> filing[<span class="st">'cik'</span>]</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>        <span class="co"># EDGAR 문서 URL 형식 생성</span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        doc_url <span class="op">=</span> <span class="ss">f"https://www.sec.gov/Archives/edgar/data/</span><span class="sc">{</span>cik<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>accession_no<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>filing[<span class="st">'accessionNo'</span>]<span class="sc">}</span><span class="ss">.txt"</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>            <span class="st">'documentUrl'</span>: doc_url,</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>            <span class="st">'filedAt'</span>: filing[<span class="st">'filedAt'</span>]</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> extract_10k_content(<span class="va">self</span>, text):</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co">        10-K 문서에서 실제 내용을 추출합니다.</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>        <span class="co"># SGML 헤더와 푸터 제거</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>        doc_start <span class="op">=</span> text.find(<span class="st">'&lt;DOCUMENT&gt;'</span>)</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>        doc_end <span class="op">=</span> text.rfind(<span class="st">'&lt;/DOCUMENT&gt;'</span>)</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> doc_start <span class="op">==</span> <span class="op">-</span><span class="dv">1</span> <span class="kw">or</span> doc_end <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> text</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>        doc_text <span class="op">=</span> text[doc_start:doc_end <span class="op">+</span> <span class="dv">11</span>]</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>        <span class="co"># BeautifulSoup으로 HTML 파싱</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>        soup <span class="op">=</span> BeautifulSoup(doc_text, <span class="st">'html.parser'</span>)</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 텍스트 추출 및 정리</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>        text_content <span class="op">=</span> []</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 문서 타입 확인</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>        doc_type <span class="op">=</span> soup.find(<span class="st">'type'</span>)</span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> doc_type:</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>            text_content.append(<span class="ss">f"문서 타입: </span><span class="sc">{</span>doc_type<span class="sc">.</span>text<span class="sc">.</span>strip()<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 주요 섹션 추출</span></span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>        main_content <span class="op">=</span> soup.find(<span class="st">'text'</span>)</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> main_content:</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>            <span class="co"># HTML 태그 제거하고 텍스트만 추출</span></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>            content <span class="op">=</span> main_content.get_text(separator<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, strip<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 불필요한 공백 제거</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>            content <span class="op">=</span> re.sub(<span class="vs">r'\n\s*\n'</span>, <span class="st">'</span><span class="ch">\n\n</span><span class="st">'</span>, content)</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>            text_content.append(content)</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>.join(text_content)</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> download_and_parse_10k(<span class="va">self</span>, filing_url):</span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="co">        10-K 파일을 다운로드하고 파싱합니다.</span></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>        <span class="co"># SEC 요구사항에 맞는 User-Agent 헤더 추가</span></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>        headers <span class="op">=</span> {</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>            <span class="st">'User-Agent'</span>: <span class="ss">f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>email<span class="sc">}</span><span class="ss">'</span>,</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Host'</span>: <span class="st">'www.sec.gov'</span>,</span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Accept'</span>: <span class="st">'application/json, text/javascript, */*; q=0.01'</span>,</span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Accept-Encoding'</span>: <span class="st">'gzip, deflate, br'</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>        <span class="co"># SEC 권장사항: 요청 간 10초 대기</span></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"SEC 권장사항에 따라 요청 전 10초 대기..."</span>)</span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>        <span class="im">import</span> time</span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>        time.sleep(<span class="dv">10</span>)</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> requests.get(filing_url, headers<span class="op">=</span>headers)</span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> response.status_code <span class="op">!=</span> <span class="dv">200</span>:</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"문서 다운로드 실패. 상태 코드: </span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 문서 파싱</span></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>        raw_text <span class="op">=</span> response.text</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"문서 다운로드 완료. 파싱 중..."</span>)</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 실제 10-K 내용 추출</span></span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>        parsed_content <span class="op">=</span> <span class="va">self</span>.extract_10k_content(raw_text)</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> parsed_content</span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> save_to_file(<span class="va">self</span>, content, ticker, filing_date):</span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a><span class="co">        파싱된 내용을 파일로 저장합니다.</span></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>        filename <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">_10K_</span><span class="sc">{</span>filing_date<span class="sc">}</span><span class="ss">.txt"</span></span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> f:</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>            f.write(content)</span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> filename</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>        <span class="co"># SBUX(스타벅스)의 10-K 파일 크롤링</span></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a>        crawler <span class="op">=</span> EdgarCrawler()</span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 최신 10-K 파일 정보 가져오기</span></span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>        filing_info <span class="op">=</span> crawler.get_latest_10k(<span class="st">'SBUX'</span>)</span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 10-K 문서 URL</span></span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a>        document_url <span class="op">=</span> filing_info[<span class="st">'documentUrl'</span>]</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a>        filing_date <span class="op">=</span> filing_info[<span class="st">'filedAt'</span>].split(<span class="st">'T'</span>)[<span class="dv">0</span>]</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"문서 다운로드 중... URL: </span><span class="sc">{</span>document_url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 문서 다운로드 및 파싱</span></span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>        content <span class="op">=</span> crawler.download_and_parse_10k(document_url)</span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 파일로 저장</span></span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a>        filename <span class="op">=</span> crawler.save_to_file(content, <span class="st">'SBUX'</span>, filing_date)</span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"10-K 파일이 성공적으로 다운로드되어 </span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">에 저장되었습니다."</span>)</span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"오류 발생: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>    main() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>다운로드 후 파싱까지 된 텍스트 파일을 GPT에 업로드하고, 다음과 같은 프롬프트를 사용하여 분석을 요청할 수 있다. 분석결과가 PDF 를 넣은 것 보다 더 좋을 것이다.</p>
+</section>
+<section id="실습-모듈-3-국내기업-분석-gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-3-국내기업-분석-gpt-실습">실습 모듈 3: 국내기업 분석 GPT 실습</h2>
+<p>이번에는 국내 기업의 감사사보고서를 분석하는 연습을 해보자. 국내 기업의 경우, 금융감독원 전자공시시스템(<a href="https://dart.fss.or.kr/">DART</a>)에서 감사보고서를 다운로드할 수 있다.</p>
+<p><strong>DART에서 메가커피 감사보고서 다운로드 방법:</strong></p>
+<p>1.<span class="math inline">\(\;\)</span> <a href="https://dart.fss.or.kr/">DART</a> 접속</p>
+<p>2.<span class="math inline">\(\;\)</span> 공시통합검색 검색창에 앤하우스 입력 (메가커피)</p>
+<p>3.<span class="math inline">\(\;\)</span> 기간을 5년으로 설정</p>
+<p>4.<span class="math inline">\(\;\)</span> 검색 후 최신 감사보고서 다운로드</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 감사보고서 리포트 분석 프롬프트</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>첨부된 감사보고서 리포트를 기반으로 다음과 같이 체계적으로 분석해 주세요.</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">## 분석 요청사항</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">### 1. 기업 개요</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>기업명<span class="op">**</span>: [회사명을 정확히 기재]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>본사 위치<span class="op">**</span>: </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>주요 사업 영역<span class="op">**</span>: </span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>설립연도<span class="op">**</span>: </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">### 2. 비전 및 미션 분석</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 회사의 공식 비전<span class="op">/</span>미션 선언문 (정확한 인용)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 비전<span class="op">/</span>미션이 사업 전략과 어떻게 연결되는지 분석</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 경쟁사 대비 차별화 포인트 식별</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">### 3. 핵심 전략 키워드 (5개)</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 빈도 분석을 통한 상위 <span class="dv">5</span><span class="er">개</span> 전략 키워드 추출</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 각 키워드의 맥락과 중요성 설명</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 키워드 간 상호 연관성 분석</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co">### 4. 재무 성과 종합 분석 (최근 5년간)</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 재무지표 <span class="op">|</span> <span class="dv">2024</span><span class="er">년</span> <span class="op">|</span> <span class="dv">2023</span><span class="er">년</span> <span class="op">|</span> <span class="dv">2022</span><span class="er">년</span> <span class="op">|</span> <span class="dv">2021</span><span class="er">년</span> <span class="op">|</span> <span class="dv">2020</span><span class="er">년</span> <span class="op">|</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="op">|----------|--------|--------|--------|--------|--------|</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 총매출 (백만달러) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 총이익 (백만달러) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 총자산 (백만달러) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 매출총이익률 (<span class="op">%</span>) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 자기자본이익률 ROE (<span class="op">%</span>) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 총자산이익률 ROA (<span class="op">%</span>) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 재고회전율 (회) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 부채비율 (<span class="op">%</span>) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> 유동비율 (배) <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span> <span class="op">|</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>재무 트렌드 분석:<span class="op">**</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="dv">5</span><span class="er">년간</span> 매출 성장률 및 추세</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 수익성 지표 변화 패턴</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 재무 안정성 평가</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 주요 리스크 요인 식별</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="co">### 5. ESG 전략 및 실행 계획</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>환경(Environmental)<span class="op">**</span>: 탄소중립, 친환경 이니셔티브, 환경 목표</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>사회(Social)<span class="op">**</span>: 직원 복지, 지역사회 기여, 고객 만족, 다양성 및 포용성</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>지배구조(Governance)<span class="op">**</span>: 이사회 구성, 투명성, 윤리경영, 컴플라이언스</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> ESG 관련 정량적 목표 및 KPI</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="co">## 출력 형식 요구사항</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 각 섹션별로 구조화하여 작성</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 재무 데이터는 반드시 표 형식으로 정리</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 감사보고서 문서의 구체적인 섹션 번호 또는 페이지 번호 인용</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 핵심 내용은 불릿 포인트로 요약</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 계산이 필요한 비율은 공식을 적용하여 산출</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>참고사항:<span class="op">**</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 모든 재무 데이터는 감사보고서 문서에서 직접 추출</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 데이터가 없는 항목은 <span class="st">"N/A"</span> 또는 <span class="st">"자료 없음"</span>으로 표시</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 이 분석이 투자 의사결정이나 기업 연구에 활용될 수 있도록 객관적이고 정확한 정보 추출에 중점</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>DART에서 스타벅스 코리아 감사보고서 다운로드 방법</strong></p>
+<p>1.<span class="math inline">\(\;\)</span> <a href="https://dart.fss.or.kr/">DART</a> 접속</p>
+<p>2.<span class="math inline">\(\;\)</span> 공시통합검색 검색창에 에스씨케이컴퍼니 입력 (스타벅스 코리아)</p>
+<p>3.<span class="math inline">\(\;\)</span> 기간을 5년으로 설정</p>
+<p>4.<span class="math inline">\(\;\)</span> 검색 후 최신 감사보고서 다운로드</p>
+<p>5.<span class="math inline">\(\;\)</span> 다운로드한 사업보고서를 GPT에 업로드하고 위의 프롬프트를 사용하여 분석 요청</p>
+</section>
+<section id="실습-모듈-4-국내기업-분석-gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-4-국내기업-분석-gpt-실습">실습 모듈 4: 국내기업 분석 GPT 실습</h2>
+<p><strong>가상환경 설정</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 가상환경설정</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m venv .venv</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 가상환경 활성화</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>설치 방법</strong></p>
+<p>필요한 패키지 설치:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>DART API 키 설정: - <a href="https://opendart.fss.or.kr/uss/umt/EgovMberInsertView.do">DART-API</a> 웹사이트에서 인증키 신청 후 키를 발급 - 프로젝트 루트 디렉토리에 config.py 파일을 생성하고 다음 내용을 추가</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> <span class="st">'DART인증키를 입력'</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>COMPANY_NAME <span class="op">=</span> <span class="st">'에스씨케이컴퍼니'</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>사용 방법</strong></p>
+<p>스크립트를 실행하려면 다음 명령어를 사용</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>실행이 완료되면 최신 감사보고서 파일이 텍스트 형식으로 저장된다. 파일은 downloads 폴더 내부에 생성된다.</p>
+<p><strong>requirements.txt 파일 내용</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>OpenDartReader<span class="op">==</span><span class="fl">0.2.3</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>pandas<span class="op">&gt;=</span><span class="fl">1.3.0</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>requests<span class="op">&gt;=</span><span class="fl">2.26.0</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>chardet</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>beautifulsoup4</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>lxml</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>markdownify </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>파일 작성방법</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">notepad</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>main.py 파일 내용</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> config <span class="im">import</span> API_KEY, COMPANY_NAME</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> chardet</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zipfile</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> io</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> markdownify <span class="im">import</span> markdownify <span class="im">as</span> md</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_corp_code():</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""기업 고유번호 찾기"""</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># OpenDartReader의 corp_codes.pkl 파일 사용</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>        corps <span class="op">=</span> pd.read_pickle(<span class="st">'docs_cache/opendartreader_corp_codes_20250621.pkl'</span>)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">[검색된 기업 목록]"</span>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>        search_result <span class="op">=</span> corps[corps[<span class="st">'corp_name'</span>].<span class="bu">str</span>.contains(COMPANY_NAME, na<span class="op">=</span><span class="va">False</span>)]</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(search_result) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">유사한 이름의 기업 목록:"</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> idx, row <span class="kw">in</span> search_result.iterrows():</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"기업명: </span><span class="sc">{</span>row[<span class="st">'corp_name'</span>]<span class="sc">}</span><span class="ss">, 고유번호: </span><span class="sc">{</span>row[<span class="st">'corp_code'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> search_result</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"'</span><span class="sc">{</span>COMPANY_NAME<span class="sc">}</span><span class="ss">'와(과) 유사한 이름의 기업을 찾을 수 없습니다."</span>)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"기업 코드 검색 중 오류 발생: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_recent_audit_report(corp_code):</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""최근 감사보고서 조회"""</span></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 검색 기간 설정</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>        end_date <span class="op">=</span> <span class="st">'20250430'</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>        start_date <span class="op">=</span> <span class="st">'20230101'</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">검색 기간: </span><span class="sc">{</span>start_date<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>end_date<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"모든 공시 내역을 검색합니다..."</span>)</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 공시 목록 API 호출</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> <span class="ss">f"https://opendart.fss.or.kr/api/list.json"</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>        params <span class="op">=</span> {</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>            <span class="st">"crtfc_key"</span>: API_KEY,</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>            <span class="st">"corp_code"</span>: corp_code,</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>            <span class="st">"bgn_de"</span>: start_date,</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>            <span class="st">"end_de"</span>: end_date,</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>            <span class="st">"page_count"</span>: <span class="dv">100</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> requests.get(url, params<span class="op">=</span>params)</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>        response.raise_for_status()</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> response.json()</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> data[<span class="st">'status'</span>] <span class="op">==</span> <span class="st">'000'</span>:</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>            reports <span class="op">=</span> pd.DataFrame(data[<span class="st">'list'</span>])</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">총 </span><span class="sc">{</span><span class="bu">len</span>(reports)<span class="sc">}</span><span class="ss">개의 공시가 검색되었습니다."</span>)</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 감사보고서 관련 공시만 필터링</span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>            audit_reports <span class="op">=</span> reports[reports[<span class="st">'report_nm'</span>].<span class="bu">str</span>.contains(<span class="st">'감사보고서|감사의견|검토보고서'</span>, na<span class="op">=</span><span class="va">False</span>)]</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">len</span>(audit_reports) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">감사 관련 보고서 </span><span class="sc">{</span><span class="bu">len</span>(audit_reports)<span class="sc">}</span><span class="ss">개가 발견되었습니다:"</span>)</span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> idx, report <span class="kw">in</span> audit_reports.iterrows():</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span>idx<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">. 보고서 제목: </span><span class="sc">{</span>report[<span class="st">'report_nm'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"   접수일자: </span><span class="sc">{</span>report[<span class="st">'rcept_dt'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"   접수번호: </span><span class="sc">{</span>report[<span class="st">'rcept_no'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>                <span class="co"># 가장 최근 보고서 처리</span></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>                latest_report <span class="op">=</span> audit_reports.iloc[<span class="dv">0</span>]</span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>                <span class="co"># 감사보고서 원문 API 호출</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">보고서 원문을 조회합니다... (접수번호: </span><span class="sc">{</span>latest_report[<span class="st">'rcept_no'</span>]<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>                doc_url <span class="op">=</span> <span class="st">"https://opendart.fss.or.kr/api/document.xml"</span></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>                doc_params <span class="op">=</span> {</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"crtfc_key"</span>: API_KEY,</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"rcept_no"</span>: latest_report[<span class="st">'rcept_no'</span>]</span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>                doc_response <span class="op">=</span> requests.get(doc_url, params<span class="op">=</span>doc_params)</span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> doc_response.status_code <span class="op">==</span> <span class="dv">200</span>:</span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># 다운로드 디렉토리 생성</span></span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a>                    download_dir <span class="op">=</span> <span class="st">'downloads'</span></span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a>                    os.makedirs(download_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># 파일 저장</span></span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>                    filename_base <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>latest_report[<span class="st">'rcept_dt'</span>]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>latest_report[<span class="st">'report_nm'</span>]<span class="sc">.</span>replace(<span class="st">' '</span>, <span class="st">'_'</span>)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>                    filepath <span class="op">=</span> os.path.join(download_dir, filename_base <span class="op">+</span> <span class="st">".zip"</span>) <span class="co"># zip 파일로 저장</span></span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">try</span>:</span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># 응답이 ZIP 파일인지 확인</span></span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">with</span> zipfile.ZipFile(io.BytesIO(doc_response.content)) <span class="im">as</span> z:</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>                            <span class="co"># ZIP 파일로 저장</span></span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">with</span> <span class="bu">open</span>(filepath, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a>                                f.write(doc_response.content)</span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a>                            <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">ZIP 파일이 성공적으로 다운로드되었습니다: </span><span class="sc">{</span>filepath<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a>                            <span class="co"># ZIP 파일 내의 XML 파일 찾기</span></span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a>                            xml_filename <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">for</span> name <span class="kw">in</span> z.namelist():</span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a>                                <span class="cf">if</span> name.lower().endswith(<span class="st">'.xml'</span>):</span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a>                                    xml_filename <span class="op">=</span> name</span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a>                                    <span class="cf">break</span></span>
+<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a>                            </span>
+<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">if</span> xml_filename:</span>
+<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a>                                <span class="bu">print</span>(<span class="ss">f"ZIP 파일 내에서 XML 파일을 찾았습니다: </span><span class="sc">{</span>xml_filename<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-111"><a href="#cb16-111" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># XML 파일 압축 해제</span></span>
+<span id="cb16-112"><a href="#cb16-112" aria-hidden="true" tabindex="-1"></a>                                z.extract(xml_filename, path<span class="op">=</span>download_dir)</span>
+<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a>                                extracted_xml_path <span class="op">=</span> os.path.join(download_dir, xml_filename)</span>
+<span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a>                                </span>
+<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># 다운로드된 파일명 변경</span></span>
+<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a>                                final_xml_path <span class="op">=</span> os.path.join(download_dir, filename_base <span class="op">+</span> <span class="st">".xml"</span>)</span>
+<span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a>                                <span class="cf">if</span> os.path.exists(final_xml_path):</span>
+<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a>                                    os.remove(final_xml_path)</span>
+<span id="cb16-119"><a href="#cb16-119" aria-hidden="true" tabindex="-1"></a>                                os.rename(extracted_xml_path, final_xml_path)</span>
+<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a>                                </span>
+<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a>                                <span class="bu">print</span>(<span class="ss">f"XML 파일이 성공적으로 추출되었습니다: </span><span class="sc">{</span>final_xml_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-122"><a href="#cb16-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-123"><a href="#cb16-123" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># DART 웹사이트 URL도 제공</span></span>
+<span id="cb16-124"><a href="#cb16-124" aria-hidden="true" tabindex="-1"></a>                                dart_url <span class="op">=</span> <span class="ss">f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo=</span><span class="sc">{</span>latest_report[<span class="st">'rcept_no'</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a>                                <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">DART 웹사이트에서도 확인할 수 있습니다:"</span>)</span>
+<span id="cb16-126"><a href="#cb16-126" aria-hidden="true" tabindex="-1"></a>                                <span class="bu">print</span>(dart_url)</span>
+<span id="cb16-127"><a href="#cb16-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-128"><a href="#cb16-128" aria-hidden="true" tabindex="-1"></a>                                <span class="cf">return</span> latest_report, final_xml_path</span>
+<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">else</span>:</span>
+<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a>                                <span class="bu">print</span>(<span class="st">"ZIP 파일 내에서 XML 파일을 찾을 수 없습니다."</span>)</span>
+<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a>                                <span class="cf">return</span> latest_report, filepath <span class="co"># zip 파일 경로 반환</span></span>
+<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">except</span> zipfile.BadZipFile:</span>
+<span id="cb16-134"><a href="#cb16-134" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="st">"응답이 ZIP 파일이 아닙니다. 텍스트로 처리합니다."</span>)</span>
+<span id="cb16-135"><a href="#cb16-135" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># 이전 로직(chardet)으로 처리 시도</span></span>
+<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># ... (이 부분은 필요 시 다시 구현)</span></span>
+<span id="cb16-137"><a href="#cb16-137" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">return</span> latest_report, <span class="va">None</span> <span class="co"># 실패 처리</span></span>
+<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-139"><a href="#cb16-139" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">"보고서 다운로드 실패"</span>)</span>
+<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"상태 코드: </span><span class="sc">{</span>doc_response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">return</span> latest_report, <span class="va">None</span></span>
+<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb16-144"><a href="#cb16-144" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">감사 관련 보고서를 찾을 수 없습니다."</span>)</span>
+<span id="cb16-145"><a href="#cb16-145" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"API 오류: </span><span class="sc">{</span>data[<span class="st">'message'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> requests.exceptions.RequestException <span class="im">as</span> e:</span>
+<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"API 요청 오류: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> json.JSONDecodeError <span class="im">as</span> e:</span>
+<span id="cb16-154"><a href="#cb16-154" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"JSON 파싱 오류: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"예상치 못한 오류 발생: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_audit_report(filepath):</span>
+<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb16-162"><a href="#cb16-162" aria-hidden="true" tabindex="-1"></a><span class="co">    XML 감사보고서 파일을 파싱하여 마크다운(.md) 파일로 저장합니다.</span></span>
+<span id="cb16-163"><a href="#cb16-163" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> filepath <span class="kw">or</span> <span class="kw">not</span> os.path.exists(filepath):</span>
+<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">파싱할 파일을 찾을 수 없습니다."</span>)</span>
+<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">감사보고서 파싱 및 마크다운 변환을 시작합니다: </span><span class="sc">{</span>filepath<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 파일 읽기</span></span>
+<span id="cb16-172"><a href="#cb16-172" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(filepath, <span class="st">'rb'</span>) <span class="im">as</span> f:</span>
+<span id="cb16-173"><a href="#cb16-173" aria-hidden="true" tabindex="-1"></a>            raw_data <span class="op">=</span> f.read()</span>
+<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-175"><a href="#cb16-175" aria-hidden="true" tabindex="-1"></a>        <span class="co"># BeautifulSoup를 사용하여 HTML/XML 파싱</span></span>
+<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a>        <span class="co"># from_encoding을 사용하면 BeautifulSoup가 인코딩을 처리해줍니다.</span></span>
+<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a>        soup <span class="op">=</span> BeautifulSoup(raw_data, <span class="st">'lxml-xml'</span>) <span class="co"># lxml-xml 파서를 사용하여 엄격하게 처리</span></span>
+<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a>        <span class="co"># HTML 문자열로 변환</span></span>
+<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a>        html_content <span class="op">=</span> <span class="bu">str</span>(soup)</span>
+<span id="cb16-181"><a href="#cb16-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-182"><a href="#cb16-182" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 마크다운으로 변환 (표 변환 기능 활성화)</span></span>
+<span id="cb16-183"><a href="#cb16-183" aria-hidden="true" tabindex="-1"></a>        markdown_content <span class="op">=</span> md(html_content, heading_style<span class="op">=</span><span class="st">"ATX"</span>, table_conversion<span class="op">=</span><span class="st">"gfm"</span>)</span>
+<span id="cb16-184"><a href="#cb16-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-185"><a href="#cb16-185" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 저장할 마크다운 파일 경로 생성</span></span>
+<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a>        md_filepath <span class="op">=</span> os.path.splitext(filepath)[<span class="dv">0</span>] <span class="op">+</span> <span class="st">'.md'</span></span>
+<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 마크다운 파일로 저장</span></span>
+<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(md_filepath, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> f:</span>
+<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a>            f.write(markdown_content)</span>
+<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-192"><a href="#cb16-192" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">보고서 내용이 마크다운 파일로 성공적으로 저장되었습니다: </span><span class="sc">{</span>md_filepath<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-193"><a href="#cb16-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-194"><a href="#cb16-194" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb16-195"><a href="#cb16-195" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"보고서 파싱 중 예상치 못한 오류 발생: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span>COMPANY_NAME<span class="sc">}</span><span class="ss">의 기업 고유번호를 검색합니다..."</span>)</span>
+<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a>    corps <span class="op">=</span> find_corp_code()</span>
+<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> corps <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> <span class="bu">len</span>(corps) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-202"><a href="#cb16-202" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb16-203"><a href="#cb16-203" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 사용자에게 기업 선택 요청</span></span>
+<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(corps) <span class="op">&gt;</span> <span class="dv">1</span>:</span>
+<span id="cb16-206"><a href="#cb16-206" aria-hidden="true" tabindex="-1"></a>        corp_code <span class="op">=</span> <span class="bu">input</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">검색된 기업 중 조회할 기업의 고유번호를 입력하세요: "</span>)</span>
+<span id="cb16-207"><a href="#cb16-207" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb16-208"><a href="#cb16-208" aria-hidden="true" tabindex="-1"></a>        corp_code <span class="op">=</span> corps.iloc[<span class="dv">0</span>][<span class="st">'corp_code'</span>]</span>
+<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">선택된 기업 고유번호: </span><span class="sc">{</span>corp_code<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 감사보고서 조회 및 다운로드</span></span>
+<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a>    latest_report, filepath <span class="op">=</span> get_recent_audit_report(corp_code)</span>
+<span id="cb16-214"><a href="#cb16-214" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> latest_report <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">[가장 최근 감사보고서 정보]"</span>)</span>
+<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"보고서 제목: </span><span class="sc">{</span>latest_report[<span class="st">'report_nm'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-218"><a href="#cb16-218" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"접수일자: </span><span class="sc">{</span>latest_report[<span class="st">'rcept_dt'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"접수번호: </span><span class="sc">{</span>latest_report[<span class="st">'rcept_no'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-220"><a href="#cb16-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> filepath:</span>
+<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a>            parse_audit_report(filepath)</span>
+<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>    main() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습-모듈-5-국내-커피숍-시장에서-스타벅스-분석-gpt-실습" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="실습-모듈-5-국내-커피숍-시장에서-스타벅스-분석-gpt-실습">실습 모듈 5: 국내 커피숍 시장에서 스타벅스 분석 GPT 실습</h2>
+<p>다음의 프롬프트는 팬데믹 이후 국내 커피숍 산업에서 스타벅스를 중심으로 한 시장 분석 보고서로 이디야, 투썸플레이스, 컴포즈커피, 메가커피, 빽다방 등의 주요 브랜드를 포함하고, 고객 피드백, 시장 점유율, 가격 및 기술 전략 등을 포괄적으로 분석하도록 작성되어 있음. 사용 모델은 GPT-4o이며 옵션으로 딥리서치를 하도록 하였음. 구독을 하지 않는 학생들의 경우 딥리서치의 제한이 있을 수 있으므로 딥리서치를 사용한 경우와 그렇지 않은 경우를 비교하면 좋은 예가 될 수 있음.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">### **국내 커피숍** 산업 내 **스타벅스**에 대한 시장 분석 보고서</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 분석기간: 팬데믹 이후</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 주요 경쟁 브랜드 포함 여부: 이디야, 투썸플레이스, 컴포즈커피, 메가커피, 빽다방 등의 주요 브랜드를 포함</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 분석에 필요한 고객 피드백, 시장 점유율, 가격 및 기술 전략 등 포괄적 분석하고 필요한 자료를 수집하여 분석</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 본 보고서는 스타벅스 내부전략 수립을 위해 작성되었으며, 스타벅스의 시장 위치와 경쟁력을 강화하기 위한 전략적 인사이트를 제공하는 것을 목표로 함</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">## 경영진 요약</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>중요한 발견 사항을 개괄적으로 설명하고 주요 경쟁자의 움직임, 시장 동향, 전략적 의미를 강조합니다.</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co">## 경쟁자 현황</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co">### 상위 다섯 경쟁자</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>경쟁자 <span class="dv">1</span><span class="op">**</span>:</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>전략적 초점<span class="op">**</span>: {최신 전략적 초점 설명}</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>제품 라인<span class="op">**</span>: {갱신된 제품 라인}</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>비즈니스 모델 혁신<span class="op">**</span>: {비즈니스 모델 혁신}</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>시장 점유율 통계<span class="op">**</span>: {시장 점유율 통계}</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>경쟁자 <span class="dv">2</span><span class="op">**</span>:</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>전략적 초점<span class="op">**</span>: {최신 전략적 초점 설명}</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>제품 라인<span class="op">**</span>: {갱신된 제품 라인}</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>비즈니스 모델 혁신<span class="op">**</span>: {비즈니스 모델 혁신}</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>시장 점유율 통계<span class="op">**</span>: {시장 점유율 통계}</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>경쟁자 <span class="dv">3</span><span class="op">**</span>:</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>전략적 초점<span class="op">**</span>: {최신 전략적 초점 설명}</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>제품 라인<span class="op">**</span>: {갱신된 제품 라인}</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>비즈니스 모델 혁신<span class="op">**</span>: {비즈니스 모델 혁신}</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>시장 점유율 통계<span class="op">**</span>: {시장 점유율 통계}</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>경쟁자 <span class="dv">4</span><span class="op">**</span>:</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>전략적 초점<span class="op">**</span>: {최신 전략적 초점 설명}</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>제품 라인<span class="op">**</span>: {갱신된 제품 라인}</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>비즈니스 모델 혁신<span class="op">**</span>: {비즈니스 모델 혁신}</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>시장 점유율 통계<span class="op">**</span>: {시장 점유율 통계}</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> <span class="op">**</span>경쟁자 <span class="dv">5</span><span class="op">**</span>:</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>전략적 초점<span class="op">**</span>: {최신 전략적 초점 설명}</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>제품 라인<span class="op">**</span>: {갱신된 제품 라인}</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>비즈니스 모델 혁신<span class="op">**</span>: {비즈니스 모델 혁신}</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> <span class="op">**</span>시장 점유율 통계<span class="op">**</span>: {시장 점유율 통계}</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a><span class="co">### 강점 및 약점</span></span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>강점<span class="op">**</span>:</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> {핵심 역량, 독특한 판매 포인트}</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> 최근 제품 출시, 고객 추천, 미디어 커버리지 예시 포함</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>약점<span class="op">**</span>:</span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> {취약점, 개선 필요 영역}</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> 시장 피드백, 알려진 문제점 예시 포함</span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-57"><a href="#cb17-57" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-58"><a href="#cb17-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-59"><a href="#cb17-59" aria-hidden="true" tabindex="-1"></a><span class="co">## 시장 동향 및 파괴자</span></span>
+<span id="cb17-60"><a href="#cb17-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-61"><a href="#cb17-61" aria-hidden="true" tabindex="-1"></a><span class="co">### 신흥 동향</span></span>
+<span id="cb17-62"><a href="#cb17-62" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>규제 변화<span class="op">**</span>: {최근 규제 변화}</span>
+<span id="cb17-63"><a href="#cb17-63" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>기술적 돌파구<span class="op">**</span>: {최근 기술적 발전}</span>
+<span id="cb17-64"><a href="#cb17-64" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>투자자 심리<span class="op">**</span>: {현재 투자자 심리}</span>
+<span id="cb17-65"><a href="#cb17-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>소비자 행동<span class="op">**</span>: {변화하는 소비자 행동}</span>
+<span id="cb17-66"><a href="#cb17-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-67"><a href="#cb17-67" aria-hidden="true" tabindex="-1"></a><span class="co">### 잠재적 파괴자</span></span>
+<span id="cb17-68"><a href="#cb17-68" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>신규 플레이어<span class="op">**</span>: {시장 장악력을 얻은 신규 플레이어}</span>
+<span id="cb17-69"><a href="#cb17-69" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>자금 조달 이정표<span class="op">**</span>: {최근 자금 조달 이정표}</span>
+<span id="cb17-70"><a href="#cb17-70" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>파괴적 기술들<span class="op">**</span>: {시장에 변화를 주도하는 주목할 만한 기술}</span>
+<span id="cb17-71"><a href="#cb17-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-72"><a href="#cb17-72" aria-hidden="true" tabindex="-1"></a><span class="co">### 화이트 스페이스 기회</span></span>
+<span id="cb17-73"><a href="#cb17-73" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>시장 격차<span class="op">**</span>: {무시된 고객 세그먼트}</span>
+<span id="cb17-74"><a href="#cb17-74" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>전략적 정렬<span class="op">**</span>: {현재 회사 또는 제품 이름의 로드맵과 일치하는 기회}</span>
+<span id="cb17-75"><a href="#cb17-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-76"><a href="#cb17-76" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-77"><a href="#cb17-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-78"><a href="#cb17-78" aria-hidden="true" tabindex="-1"></a><span class="co">## 심층 분석</span></span>
+<span id="cb17-79"><a href="#cb17-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-80"><a href="#cb17-80" aria-hidden="true" tabindex="-1"></a><span class="co">### 미개척 고객 니즈</span></span>
+<span id="cb17-81"><a href="#cb17-81" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>풀리지 않은 문제점<span class="op">**</span>: {온라인 리뷰, 설문조사 데이터에서 발견된 통찰력}</span>
+<span id="cb17-82"><a href="#cb17-82" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>해결책 제안<span class="op">**</span>: {미개척 고객 니즈를 해결하기 위한 제안}</span>
+<span id="cb17-83"><a href="#cb17-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-84"><a href="#cb17-84" aria-hidden="true" tabindex="-1"></a><span class="co">### AI 및 자동화 채택</span></span>
+<span id="cb17-85"><a href="#cb17-85" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>경쟁자 사례<span class="op">**</span>: {AI, 자동화, 데이터 분석 사용 예시}</span>
+<span id="cb17-86"><a href="#cb17-86" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>적응 전략<span class="op">**</span>: {경쟁자 접근을 뛰어넘거나 적응하는 방법 제안}</span>
+<span id="cb17-87"><a href="#cb17-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-88"><a href="#cb17-88" aria-hidden="true" tabindex="-1"></a><span class="co">### 전략적 파트너십 및 인수합병</span></span>
+<span id="cb17-89"><a href="#cb17-89" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>중요한 파트너십<span class="op">/</span>합병<span class="op">/</span>인수<span class="op">**</span>: {지난 <span class="dv">12</span><span class="er">개월</span> 동안의 중요한 움직임}</span>
+<span id="cb17-90"><a href="#cb17-90" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>합리적 및 영향<span class="op">**</span>: {기술적 시너지, 시장 확장, 경쟁적 위치}</span>
+<span id="cb17-91"><a href="#cb17-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-92"><a href="#cb17-92" aria-hidden="true" tabindex="-1"></a><span class="co">### 고객 피드백</span></span>
+<span id="cb17-93"><a href="#cb17-93" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>감성 분석<span class="op">**</span>: {여러 데이터 출처에서 집계된 감성}</span>
+<span id="cb17-94"><a href="#cb17-94" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>경쟁자 강점 및 취약점<span class="op">**</span>: {얻은 통찰력}</span>
+<span id="cb17-95"><a href="#cb17-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-96"><a href="#cb17-96" aria-hidden="true" tabindex="-1"></a><span class="co">### 가격 및 수익 모델</span></span>
+<span id="cb17-97"><a href="#cb17-97" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>비교 분석<span class="op">**</span>: {경쟁자 수익 모델, 가격 구조 비교}</span>
+<span id="cb17-98"><a href="#cb17-98" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>최근 변화<span class="op">**</span>: {구독 기반 모델, 계층적 가격 등 눈에 띄는 변화}</span>
+<span id="cb17-99"><a href="#cb17-99" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>파괴적 가격 전략<span class="op">**</span>: {적응 또는 혼란을 위한 추천}</span>
+<span id="cb17-100"><a href="#cb17-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-101"><a href="#cb17-101" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-102"><a href="#cb17-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-103"><a href="#cb17-103" aria-hidden="true" tabindex="-1"></a><span class="co">## 실행 가능한 추천</span></span>
+<span id="cb17-104"><a href="#cb17-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-105"><a href="#cb17-105" aria-hidden="true" tabindex="-1"></a><span class="co">### 전략적 차별화</span></span>
+<span id="cb17-106"><a href="#cb17-106" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>제안<span class="op">**</span>: {차별화를 위한 구체적인 이니셔티브 또는 제품 개발 강화}</span>
+<span id="cb17-107"><a href="#cb17-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-108"><a href="#cb17-108" aria-hidden="true" tabindex="-1"></a><span class="co">### 대책 마련</span></span>
+<span id="cb17-109"><a href="#cb17-109" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>경쟁 위협 대응<span class="op">**</span>: {새로운 프로모션 전술, 개선된 고객 지원 모델, 전문화된 제품 특징, 목표 지향적 채널 파트너십}</span>
+<span id="cb17-110"><a href="#cb17-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-111"><a href="#cb17-111" aria-hidden="true" tabindex="-1"></a><span class="co">### 실행 로드맵</span></span>
+<span id="cb17-112"><a href="#cb17-112" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>타임라인 및 중요한 단계<span class="op">**</span>: {주요 단계, 잠재적 의존성, 리소스 필요}</span>
+<span id="cb17-113"><a href="#cb17-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-114"><a href="#cb17-114" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-115"><a href="#cb17-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-116"><a href="#cb17-116" aria-hidden="true" tabindex="-1"></a><span class="co">## 데이터 출처 및 방법론</span></span>
+<span id="cb17-117"><a href="#cb17-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-118"><a href="#cb17-118" aria-hidden="true" tabindex="-1"></a><span class="co">### 산업 조사 기관</span></span>
+<span id="cb17-119"><a href="#cb17-119" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>출처<span class="op">**</span>: Gartner, Forrester, McKinsey, IBISWorld</span>
+<span id="cb17-120"><a href="#cb17-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-121"><a href="#cb17-121" aria-hidden="true" tabindex="-1"></a><span class="co">### 재무 보고서</span></span>
+<span id="cb17-122"><a href="#cb17-122" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>출처<span class="op">**</span>: 연례<span class="op">/</span>분기별 보고서, 투자자 프리젠테이션, 실적 발표 회의 기록, SEC 파일링</span>
+<span id="cb17-123"><a href="#cb17-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-124"><a href="#cb17-124" aria-hidden="true" tabindex="-1"></a><span class="co">### 디지털 및 소셜 데이터</span></span>
+<span id="cb17-125"><a href="#cb17-125" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>도구들<span class="op">**</span>: Brandwatch, Sprout Social, Talkwalker</span>
+<span id="cb17-126"><a href="#cb17-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-127"><a href="#cb17-127" aria-hidden="true" tabindex="-1"></a><span class="co">### 설문 및 포커스 그룹</span></span>
+<span id="cb17-128"><a href="#cb17-128" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>방법론<span class="op">**</span>: 단기 설문 조사, 목표 지향적 포커스 그룹을 통한 직접 소비자 피드백</span>
+<span id="cb17-129"><a href="#cb17-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-130"><a href="#cb17-130" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-131"><a href="#cb17-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-132"><a href="#cb17-132" aria-hidden="true" tabindex="-1"></a><span class="co">### 형식 및 발표</span></span>
+<span id="cb17-133"><a href="#cb17-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-134"><a href="#cb17-134" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>경영진 요약<span class="op">**</span>: 중요한 발견사항.</span>
+<span id="cb17-135"><a href="#cb17-135" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>시각 보조 자료<span class="op">**</span>: 차트, 테이블, 인포그래픽.</span>
+<span id="cb17-136"><a href="#cb17-136" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>간결하고 실천 가능한 내용<span class="op">**</span>: 의사 결정의 중요성을 명확하게 표시.</span>
+<span id="cb17-137"><a href="#cb17-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-138"><a href="#cb17-138" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb17-139"><a href="#cb17-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-140"><a href="#cb17-140" aria-hidden="true" tabindex="-1"></a><span class="co">## 목표 결과</span></span>
+<span id="cb17-141"><a href="#cb17-141" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>성장 기회<span class="op">**</span>: 소비자, 경쟁자, 규제 동향에 따른 성장의 통찰력.</span>
+<span id="cb17-142"><a href="#cb17-142" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>경쟁자 장점 대응<span class="op">**</span>: 장기적인 비전에 일치.</span>
+<span id="cb17-143"><a href="#cb17-143" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>구체적인 단계<span class="op">**</span>: 제품 개발, 파트너십, 가격 책정 및 시장 진출 전략을 위한 우선순위 지정된 실행 계획.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>생성한 그래프의 한글이 깨지는 경우</strong></p>
+<p>탐색이에서 fonts를 검색하여 윈도우 폰트가 모여 있는 폴더를 찾아 폴더를 열고, 나눔고딕 폰트를 GPT에 업로드 한 후, 첨부된 한글폰트로 그래프를 다시 그리라고 하면 한글이 깨지지 않는 그래프가 생성된다.</p>
+<p><strong>다양한 비교</strong></p>
+<p>ChatGPT보다 시장조사에서는 Perplexity가 더 나은 결과를 제공하는 경우가 많다. Perplexity는 검색엔진과 AI의 장점을 결합하여 실시간으로 정보를 검색하고, 최신 데이터를 반영한 답변을 제공한다. 또한, 최근에는 Genspark가 상당히 개선된 결과를 보여주고 있다. 모든 경우 딥리서치 혹은 심층 리서치 모드를 사용하여 조사하도록 하는 것이 보다 양질의 결과를 얻을 수 있다.</p>
+<p><strong>프롬프트의 개선 및 개발</strong></p>
+<p>앞으로는 모든 사람이 AI 리터러시를 넘어 AI 리더십이 필요한 시대이다. 위에 제시된 프롬프트를 수정하여 본인만의 프롬프트를 개발하는 연습을 해보자.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Chapter1.html" class="pagination-link  aria-label=" &lt;span="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">전략경영이란?</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Chapter3.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>외부환경 분석</span>">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">외부환경 분석</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

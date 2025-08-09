@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -450,10 +421,10 @@ window.Quarto = {
 </section>
 <section id="사용-전-주의사항" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="사용-전-주의사항">사용 전 주의사항</h3>
-<table class="table">
+<table class="table-striped table-hover table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 25%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -483,11 +454,11 @@ window.Quarto = {
 </section>
 <section id="gpt-실습-유형" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="gpt-실습-유형">GPT 실습 유형</h3>
-<table class="table">
+<table class="table-striped table-hover table">
 <colgroup>
-<col style="width: 28%">
-<col style="width: 28%">
-<col style="width: 42%">
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -500,61 +471,44 @@ window.Quarto = {
 <tr class="odd">
 <td>기업 분석</td>
 <td>기업의 전략을 다양한 프레임워크로 분석</td>
-<td><code>스타벅스의 SWOT 분석을 해줘.</code></td>
+<td>스타벅스의 SWOT 분석을 해줘</td>
 </tr>
 <tr class="even">
 <td>시나리오 설계</td>
 <td>불확실한 미래 시나리오에 대응 전략 제시</td>
-<td><code>전기차 시장의 위기 시나리오 3개와 대응 전략 제안해줘.</code></td>
+<td>전기차 시장의 위기 시나리오 3개와 대응 전략 제안해줘</td>
 </tr>
 <tr class="odd">
 <td>전략 비교</td>
 <td>전략적 선택지 비교 및 평가</td>
-<td><code>삼성전자의 M&amp;A 전략과 자체 개발 전략을 비교 분석해줘.</code></td>
+<td>삼성전자의 M&amp;A 전략과 자체 개발 전략을 비교 분석해줘</td>
 </tr>
 <tr class="even">
 <td>전략 창의성 토론</td>
 <td>전략은 과학인가 예술인가에 대한 사고 유도</td>
-<td><code>전략을 창의적 사고로 재해석해줘.</code></td>
+<td>전략을 창의적 사고로 재해석해줘</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="좋은-프롬프트-작성-팁" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="좋은-프롬프트-작성-팁">좋은 프롬프트 작성 팁</h3>
-<ul>
-<li><strong>구체적이고 명확한 지시</strong>
-<ul>
-<li>좋은 케이스: “5 Forces로 분석해줘”<br>
-</li>
-<li>나쁜 케이스: “분석해줘”</li>
-</ul></li>
-<li><strong>맥락과 대상 기업을 명시</strong>
-<ul>
-<li>“한국 시장에서의 현대차 전략을 SWOT으로 정리해줘”</li>
-</ul></li>
-<li><strong>결과물 형식을 요청</strong>
-<ul>
-<li>“표 형식으로 정리해줘”<br>
-</li>
-<li>“100자 이내 요약 포함해줘”</li>
-</ul></li>
-</ul>
+<p><strong>1. 구체적이고 명확한 지시</strong><br>
+<strong>-</strong> 좋은 케이스: “5 Forces로 분석해줘”<br>
+<strong>-</strong> 나쁜 케이스: “분석해줘”</p>
+<p><strong>2. 맥락과 대상 기업을 명시</strong><br>
+<strong>-</strong> “한국 시장에서의 현대차 전략을 SWOT으로 정리해줘”</p>
+<p><strong>3. 결과물 형식을 요청</strong> <strong>-</strong> “표 형식으로 정리해줘”<br>
+<strong>-</strong> “100자 이내 요약 포함해줘”</p>
 </section>
 <section id="비판적-사고-프레임" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="비판적-사고-프레임">비판적 사고 프레임</h3>
 <p>GPT의 응답을 그대로 받아들이지 말고, 다음 질문을 통해 <strong>비판적 사고</strong>를 훈련</p>
-<p>1.<span class="math inline">\(\;\)</span> 이 전략은 <strong>사실에 근거하고 있는가?</strong></p>
-<p>2.<span class="math inline">\(\;\)</span> 제시된 전략은 <strong>실행 가능성과 지속 가능성</strong>이 있는가?</p>
-<p>3.<span class="math inline">\(\;\)</span> 누락된 관점은 없는가? (예: 경쟁사 반응, 비용 구조 등)</p>
-<p>4.<span class="math inline">\(\;\)</span> 이 전략은 <strong>누구에게 유리하고 불리한가?</strong> (이해관계자 분석)</p>
-<p>5.<span class="math inline">\(\;\)</span> 내가 이 전략을 CEO로서 <strong>실행할 것인가? 왜?</strong></p>
+<p><strong>1.</strong> 이 전략은 <strong>사실에 근거하고 있는가?</strong> <br> <strong>2.</strong> 제시된 전략은 <strong>실행 가능성과 지속 가능성</strong>이 있는가? <br> <strong>3.</strong> 누락된 관점은 없는가? (예: 경쟁사 반응, 비용 구조 등) <br> <strong>4.</strong> 이 전략은 <strong>누구에게 유리하고 불리한가?</strong> (이해관계자 분석) <br> <strong>5.</strong> 내가 이 전략을 CEO로서 <strong>실행할 것인가? 왜?</strong> <br></p>
 </section>
 <section id="실습-결과물-작성-지침" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="실습-결과물-작성-지침">실습 결과물 작성 지침</h3>
-<p>1.<span class="math inline">\(\;\)</span> <strong>GPT 응답 요약</strong> (핵심 주장 또는 분석 내용 정리)</p>
-<p>2.<span class="math inline">\(\;\)</span> <strong>학생의 비판적 피드백</strong> (동의 여부, 누락 요소 지적 등)</p>
-<p>3.<span class="math inline">\(\;\)</span> <strong>대안 전략 제시</strong> (자신의 관점에서 새로운 전략 또는 수정 제안)</p>
+<p><strong>1.</strong> <strong>GPT 응답 요약</strong> (핵심 주장 또는 분석 내용 정리) <br> <strong>2.</strong> <strong>학생의 비판적 피드백</strong> (동의 여부, 누락 요소 지적 등) <br> <strong>3.</strong> <strong>대안 전략 제시</strong> (자신의 관점에서 새로운 전략 또는 수정 제안) <br></p>
 </section>
 <section id="결론" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="결론">결론</h3>

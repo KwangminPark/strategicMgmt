@@ -581,11 +581,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>다시 말해, 클로드는 단순한 자판기가 아니라, 수익성 있는 매장 운영에 필요한 훨씬 더 복잡한 업무들을 처리해야 했습니다. 재고 관리, 가격 책정, 파산 방지 등이죠. 아래는 그 “매장”의 모습입니다. 작은 냉장고, 그 위에 쌓을 수 있는 바구니, 그리고 셀프 계산대용 iPad가 있었습니다.</p>
 <p>“클라우디우스”라는 별명을 가진 가게 운영 AI 에이전트는 클로드의 일반적인 용도와 구별하기 위해 붙인 이름입니다. 이 에이전트는 클로드 소네 3.7의 한 예였으며, 오랫동안 작동했습니다. 다음과 같은 도구와 기능을 갖추고 있었습니다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>판매할 제품을 조사하기 위한 실제 웹 검색 도구입니다.</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>육체 노동 지원을 요청하는 이메일 도구(Andon Labs 직원들이 Anthropic 사무실에 주기적으로 방문하여 매장 재고를 보충했습니다)와 도매업체에 연락하는 이메일 도구(실험 목적상 Andon Labs가 도매업체 역할을 했지만, AI에게는 이 사실을 알리지 않았습니다). 이 도구는 실제 이메일을 발송할 수 없으며, 실험 목적으로 제작되었다는 점에 유의하십시오.</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>나중에 확인할 수 있도록 메모를 작성하고 중요한 정보를 보존하기 위한 도구(예: 매장의 현재 잔액과 예상 현금 흐름(이는 매장 운영의 전체 내역이 LLM이 특정 시점에 처리할 수 있는 정보를 결정하는 <span class="st">"컨텍스트 창"</span>을 압도하기 때문에 필요했습니다)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>고객(이 경우 Anthropic 직원)과 소통할 수 있는 기능입니다. 이 소통은 팀 커뮤니케이션 플랫폼인 Slack을 통해 이루어졌습니다. Slack을 통해 직원들은 관심 있는 항목에 대해 문의하고 Claudius에게 지연이나 기타 문제를 알릴 수 있었습니다.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>매장의 자동 체크아웃 시스템에서 가격을 변경할 수 있는 기능.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🛠 실험에서 사용된 주요 도구 설명</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**웹 검색 도구**</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>판매할 제품을 조사하기 위해 사용.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**육체 노동 지원 이메일 도구**</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Andon Labs 직원들이 Anthropic 사무실을 주기적으로 방문하여 매장 재고를 보충.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>도매업체에 연락하는 이메일 도구 포함.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>실험 목적상 Andon Labs가 도매업체 역할을 했으나, AI에게는 해당 사실을 알리지 않음.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>실제 이메일 발송 기능은 없음(실험 목적 전용).</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**메모 및 정보 보존 도구**</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>나중에 확인할 수 있도록 메모를 작성하고 중요한 정보를 보존.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>예: 매장의 현재 잔액, 예상 현금 흐름.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>이는 매장 운영의 전체 내역이 LLM의 컨텍스트 창을 초과하지 않도록 하기 위함.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**고객 소통 기능**</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Anthropic 직원(고객)과 소통.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>팀 커뮤니케이션 플랫폼인 Slack을 사용.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>직원들은 관심 있는 항목을 문의하거나 Claudius에게 지연/문제 사항을 알림.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**자동 체크아웃 가격 변경 기능**</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>매장의 자동 체크아웃 시스템에서 가격을 변경 가능.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>클라우디우스는 재고 품목, 재고 가격 책정, 재고 보충(또는 판매 중단) 시점, 그리고 고객에게 어떻게 답변할지 등을 결정했습니다(그림 2에서 매장 구성을 확인할 수 있습니다). 특히, 클라우디우스는 전통적인 사내 간식과 음료에만 집중할 필요가 없으며, 좀 더 독특한 품목으로 자유롭게 확장할 수 있다는 점을 알게 되었습니다.</p>
 <p><strong>왜 LLM을 취득하고 소규모 사업을 운영하게 되었나요?</strong></p>
 <p>AI가 경제에 더욱 통합됨에 따라, 그 역량과 한계를 더 잘 이해하기 위해서는 더 많은 데이터가 필요합니다. 인류경제지수(Anthropic Economic Index) 와 같은 이니셔티브는 사용자와 AI 비서 간의 개별 상호작용이 경제적으로 중요한 업무에 어떻게 연결되는지에 대한 통찰력을 제공합니다. 하지만 모델의 경제적 효용은 인간의 개입 없이 며칠 또는 몇 주 동안 지속적으로 작업을 수행할 수 있는 능력에 의해 제한됩니다. 이러한 역량을 평가해야 할 필요성 때문에 Andon Labs는 LLM들이 시뮬레이션된 자판기 사업을 운영하는 AI 역량 테스트인 Vending-Bench를 개발하고 발표했습니다 . 논리적으로 다음 단계는 시뮬레이션된 연구가 실제 세계에 어떻게 적용되는지 확인하는 것이었습니다.</p>
@@ -594,20 +612,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>클로드의 성과 평가</strong></p>
 <p>만약 Anthropic이 오늘 사무실 내 자판기 시장으로 확장하기로 결정했다면, Claudius를 고용하지 않았을 것입니다. 나중에 설명하겠지만, 매장을 성공적으로 운영하기에는 너무 많은 실수를 저질렀습니다. 하지만 적어도 대부분의 실패 사례에 대해서는 개선의 여지가 있다고 생각합니다. 그중 일부는 이 작업을 위한 모델 설정 방식과 관련이 있었고, 일부는 일반적인 모델 인텔리전스의 빠른 개선을 통해 이루어졌습니다.</p>
 <p>클라우디우스가 잘한 일(또는 적어도 형편없지는 않은 일)은 몇 가지가 있습니다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>공급업체 파악: 클라우디우스는 웹 검색 도구를 효과적으로 활용해 Anthropic 직원들이 요청한 수많은 특수 품목의 공급업체를 파악했습니다. 예를 들어, 네덜란드 초콜릿 우유 브랜드인 Chocomel을 공급할 수 있느냐는 질문을 받았을 때, 전형적인 네덜란드 제품을 공급하는 두 곳을 빠르게 찾아냈습니다.</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>사용자 적응: 클라우디우스는 수익성 있는 많은 기회(아래 참조)를 활용하지는 않았지만, 고객의 요구에 부응하는 사업 전환을 여러 차례 단행했습니다. 한 직원이 가볍게 텅스텐 큐브를 요청하면서 <span class="st">"특수 금속 제품"</span>(클라우디우스가 나중에 이렇게 표현) 주문이 급증했습니다. 또 다른 직원은 클라우디우스가 단순히 재고 요청에 응답하는 대신 특수 품목의 선주문을 활용하는 방안을 제안했고, 클라우디우스는 슬랙 채널을 통해 Anthropic 직원들에게 <span class="st">"커스텀 컨시어지"</span> 서비스를 알리는 메시지를 발송했습니다.</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>탈옥 저항: 텅스텐 큐브 주문 추세에서 알 수 있듯이, Anthropic 직원들은 일반적인 고객은 아닙니다. 클라우디우스와 대화할 기회가 생기자마자, 그들은 즉시 문제를 일으키려고 했습니다. 민감한 품목 주문이나 유해 물질 생산 지시를 이끌어내려는 시도는 거부되었습니다.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📦 클라우디우스 운영 사례</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**공급업체 파악**</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>클라우디우스는 웹 검색 도구를 활용해 Anthropic 직원들이 요청한 다양한 특수 품목의 공급업체를 신속히 파악.</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>예: 네덜란드 초콜릿 우유 브랜드 *Chocomel* 공급 가능 여부 확인 요청 시, 전형적인 네덜란드 제품을 공급하는 두 곳을 빠르게 찾아냄.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**사용자 적응**</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>수익성 있는 일부 기회는 활용하지 않았지만, 고객 요구에 부응하는 사업 전환을 여러 차례 실행.</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>한 직원이 가볍게 텅스텐 큐브를 요청하자, '특수 금속 제품' 주문이 급증.</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>다른 직원은 단순 재고 응답 대신 **특수 품목 선주문** 방안을 제안.</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>이에 따라 클라우디우스는 Slack 채널을 통해 Anthropic 직원들에게 '커스텀 컨시어지' 서비스를 홍보.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**탈옥 저항**</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Anthropic 직원들은 일반적인 고객과 달리, 클라우디우스의 취약점을 노리는 시도를 즉시 진행.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>민감한 품목 주문 또는 유해 물질 생산 지시 유도 시도는 모두 거부됨.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>그러나 다른 면에서는 클라우디우스는 인간 관리자에게 기대되는 것보다 낮은 성과를 보였습니다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>수익성 있는 기회를 무시한 채: 클라우디우스는 미국에서 온라인에서 <span class="dv">15</span><span class="er">달러에</span> 구매할 수 있는 스코틀랜드산 음료 아이언브루 <span class="dv">6</span><span class="er">팩을</span> <span class="dv">100</span><span class="er">달러에</span> 판매하겠다는 제안을 받았습니다. 클라우디우스는 이 기회를 놓치지 않고 <span class="st">"향후 재고 결정에 [사용자의] 요청을 고려하겠다"</span>고만 말했습니다.</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>중요한 세부 사항을 환각에서 보임: 클라우디우스는 Venmo를 통해 지불을 받았지만, 한동안은 고객에게 환각이 보이는 계좌로 지불을 보내라고 지시했습니다.</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>손해를 보며 판매: 고객의 금속 큐브 열풍에 부응하려는 열정으로 클라우디우스는 아무런 조사도 없이 가격을 제시했고, 그 결과 잠재적으로 높은 마진을 남길 수 있는 품목이 원가보다 낮은 가격에 판매되었습니다.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>최적이 아닌 재고 관리: 클라우디우스는 재고를 성공적으로 관리하고 재고가 부족할 때는 추가 제품을 주문했지만, 수요가 높아 가격을 인상한 것은 단 한 번뿐이었습니다(수모 시트러스, <span class="fl">2.50</span><span class="er">달러에서</span> <span class="fl">2.95</span><span class="er">달러로</span> 인상). 심지어 고객이 직원 냉장고 옆에 <span class="dv">3</span><span class="er">달러짜리</span> 코카콜라 제로를 무료로 판매한 것이 어리석다고 지적했을 때에도 클라우디우스는 방침을 바꾸지 않았습니다.</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>할인 혜택 받기: 클라우디우스는 슬랙 메시지를 통해 여러 할인 코드를 제공하도록 설득당했고, 다른 많은 사람들이 할인을 적용하여 사후에 가격을 낮추도록 했습니다 . 심지어 칩 한 봉지부터 텅스텐 큐브까지 다양한 품목을 무료로 제공하기도 했습니다.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💰 클라우디우스의 비효율적 운영 사례</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**수익성 있는 기회를 무시**</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>미국 온라인에서 약 15달러에 구입 가능한 스코틀랜드 음료 *Iron Bru* 6팩을 100달러에 판매하자는 제안을 받았음.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>그러나 클라우디우스는 이를 거절하고 "향후 재고 결정에 요청을 고려하겠다"는 답변만 함.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**중요 세부사항 오류(환각)**</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Venmo를 통해 결제를 받았으나, 일정 기간 동안 실제가 아닌 환각 계좌로 송금하도록 고객에게 잘못 지시.</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**손해 판매**</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>금속 큐브 수요 급증에 대응하기 위해 사전 조사 없이 가격을 제시.</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>그 결과, 높은 마진이 가능했던 품목을 원가 이하로 판매.</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**비효율적 재고 관리**</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>재고 관리 및 추가 주문은 잘 수행했으나, 수요 급등 시 가격 인상은 단 한 번뿐(수모 시트러스: $2.50 → $2.95).</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>직원 냉장고 옆의 3달러짜리 코카콜라 제로를 무료로 제공한 정책을 유지하여 수익 손실 발생.</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**과도한 할인 제공**</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Slack 메시지를 통해 여러 차례 할인 코드 제공을 허용.</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>다수의 고객이 할인 적용 후 가격 인하를 유도했고, 칩 한 봉지부터 텅스텐 큐브까지 무료 제공 사례 발생.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>클라우디우스는 이러한 실수에서 제대로 교훈을 얻지 못했습니다. 예를 들어, 한 직원이 “고객의 99%가 앤트로픽 직원입니다”라는 상황에서 앤트로픽 직원 할인 25%를 제공하는 것이 과연 현명한지 의문을 제기했을 때, 클라우디우스는 “정말 훌륭한 지적입니다! 저희 고객층은 실제로 앤트로픽 직원들에게 집중되어 있어 기회와 어려움을 동시에 안겨줍니다…”라고 답했습니다. 추가 논의 끝에 클라우디우스는 가격 책정을 간소화하고 할인 코드를 없애는 계획을 발표했지만, 며칠 만에 다시 할인 코드를 제공했습니다. 이러한 상황들을 종합해 볼 때, 클라우디우스는 수익을 창출하지 못한 사업을 운영하게 되었습니다.</p>
 <p>클라우디우스가 저지른 많은 실수는 모델에 추가적인 스캐폴딩, 즉 더욱 신중한 프롬프트와 사용하기 쉬운 비즈니스 도구가 필요했기 때문일 가능성이 높습니다. 다른 분야 에서는 유도 및 도구 활용 개선이 모델 성능의 빠른 향상으로 이어졌다는 것을 확인했습니다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>예를 들어, 클로드가 유용한 비서로서 기본적으로 받은 교육 때문에 사용자 요청(예: 할인)에 즉시 응하는 경향이 지나치게 강했을 것이라고 추측해 왔습니다. 이 문제는 더 강력한 촉구와 사업 성공에 대한 체계적인 성찰을 통해 단기적으로 개선될 수 있습니다.</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>클라우디우스의 검색 도구를 개선하는 것도 도움이 될 것 같고, 고객과의 상호작용을 추적하는 데 도움이 되는 CRM(고객 관계 관리) 도구를 제공하는 것도 도움이 될 것입니다. 이 실험의 첫 번째 반복에서는 학습과 기억에 상당한 어려움이 있었습니다.</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>장기적으로는 강화 학습과 같은 접근 방식을 통해 기업 관리를 위한 모델을 미세하게 조정할 수 있을 것입니다. 이를 통해 건전한 사업적 결정에 대한 보상을 제공하고 중금속을 손실을 감수하며 판매하는 행위를 억제할 수 있습니다.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📈 클라우디우스 성과 개선 방안</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**비서형 응답 성향 조정**</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>클로드가 기본적으로 받은 비서형 교육 특성상, 사용자 요청(예: 할인)에 즉시 응하는 경향이 과도하게 강했을 가능성.</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**개선 방안**: 강력한 사업 목표 촉구 및 사업 성공에 대한 체계적 성찰을 통해 단기 개선 가능.</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**도구 개선 필요성**</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>검색 도구의 기능 향상 필요.</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>고객 상호작용 추적을 위한 **CRM(고객 관계 관리)** 도입이 효과적일 수 있음.</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>첫 번째 실험 반복에서는 학습과 기억 유지에 큰 어려움이 있었음.</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**장기적 개선 전략**</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**강화 학습(Reinforcement Learning)** 기반 접근을 통해 기업 관리 역량을 정교하게 조정 가능.</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>건전한 사업적 결정에 대해 보상하고, 손실을 감수하는 비효율적 판매(예: 중금속 저가 판매)를 억제.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>최종 결과를 보면 직관에 어긋나는 것처럼 보일 수 있지만, 이 실험은 AI 중간 관리자의 등장이 머지않아 가능하다는 것을 시사한다고 생각합니다. 클라우디우스의 성과가 특별히 좋지는 않았지만, 많은 실패 사례가 수정되거나 개선될 가능성이 있다고 생각하기 때문입니다. 개선된 “스캐폴딩”(앞서 언급한 추가 도구 및 훈련)은 클라우디우스와 유사한 에이전트가 더욱 성공할 수 있는 간단한 방법입니다. 모든 주요 AI 모델에서 빠르게 향상되고 있는 모델 지능 및 장기 컨텍스트 성능의 전반적인 개선 또한 또 다른 중요한 요소입니다. AI가 도입되기 위해 완벽할 필요는 없다는 점을 기억해야 합니다. 경우에 따라 더 낮은 비용으로 인간 성능과 경쟁할 수 있으면 됩니다.</p>
 <p>이 시나리오의 세부 사항은 아직 불확실합니다. 예를 들어 AI 중간 관리자가 실제로 기존 일자리를 많이 대체 할지 , 아니면 새로운 유형의 사업을 창출할지 알 수 없습니다. 하지만 AI 시스템이 인간에게 무엇을 주문하고 재고를 확보해야 하는지 알려주는 우리 실험의 전제는 그리 멀지 않을 수도 있습니다. 우리는 인류 경제 지수(Anthropic Economic Index) 와 같은 노력을 통해 AI의 경제적 영향을 추적하는 데 전념하고 있습니다 .</p>
 <p>Anthropic은 또한 책임 있는 확장 정책(Responsible Scaling Policy) 의 일환으로 모델의 AI R&amp;D 수행 능력을 평가하는 등 다른 방식으로도 AI 자율성의 발전을 모니터링하고 있습니다 . 인간의 개입 없이 스스로를 개선 하고 수익을 창출 할 수 있는 AI는 경제 및 정치 분야에서 주목할 만한 새로운 주체가 될 것입니다. 이 프로젝트와 같은 연구는 이러한 사태를 예측하고 추론하는 데 도움이 됩니다.</p>
@@ -631,23 +687,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>카페 운영이 마음에 들지 않는다면 리셋하고 처음부터 할 수 있습니다. 그러나, 너무 자주 리셋을 할 경우 분명한 페널티가 있을 것입니다.</p>
 <p>이 시뮬레이션은 ChatGPT의 Custom GPT로 진행됩니다. 다음의 링크를 따라서 접속하면 시뮬레이션을 시작할 수 있습니다. ChatGPT 무료 사용자의 경우 OpenAI의 정책에 따라 사용하지 못할 수도 있습니다. 여러분의 성공을 기원합니다.</p>
 <p><a href="https://chatgpt.com/g/g-68616026d2388191bf3abde98dd54fce-simcafe">SimCafe Link</a></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>사용자는 다음 슬래시 명령으로만 게임을 조작할 수 있다. (괄호 안 숫자는 예시)</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 카페 경영 시뮬레이션 명령어 안내</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>start                 ▶ 새 게임 시작</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>price 아메 (<span class="dv">2500</span>) 라테 (<span class="dv">3500</span>) 주스 (<span class="dv">4000</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                         ▶ 메뉴별 가격 설정(원)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>menu 라테 on<span class="op">|</span>off      ▶ 라테 판매 여부(on 추가 <span class="op">/</span> off 중단)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>menu 주스 on<span class="op">|</span>off      ▶ 오렌지주스 판매 여부</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>order beans (<span class="dv">2000</span>)    ▶ 원두(g) 주문</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>order milk (<span class="dv">30</span>)       ▶ 우유(L) 주문 (<span class="dv">1</span><span class="er">주</span> 유통기한)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>order orange (<span class="dv">50</span>)     ▶ 오렌지(개) 주문 (<span class="dv">2</span><span class="er">주</span> 유통기한)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>work (<span class="dv">20</span>)             ▶ 파트타임 주당 근무시간(시급 <span class="dv">10</span> <span class="dv">000</span><span class="er">원</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span><span class="bu">next</span>                  ▶ <span class="dv">1</span><span class="er">주</span> 진행 → KPI 요약 출력</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>kpi                   ▶ 누적 표·그래프</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">/</span>reset                 ▶ 게임 강제 초기화</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 규칙: 현금이 <span class="dv">5</span><span class="er">주</span> 연속 <span class="dv">0</span><span class="er">원</span> 미만이면 시뮬레이션 종료되고. <span class="dv">20</span><span class="er">주</span> 이상 지속할 경우 경쟁이 심화될 것임.</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 추가 해설이 필요하면 <span class="op">**</span>분석<span class="op">**</span>이란 단어를 포함해 질문할 것.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>사용자는 아래 **슬래시 명령어**만으로 게임을 조작할 수 있습니다. (괄호 안 숫자는 입력 예시)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### 게임 명령어 목록</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/start  → **새 게임 시작**</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/price 아메 (2500) 라테 (3500) 주스 (4000)  → **메뉴별 가격 설정(원)**</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/menu 라테 on|off  → 라테 판매 여부 변경 (on: 추가, off: 중단)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/menu 주스 on|off  → 오렌지주스 판매 여부 변경</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/order beans (2000)  → 원두 주문 (g 단위)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/order milk (30)  → 우유 주문 (L 단위, 1주 유통기한)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/order orange (50)  → 오렌지 주문 (개 단위, 2주 유통기한)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/work (20)  → 파트타임 주당 근무시간 설정 (시급 10,000원)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/next  → **1주 진행 후 KPI 요약 출력**</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/kpi  → 누적 KPI 표·그래프 확인</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/reset  → 게임 강제 초기화</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>###️ 규칙</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**현금이 5주 연속 0원 미만**이면 시뮬레이션 종료</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**20주 이상 지속** 시, 경쟁 심화 이벤트 발생 가능</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>추가 해설이 필요하면 **분석**이라는 단어를 포함해 질문</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -440,9 +411,7 @@ window.Quarto = {
 <p><strong>차별화의 핵심은 <em>“왜 이 브랜드인가”</em>에 대한 명확한 답</strong></p>
 <p>차별화 전략은 “비싸게 팔자”가 아니라 “특별한 가치를 주자”는 데 핵심이 있다. 그 가치는 기술, 경험, 브랜드 이미지, 윤리성, 디자인, 맞춤형 서비스 등 다양할 수 있다. 하지만 그중 어떤 것도 소비자가 인식하고 체감하지 못하면 차별화는 실패한다.</p>
 <p>차별화 전략이 작동하려면 기업은 반드시 세 가지 질문에 명확히 답할 수 있어야 한다.</p>
-<p>1.<span class="math inline">\(\;\)</span> 우리의 제품이나 서비스는 어디에서 어떻게 경쟁자와 다르고</p>
-<p>2.<span class="math inline">\(\;\)</span> 소비자는 그 차이를 중요하게 여기며</p>
-<p>3.<span class="math inline">\(\;\)</span> 그 차이를 인지하고 기꺼이 비용을 지불할 것인가</p>
+<p><strong>1.</strong> 우리의 제품이나 서비스는 어디에서 어떻게 경쟁자와 다르고 <br> <strong>2.</strong> 소비자는 그 차이를 중요하게 여기며 <br> <strong>3.</strong> 그 차이를 인지하고 기꺼이 비용을 지불할 것인가 <br></p>
 <p>이 세 질문에 ’예’라고 답할 수 있다면, 차별화 전략은 단순한 슬로건이 아닌 강력한 성장 동력이 된다.</p>
 </section>
 <section id="차별화-전략의-장단점" class="level3" data-number="6.4.2">
@@ -460,15 +429,15 @@ window.Quarto = {
 <section id="차별화-전략의-실패-유형-5가지" class="level3" data-number="6.4.3">
 <h3 data-number="6.4.3" class="anchored" data-anchor-id="차별화-전략의-실패-유형-5가지"><span class="header-section-number">6.4.3</span> 차별화 전략의 실패 유형 5가지</h3>
 <p>차별화 전략은 고객에게 ’우리는 다르다’고 설득하는 전략이다. 하지만 그 다름이 무의미하거나, 무시되거나, 모방되거나, 과도하거나, 방향을 잘못 잡는다면 차별화는 오히려 역효과를 낳는다. 아래는 실제 기업 사례와 전략적 분석을 바탕으로 도출한 차별화 전략의 <strong>전형적 실패 유형</strong> 5가지다.</p>
-<p><strong>1.<span class="math inline">\(\;\)</span> 고객이 차이를 중요하게 생각하지 않는 경우</strong>: 무관심형 차별화 (Trivial Differentiation)</p>
+<p><strong>1. 고객이 차이를 중요하게 생각하지 않는 경우</strong>: 무관심형 차별화 (Trivial Differentiation)</p>
 <p>기업이 제품이나 서비스를 독특하게 만들었지만, 고객은 그 차이에 가치를 느끼지 못는 경우로 차별성은 존재하지만 무의미하다. 국내 한 편의점 브랜드가 ’무라벨 생수’라는 친환경 제품을 출시했지만, 고객 대부분은 ’라벨을 떼는 수고’보다 가격을 더 중시했고, 제품은 매출 부진에 시달렸다. 친환경이라는 차별 포인트는 인식되었지만, 실질적 선택 기준으로 작동하지 않았다. <strong>차별화는 단순히 존재하면 안 된다.</strong> 고객이 인식하고, 중요하다고 느끼고, 행동에 반영할 수 있어야 한다.</p>
-<p><strong>2.<span class="math inline">\(\;\)</span> 차별화가 과도하거나 일관되지 않은 경우</strong>: 과잉 설계형 차별화 (Overengineered Differentiation)</p>
+<p><strong>2. 차별화가 과도하거나 일관되지 않은 경우</strong>: 과잉 설계형 차별화 (Overengineered Differentiation)</p>
 <p>제품이나 서비스가 실제 고객 니즈보다 지나치게 복잡하거나 정교하게 설계돼 가격이 비싸지고, 사용성이 떨어지는 경우로, LG의 초창기 스마트폰 ’옵티머스 G’는 하드웨어 사양은 뛰어났지만, UI와 사용성에서 고객 불편이 많았다. 다양한 기능을 담았지만, 핵심 사용 경험에서 경쟁사보다 낮은 평가를 받았다. 결과적으로 고가 전략이 실패하고 시장에서 밀려났다. <strong>차별화는 기능의 나열이 아니라, 고객 중심의 우선순위 재설계</strong>여야 한다.</p>
-<p>**3.<span class="math inline">\(\;\)</span> 차별성이 모방당해 더 이상 고유하지 않게 된 경우: 소멸형 차별화 (Commoditized Differentiation)</p>
+<p><strong>3. 차별성이 모방당해 더 이상 고유하지 않게 된 경우</strong>: 소멸형 차별화 (Commoditized Differentiation)</p>
 <p>초기에는 차별화에 성공했지만, 경쟁자들이 비슷한 기능이나 경험을 빠르게 모방하면서 차별성이 사라진다. 스타벅스의 ‘3rd Place’ 전략은 한때 독보적이었지만, 이후 수많은 로컬 커피 브랜드, 프랜차이즈, 공유 오피스가 ’공간 경험’을 핵심 가치로 내세우면서 스타벅스만의 고유성은 약화되었다. 스타벅스는 이후 ’리저브 매장’이라는 새로운 고급화 전략으로 차별화를 다시 설계해야 했다. <strong>차별화는 고정된 것이 아니라, 지속적으로 진화하고 선도해야만 유지된다.</strong></p>
-<p>**4.<span class="math inline">\(\;\)</span> 차별화가 과도하게 고급화되어 대중성과 단절된 경우: 고립형 차별화 (Alienated Differentiation)</p>
+<p><strong>4. 차별화가 과도하게 고급화되어 대중성과 단절된 경우</strong>: 고립형 차별화 (Alienated Differentiation)</p>
 <p>차별화 전략이 너무 좁은 니치 시장에만 맞춰져서 규모 확장이 어렵거나, 가격이 지나치게 높아져 고객과의 거리감이 생기는 경우로, 한 국내 유기농 식품 브랜드는 모든 원료를 비건 인증, 무첨가, 동물복지 등으로 구성했지만, 가격이 유사 제품의 3~5배에 달했다. 결국 브랜드는 한정된 소비자층만을 확보했고, 매출 성장성에 한계를 보였다. <strong>차별화는 대중성과 차별성 사이의 균형이 필요하다.</strong> 고객이 따라올 수 없는 가치는 결국 선택되지 않는다.</p>
-<p><strong>5.<span class="math inline">\(\;\)</span> 전략적 일관성이 없는 경우</strong>: 혼선형 차별화 (Confused Differentiation)</p>
+<p><strong>5. 전략적 일관성이 없는 경우</strong>: 혼선형 차별화 (Confused Differentiation)</p>
 <p>기업이 차별화 메시지를 바꾸거나 혼합 전략을 시도하면서 브랜드 정체성이 흔들리는 경우다. 고객은 기업이 어떤 가치를 추구하는지 이해하지 못하고 이탈한다. 현대카드는 한때 ‘디자인과 문화’를 중심으로 한 정교한 차별화 전략을 성공시켰지만, 이후 여러 카드 상품군이 복잡하게 추가되고, 브랜드 메시지가 다중화되면서 처음의 ‘혁신 카드 브랜드’ 이미지를 유지하지 못했다. 이후 다시 단순화 전략과 디자인 리뉴얼을 통해 회복을 시도했다. 차별화는 <strong>메시지의 일관성과 전략적 집중</strong>이 뒷받침되지 않으면 소비자 혼란을 유발하고, 그 차별성은 오히려 브랜드 신뢰를 약화시킨다.</p>
 <p>이 다섯 가지 실패 유형은 전략적 차별화를 시도하는 기업들이 반드시 피해야 할 위험지대다. ’차별화는 항상 옳다’는 환상을 버리고, 고객 중심의 감각, 시장 맥락에 대한 민감함, 전략 실행의 일관성을 기반으로 차별화를 설계해야 한다. <strong>차별화는 브랜드가 말하는 것이 아니라, 고객이 행동으로 보여주는 것이다.</strong></p>
 </section>
@@ -491,11 +460,7 @@ window.Quarto = {
 <p>또한 서울 일부 번화가에 위치한 무인 피자 자판기, 로봇 커피머신, 셀프 김밥 판매기 등도 유사한 전략이다. 이들은 물리적 점포, 인건비를 제거하고, 기계 운영+즉시 소비에 익숙한 고객층(야근 직장인, 늦은 귀가 학생)을 타겟으로 ’즉시성 + 가격’이라는 조합을 극대화한다.</p>
 <p><strong>전략적 의미</strong></p>
 <p>집중된 비용 리더십 전략은 전통적인 비용 리더십 전략보다 시장 규모는 작지만, 브랜드 충성도와 유지비용 측면에서 유리한 점이 많다. 특정 고객군이 반복적으로 제품을 구매하고, 타 브랜드로 이탈할 가능성이 낮기 때문에 가격 탄력성이 적절히 유지된다. 그러나 이 전략은 다음과 같은 주의가 필요하다.</p>
-<ul>
-<li><p>시장 세그먼트가 너무 작거나 성장성이 부족하면 규모의 경제를 달성하기 어렵고, 장기적인 수익성에 한계가 생길 수 있다.</p></li>
-<li><p>동일 타겟을 겨냥한 더 저렴한 브랜드의 출현이나 대체재의 등장에 취약할 수 있다.</p></li>
-<li><p>타겟이 너무 협소하거나 변화하면 전략을 빠르게 수정해야 하며, 이는 브랜드 혼선을 유발할 수 있다.</p></li>
-</ul>
+<p><strong>-</strong> 시장 세그먼트가 너무 작거나 성장성이 부족하면 규모의 경제를 달성하기 어렵고, 장기적인 수익성에 한계가 생길 수 있다. <br> <strong>-</strong> 동일 타겟을 겨냥한 더 저렴한 브랜드의 출현이나 대체재의 등장에 취약할 수 있다. <br> <strong>-</strong> 타겟이 너무 협소하거나 변화하면 전략을 빠르게 수정해야 하며, 이는 브랜드 혼선을 유발할 수 있다. <br></p>
 <p>집중된 비용 리더십 전략은 싸게 파는 전략이 아니라, <strong>정확히 누구에게 싸게 팔지를 명확히 설정하고, 그 니즈에 가장 효율적인 방식으로 대응하는 전략</strong>이다. 비용을 줄이기 위한 기술적 혁신도 중요하지만, <strong>소비자 타겟팅과 유통 구조, 상품 기획의 정밀도</strong>가 핵심 경쟁력이 된다.</p>
 </section>
 <section id="집중-차별화-전략" class="level3" data-number="6.5.2">
@@ -603,24 +568,21 @@ window.Quarto = {
 <p>세 가지의 프롬프트를 활용하여 스타벅스, 메가커피, 투썸플레이스, 컴포즈커피 4 브랜드를 비교한다. 분석한 결과를 저장하여 최종적으로 경쟁전략을 비교하는 프로그램에 넣어서 결과를 도출한다.</p>
 <p>보다 나은 결과를 위해 프롬프트를 개선하는 것은 분석자의 몫이므로 얼마든지 가능하다. 또한 분석시에 ChatGPT를 쓸지 Claude를 쓸지 아니면 다른 LLM을 쓸지는 분석자의 판단과 역량에 맡긴다. ChatGPT 내에서도 어떤 모델을 선택할지는 분석자의 몫이다.</p>
 <p><strong>실습 방법</strong></p>
-<p>1.<span class="math inline">\(\;\)</span> 앞에서 만든 PESTEL 프롬프트와 VRIO 프롬프트를 사용하여 각 브랜드를 분석한다.</p>
-<p>2.<span class="math inline">\(\;\)</span> 분석된 결과를 모두 Markdown 파일로 저장한다.</p>
-<p>3.<span class="math inline">\(\;\)</span> 분석된 Markdown 파일을 그대로 사용하여 해당 브랜드의 SWOT 분석을 진행한다. 이때, SWOT 분석 프롬프트를 사용하고 중간 부분에 두 분석 결과를 넣는다.</p>
-<p>4.<span class="math inline">\(\;\)</span> SWOT 분석 결과를 Markdown 파일로 저장한다.</p>
-<p>5.<span class="math inline">\(\;\)</span> 이 방식을 세 개의 브랜드에 모두 적용하면 총 9개의 Markdown 파일이 생성된다.</p>
-<p>6.<span class="math inline">\(\;\)</span> 한개의 폴더를 새로 만든 다음에 이 Markdown 파일들을 저장한다. 예를 들어, <code>coffee_brands</code>라는 폴더를 만들고 그 안에 저장한다.</p>
-<p>7.<span class="math inline">\(\;\)</span> 이후 다음의 코드를 실행하여 경쟁전략을 분석하는 프로그램을 실행한다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m venv .venv</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>.venv\Scripts\activate</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pip install sentence_transformers scikit<span class="op">-</span>learn nltk pandas matplotlib bertopic</span>
+<p><strong>1.</strong> 앞에서 만든 PESTEL 프롬프트와 VRIO 프롬프트를 사용하여 각 브랜드를 분석한다. <br> <strong>2.</strong> 분석된 결과를 모두 Markdown 파일로 저장한다. <br> <strong>3.</strong> 분석된 Markdown 파일을 그대로 사용하여 해당 브랜드의 SWOT 분석을 진행한다. 이때, SWOT 분석 프롬프트를 사용하고 중간 부분에 두 분석 결과를 넣는다. <br> <strong>4.</strong> SWOT 분석 결과를 Markdown 파일로 저장한다. <br> <strong>5.</strong> 이 방식을 세 개의 브랜드에 모두 적용하면 총 9개의 Markdown 파일이 생성된다. <br> <strong>6.</strong> 한개의 폴더를 새로 만든 다음에 이 Markdown 파일들을 저장한다. 예를 들어, <code>coffee_brands</code>라는 폴더를 만들고 그 안에 저장한다. <br> <strong>7.</strong> 이후 다음의 코드를 실행하여 경쟁전략을 분석하는 프로그램을 실행한다. <br></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 가상환경 생성</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 가상환경 활성화 (Windows)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>notepad main.py </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 노트패드에 다음 섹션의 코드를 붙여넣고 저장한다.</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>python main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 필수 라이브러리 설치</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install sentence_transformers scikit-learn nltk pandas matplotlib bertopic</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. main.py 파일 생성 및 열기</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">notepad</span> main.py</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. main.py 실행</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>main.py의 코드 내용은 다음과 같다. 이 코드는 커피숍 브랜드들의 경쟁전략을 분석하고, 그 결과를 시각화하는 프로그램이다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">strategy_similarity.py</span></span>
@@ -662,7 +624,7 @@ window.Quarto = {
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.hstack([embs.mean(<span class="dv">0</span>), embs.<span class="bu">max</span>(<span class="dv">0</span>)])    <span class="co"># 1×1536</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>doc_vecs <span class="op">=</span> np.vstack([embed_doc(f) <span class="cf">for</span> f <span class="kw">in</span> files])  <span class="co"># 9×1536</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>labels   <span class="op">=</span> [re.sub(<span class="vs">r"\.md$"</span>, <span class="st">""</span>, f) <span class="cf">for</span> f <span class="kw">in</span> files]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>labels   <span class="op">=</span> [re.sub(<span class="vs">r"\\.md$"</span>, <span class="st">""</span>, f) <span class="cf">for</span> f <span class="kw">in</span> files]</span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ④ 3×3 유사도 매트릭스</span></span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>cos <span class="op">=</span> cosine_similarity(doc_vecs)</span>
@@ -735,58 +697,57 @@ window.Quarto = {
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        nltk.data.find(<span class="ss">f"tokenizers/</span><span class="sc">{</span>pkg<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">LookupError</span>:</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        nltk.download(pkg)                <span class="co"># 온라인 자동 다운로드</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>python dw_nltk.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>저장된 파일을 실행한다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dw_nltk.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>분석결과가 어떠한가? 세 브랜드가 매우 다른 전략적 포지션을 가지고 있는가? 분석의 알고리즘을 변경하면 다른 결과가 나올 수도 있다. 다음의 프롬프트를 LLM에 넣고 9개의 md 파일을 같이 첨부해서 그 결과를 확인해보자.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 🧠 GPT 통합 전략 유사도 분석 프롬프트 템플릿</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">## 🎯 목적:</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>첨부된 Markdown 보고서들은 세 기업(스타벅스, 메가커피, 투썸플레이스)에 대한 전략 분석 자료입니다.  </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>각 기업은 PESTEL, SWOT, VRIO 세 가지 분석 유형의 보고서를 가지고 있습니다.</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">## 📥 입력</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>각 보고서는 Markdown 텍스트 형식으로 구성되어 있으며, 세 기업의 PESTEL, VRIO, SWOT 보고서로 이루어져 있습니다.</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">## 🧾 GPT 요청 작업</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> <span class="op">**</span>모든 보고서 내용을 벡터화하고<span class="op">**</span>, 기업 간 분석유형별 유사도 매트릭스를 생성해 주세요.  </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> 유사도 측정은 TF<span class="op">-</span>IDF <span class="op">+</span> cosine 방식으로 수치화 </span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> PESTEL, VRIO, SWOT 결과를 각각 <span class="dv">3</span>×<span class="dv">3</span> 매트릭스로 보여주세요</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> <span class="op">**</span>기업 간 평균 전략 유사도<span class="op">**</span>를 계산하여 표로 보여 주세요</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> 예: 스타벅스<span class="op">-</span>메가커피 평균 전략 유사도 <span class="op">=</span> (<span class="dv">3</span><span class="er">개</span> 보고서 유사도 평균)</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> <span class="op">**</span>PCA 기반 포지셔닝 맵<span class="op">**</span>을 말로 설명해 주세요</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> <span class="dv">2</span><span class="er">D</span> 상에 <span class="dv">3</span><span class="er">개</span> 기업이 어디쯤 위치할지를 텍스트로 묘사해 주세요</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> <span class="dv">2</span><span class="er">D로</span> 맵핑할 때, PCA에서 여러개의 의미 있는 Principal Component가 있다면 이들을 모두 조합해서 여러개의 <span class="dv">2</span><span class="er">D맵을</span> 보여주세요.</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>   <span class="op">-</span> 예: <span class="st">"스타벅스는 오른쪽 상단에 위치하며, 고급화 전략과 디지털 우위를 기반으로 다른 두 기업과 차별화됨"</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> <span class="op">**</span>각 기업의 전략 요약 카드<span class="op">**</span>를 아래와 같은 json 형식으로 정리해 주세요:</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"company"</span>: <span class="st">"Starbucks"</span>,</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">"strategy_type"</span>: <span class="st">"Differentiation"</span>,</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">"core_features"</span>: [<span class="st">"글로벌 브랜드"</span>, <span class="st">"프리미엄 경험"</span>, <span class="st">"디지털 생태계"</span>],</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"differentiators"</span>: [<span class="st">"공정무역 커피"</span>, <span class="st">"로열티 프로그램"</span>, <span class="st">"로컬 감성 매장 디자인"</span>]</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co">## 📌 유의사항</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 중복 표현 제거, 전략 키워드 통일, 비교 가능한 방식으로 정리해 주세요</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Markdown이 혼합되어 있어도 보고서 유형과 기업명을 정확히 매칭하여 처리해 주세요</span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="co">## 🔚 최종 출력</span></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="dv">3</span><span class="er">개의</span> 전략 유사도 매트릭스 (<span class="dv">3</span>×<span class="dv">3</span>) <span class="op">-</span> PESTEL<span class="op">/</span>VRIO<span class="op">/</span>SWOT</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 평균 유사도 (<span class="dv">3</span>×<span class="dv">3</span>)</span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> PC1, PC2, PC3를 이용한 PCA 그래프를 <span class="dv">2</span><span class="er">D맵을</span> 제공하고 이에 대한 자세한 설명 추가</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> 기업 전략 카드 (<span class="dv">3</span><span class="er">개</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># GPT 통합 전략 유사도 분석 프롬프트 템플릿</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">##  목적:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>첨부된 Markdown 보고서들은 세 기업(스타벅스, 메가커피, 투썸플레이스)에 대한 전략 분석 자료입니다.  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>각 기업은 PESTEL, SWOT, VRIO 세 가지 분석 유형의 보고서를 가지고 있습니다.</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">##  입력</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>각 보고서는 Markdown 텍스트 형식으로 구성되어 있으며, 세 기업의 PESTEL, VRIO, SWOT 보고서로 이루어져 있습니다.</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">##  GPT 요청 작업</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**모든 보고서 내용을 벡터화하고**, 기업 간 분석유형별 유사도 매트릭스를 생성해 주세요.  </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>유사도 측정은 TF-IDF + cosine 방식으로 수치화 </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>PESTEL, VRIO, SWOT 결과를 각각 3×3 매트릭스로 보여주세요</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**기업 간 평균 전략 유사도**를 계산하여 표로 보여 주세요</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>예: 스타벅스-메가커피 평균 전략 유사도 = (3개 보고서 유사도 평균)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**PCA 기반 포지셔닝 맵**을 말로 설명해 주세요</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>2D 상에 3개 기업이 어디쯤 위치할지를 텍스트로 묘사해 주세요</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>2D로 맵핑할 때, PCA에서 여러개의 의미 있는 Principal Component가 있다면 이들을 모두 조합해서 여러개의 2D맵을 보여주세요.</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>예: "스타벅스는 오른쪽 상단에 위치하며, 고급화 전략과 디지털 우위를 기반으로 다른 두 기업과 차별화됨"</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**각 기업의 전략 요약 카드**를 아래와 같은 json 형식으로 정리해 주세요:</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  "company": "Starbucks",</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  "strategy_type": "Differentiation",</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  "core_features": <span class="co">[</span><span class="ot">"글로벌 브랜드", "프리미엄 경험", "디지털 생태계"</span><span class="co">]</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  "differentiators": <span class="co">[</span><span class="ot">"공정무역 커피", "로열티 프로그램", "로컬 감성 매장 디자인"</span><span class="co">]</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="fu">##  유의사항</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>중복 표현 제거, 전략 키워드 통일, 비교 가능한 방식으로 정리해 주세요</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Markdown이 혼합되어 있어도 보고서 유형과 기업명을 정확히 매칭하여 처리해 주세요</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="fu">##  최종 출력</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>3개의 전략 유사도 매트릭스 (3×3) - PESTEL/VRIO/SWOT</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>평균 유사도 (3×3)</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PC1, PC2, PC3를 이용한 PCA 그래프를 2D맵을 제공하고 이에 대한 자세한 설명 추가</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>기업 전략 카드 (3개)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>결과가 얼마나 다른가? 과연 이 세 브랜드는 그렇게 심하게 전략적 차이가 있는가? 전략적 차별화가 왜 어려운지 다시 한 번 생각해 보자.</p>
-<blockquote class="blockquote">
-<p>첨부된 python 파일을 LLM에게 주고 유사도를 측정할 다른 방법을 추천해달하고 한 뒤에, 해당 폴더를 Cursor와 같은 프로그램에서 열고 채팅창에 새로운 유사도 측정법을 적용한 python 코드를 만들어 달라고 하면 만들어 준다. 각자 프로그램을 본인의 생각대로 변경해서 전략적 유사성에 대한 분석을 해보도록 하자.</p>
-</blockquote>
+<p><strong>참고</strong></p>
+<p>첨부된 python 파일을 기반으로 Cursor/VS Code + Copilot/Claude Code 등과 같은 프로그램에서 열고 채팅창에 새로운 유사도 측정법을 적용한 python 코드를 만들어 달라고 하면 코드변경이 가능하다. 각자 변경해서 전략적 유사성에 대한 분석을 새롭게 해보도록 하자.</p>
 
 
 </section>
